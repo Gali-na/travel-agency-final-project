@@ -1,0 +1,2 @@
+ALTER TABLE countries
+ADD COLUMN image_path VARCHAR(255) NOT NULL;

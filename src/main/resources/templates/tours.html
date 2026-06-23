@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dream Tour - Наші Тури</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <style>
+        .btn-red-action {
+            background-color: #e60000;
+            color: white;
+            font-weight: 700;
+            padding: 10px 24px;
+            border-radius: 50px;
+            border: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            transition: background-color 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-red-action:hover {
+            background-color: #b30000;
+            color: white;
+        }
+
+        /* Чітка фіксація картки туру */
+        .custom-tour-row {
+            display: flex !important;
+            flex-direction: row;
+            align-items: center;
+            background: #ffffff;
+            border-radius: 8px;
+            border: 1px solid #eaeaea;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        @media (max-width: 767px) {
+            .custom-tour-row {
+                flex-direction: column !important;
+                text-align: center;
+            }
+            .custom-tour-row .col-left, .custom-tour-row .col-right {
+                width: 100% !important;
+                flex: 0 0 100% !important;
+            }
+        }
+    </style>
+
+</head>
+<body class="bg-light">
+
+<div class="w-100 bg-white py-2 border-bottom shadow-sm">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div class="d-flex gap-4 fs-6 text-secondary flex-wrap">
+            <span><i class="bi bi-telephone text-dark me-1"></i> +288 888 888 888</span>
+            <span><i class="bi bi-whatsapp text-success me-1"></i> +288 888 888 888</span>
+            <span><i class="bi bi-envelope text-dark me-1"></i> +299 999 999 999</span>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+            <a href="/" class="btn btn-outline-secondary btn-sm">
+                <i class="bi bi-house-door"></i>
+            </a>
+
+        </div>
+        <div class="d-flex align-items-center gap-3">
+            <a href="/cart" class="btn btn-outline-dark position-relative btn-sm px-3">
+                <i class="bi bi-cart3 me-1"></i>
+                <span th:text="#{nav.cart}">Кошик</span>
+                <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">0</span>
+            </a>
+            <div class="btn-group btn-group-sm">
+                <a th:href="@{/tours(lang='uk', page=${currentPage}, isHot=${filter.isHot}, tourType=${filter.tourType}, hotelType=${filter.hotelType})}" class="btn btn-outline-secondary px-2" th:classappend="${currentLang == 'uk'} ? 'active'">UA</a>
+                <a th:href="@{/tours(lang='en', page=${currentPage}, isHot=${filter.isHot}, tourType=${filter.tourType}, hotelType=${filter.hotelType})}" class="btn btn-outline-secondary px-2" th:classappend="${currentLang == 'en'} ? 'active'">EN</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <h2 class="text-center fw-bold mb-4" style="font-family: sans-serif;" th:text="#{page.tours.title}">
+        Доступні туристичні напрямки
+    </h2>
+
+
+    <div class="card p-3 shadow-sm border-0 mb-5 bg-white">
+        <form th:action="@{/tours}" method="GET" class="row g-3 align-items-center justify-content-between">
+            <input type="hidden" name="lang" th:value="${currentLang}" />
+
+            <div class="col-md-9 d-flex flex-wrap gap-4 align-items-center">
+                <div class="form-check m-0">
+                    <input class="form-check-input" type="checkbox" id="isHot" name="isHot" value="true" th:checked="${filter.isHot != null && filter.isHot}">
+                    <label class="form-check-label fw-bold text-danger cursor-pointer" for="isHot">
+                        <i class="bi bi-fire me-1"></i> HOT
+                    </label>
+                </div>
+
+                <div class="d-flex align-items-center gap-2">
+                    <label class="small text-muted text-uppercase fw-semibold m-0">Тип:</label>
+                    <select class="form-select form-select-sm" name="tourType" style="min-width: 140px;">
+                        <option value="" th:text="#{filter.type.all}">Всі типи</option>
+                        <option value="HEALTH" th:selected="${filter.tourType == 'HEALTH'}" th:text="#{tour.type.HEALTH}">HEALTH</option>
+                        <option value="SPORTS" th:selected="${filter.tourType == 'SPORTS'}" th:text="#{tour.type.SPORTS}">SPORTS</option>
+                        <option value="LEISURE" th:selected="${filter.tourType == 'LEISURE'}" th:text="#{tour.type.LEISURE}">LEISURE</option>
+                        <option value="SAFARI" th:selected="${filter.tourType == 'SAFARI'}" th:text="#{tour.type.SAFARI}">SAFARI</option>
+                        <option value="WINE" th:selected="${filter.tourType == 'WINE'}">WINE</option>
+                        <option value="ECO" th:selected="${filter.tourType == 'ECO'}">ECO</option>
+                        <option value="ADVENTURE" th:selected="${filter.tourType == 'ADVENTURE'}">ADVENTURE</option>
+                        <option value="CULTURAL" th:selected="${filter.tourType == 'CULTURAL'}">CULTURAL</option>
+                    </select>
+                </div>
+
+                <div class="d-flex align-items-center gap-2">
+                    <label class="small text-muted text-uppercase fw-semibold m-0">Готель:</label>
+                    <select class="form-select form-select-sm" name="hotelType" style="min-width: 160px;">
+                        <option value="" th:text="#{filter.hotel.any}">Будь-який</option>
+                        <option value="Five-star hotel" th:selected="${filter.hotelType == 'Five-star hotel'}" th:text="#{filter.hotel.five_star}">Five-star hotel</option>
+                        <option value="Four-star hotel" th:selected="${filter.hotelType == 'Four-star hotel'}" th:text="#{filter.hotel.four_star}">Four-star hotel</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-3 text-md-end">
+                <button type="submit" class="btn btn-dark btn-sm px-4 fw-bold text-uppercase w-100 w-md-auto" style="border-radius: 50px; padding: 7px 20px;" th:text="#{filter.btn.apply}">
+                    Застосувати
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div class="w-100">
+        <div th:each="tour : ${tours}" class="row custom-tour-row py-3 my-4 mx-0 shadow-sm">
+
+            <div class="col-left text-center" style="flex: 0 0 auto; width: 280px; padding: 15px;">
+                <div class="position-relative d-inline-block">
+                    <img th:src="@{'/uploads/' + ${tour.imagePath}}"
+                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=80';"
+                         class="img-fluid"
+                         alt="Tour Image"
+                         style="width: 240px; height: 240px; object-fit: cover; border-radius: 6px; display: block;">
+
+                    <div th:if="${tour.isHot}" class="position-absolute top-0 start-0 m-2">
+                        <span class="badge bg-danger text-uppercase fw-bold px-2 py-1 shadow-sm" style="font-size: 0.7rem;">
+                            <i class="bi bi-fire me-1"></i> Hot
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-right px-4" style="flex: 1 1 0%; min-width: 280px; padding: 15px;">
+                <h3 class="fw-bold mb-2" style="color: #1a1a1a; font-size: 1.6rem; margin-top: 0;" th:text="${tour.title}">
+                    Caribbean Beach Holiday
+                </h3>
+
+                <div class="d-flex flex-wrap gap-2 mb-2 text-uppercase font-monospace" style="font-size: 0.75rem; color: #6c757d; margin-bottom: 12px;">
+                    <span><i class="bi bi-compass me-1"></i><span th:text="#{ 'tour.type.' + ${tour.tourType} }">LEISURE</span></span>
+                    <span>|</span>
+                    <span><i class="bi bi-train-front me-1"></i><span th:text="#{ 'transfer.type.' + ${tour.transferType} }">TRAIN</span></span>
+                    <span>|</span>
+                    <span><i class="bi bi-building me-1"></i><span th:text="#{ 'hotel.type.' + ${#strings.replace(tour.hotelType, ' ', '_')} }">Four-star hotel</span></span>
+                </div>
+
+                <p class="text-muted mb-3" style="font-size: 0.95rem; line-height: 1.5;" th:text="${tour.description}">
+                    Опис...
+                </p>
+
+                <div class="mb-3 d-flex flex-wrap gap-4 text-muted border-top pt-2" style="font-size: 0.85rem; border-top: 1px solid #ededed;">
+                    <div>
+                        <span style="font-size: 0.7rem; color: #6c757d; display: block; text-transform: uppercase;"
+                              th:text="#{tour.arrival.label}">ARRIVAL</span>
+                        <strong style="color: #212529;" th:text="${#temporals.format(tour.arrivalDate, 'dd.MM.yyyy')}">10.11.2026</strong>
+                    </div>
+                    <div class="border-start ps-3" style="border-left: 1px solid #ededed;">
+                        <span style="font-size: 0.7rem; color: #6c757d; display: block; text-transform: uppercase;"
+                              th:text="#{tour.departure.label}">DEPARTURE</span>
+                        <strong style="color: #212529;" th:text="${#temporals.format(tour.evictionDate, 'dd.MM.yyyy')}">18.11.2026</strong>
+                    </div>
+                    <div th:if="${tour.cityName != null}" class="border-start ps-3" style="border-left: 1px solid #ededed;">
+                        <span style="font-size: 0.7rem; color: #6c757d; display: block; text-transform: uppercase;" th:text="#{tour.city.label}">Місто</span>
+                        <strong style="color: #212529;" th:text="${tour.cityName}">Лондон</strong>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between border-top pt-2" style="border-top: 1px solid #ededed;">
+                    <div>
+                        <span style="font-size: 0.75rem; color: #6c757d; display: block; text-transform: uppercase;" th:text="#{tour.price.per.person}">Ціна за особу</span>
+                        <span style="font-size: 1.5rem; font-weight: bold; color: #212529;">$<span th:text="${tour.price}">1390</span></span>
+                    </div>
+
+                    <form th:action="@{/book}" method="POST" style="margin: 0;">
+                        <input type="hidden" name="tourId" th:value="${tour.id}" />
+                        <input type="hidden" name="lang" th:value="${currentLang}" />
+
+                        <button type="submit" class="btn btn-red-action">
+                            <i class="bi bi-cart3 me-1"></i>
+                            <span th:text="#{button.buy.tour}">Купити тур</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <nav th:if="${totalPages > 1}" class="mt-5">
+        <ul class="pagination justify-content-center">
+            <li class="page-item" th:classappend="${currentPage == 0} ? 'disabled'">
+                <a class="page-link text-dark" th:href="@{/tours(page=${currentPage - 1}, lang=${currentLang}, isHot=${filter.isHot}, tourType=${filter.tourType}, hotelType=${filter.hotelType})}">Попередня</a>
+            </li>
+            <li class="page-item" th:each="i : ${#numbers.sequence(0, totalPages - 1)}" th:classappend="${currentPage == i} ? 'active'">
+                <a class="page-link" th:classappend="${currentPage == i} ? 'bg-dark border-dark text-white' : 'text-dark'"
+                   th:href="@{/tours(page=${i}, lang=${currentLang}, isHot=${filter.isHot}, tourType=${filter.tourType}, hotelType=${filter.hotelType})}" th:text="${i + 1}">1</a>
+            </li>
+            <li class="page-item" th:classappend="${currentPage == totalPages - 1} ? 'disabled'">
+                <a class="page-link text-dark" th:href="@{/tours(page=${currentPage + 1}, lang=${currentLang}, isHot=${filter.isHot}, tourType=${filter.tourType}, hotelType=${filter.hotelType})}">Наступна</a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Функція для отримання значення куки за ім'ям
+        function getCookie(name) {
+            let matches = document.cookie.match(new RegExp(
+                "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+            ));
+            return matches ? decodeURIComponent(matches[1]) : null;
+        }
+
+        // Отримуємо нашу куку 'cart'
+        let cartCookie = getCookie('cart');
+        let totalCount = 0;
+
+        if (cartCookie) {
+            try {
+                // Парсимо JSON (наприклад: {"uuid1": 2, "uuid2": 1})
+                let cartItems = JSON.parse(cartCookie);
+
+                // Сумуємо всі кількості
+                for (let id in cartItems) {
+                    if (cartItems.hasOwnProperty(id)) {
+                        totalCount += cartItems[id];
+                    }
+                }
+            } catch (e) {
+                console.error("Помилка парсингу куки кошика:", e);
+                totalCount = 0;
+            }
+        }
+
+        // Оновлюємо цифру в бейджі кошика
+        let badge = document.getElementById("cart-badge");
+        if (badge) {
+            badge.innerText = totalCount;
+
+            // Візуальний ефект: якщо в кошику щось є, робимо бейдж яскравим
+            if (totalCount > 0) {
+                badge.classList.remove("bg-secondary");
+                badge.classList.add("bg-danger");
+            } else {
+                badge.classList.remove("bg-danger");
+                badge.classList.add("bg-secondary");
+            }
+        }
+    });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

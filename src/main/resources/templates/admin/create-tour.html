@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="#{admin.tour.create.title}">Створення туру</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        .admin-form-card { background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .btn-red-action { background-color: #e60000; color: white; padding: 10px 24px; border-radius: 50px; border: none; text-transform: uppercase; transition: background-color 0.2s; }
+        .btn-red-action:hover { background-color: #b30000; color: white; }
+    </style>
+</head>
+<body class="bg-light">
+
+<div class="w-100 bg-white py-2 border-bottom shadow-sm mb-5">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a th:href="@{/tours(lang=${#locale.language})}" class="btn btn-outline-dark btn-sm"><i class="bi bi-arrow-left"></i> Назад</a>
+
+        <div class="btn-group btn-group-sm">
+            <a th:href="@{/admin/create-tour(lang='uk')}" class="btn btn-outline-secondary" th:classappend="${#locale.language == 'uk'} ? 'active'">UA</a>
+            <a th:href="@{/admin/create-tour(lang='en')}" class="btn btn-outline-secondary" th:classappend="${#locale.language == 'en'} ? 'active'">EN</a>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="admin-form-card mx-auto" style="max-width: 800px;">
+        <h2 class="fw-bold mb-4" th:text="#{admin.tour.create.header}">Створення нового туру</h2>
+
+        <form th:action="@{/admin/tours/create(lang=${#locale.language})}" th:object="${tourCreationDTO}" method="post">
+
+            <div th:if="${#fields.hasAnyErrors()}" class="alert alert-danger">
+                <ul>
+                    <li th:each="err : ${#fields.allErrors()}" th:text="${err}">Помилка</li>
+                </ul>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label" th:text="#{tour.price}">Ціна</label>
+                    <input type="number" step="0.01" th:field="*{price}" class="form-control" th:classappend="${#fields.hasErrors('price')} ? 'is-invalid'">
+                    <div class="invalid-feedback" th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></div>
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label" th:text="#{tour.arrival.date}">Дата прибуття</label>
+                    <input type="datetime-local" th:field="*{arrivalDate}" class="form-control" th:classappend="${#fields.hasErrors('arrivalDate')} ? 'is-invalid'">
+                    <div class="invalid-feedback" th:if="${#fields.hasErrors('arrivalDate')}" th:errors="*{arrivalDate}"></div>
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label" th:text="#{tour.eviction.date}">Дата виселення</label>
+                    <input type="datetime-local" th:field="*{evictionDate}" class="form-control" th:classappend="${#fields.hasErrors('evictionDate')} ? 'is-invalid'">
+                    <div class="invalid-feedback" th:if="${#fields.hasErrors('evictionDate')}" th:errors="*{evictionDate}"></div>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label" th:text="#{tour.type}">Тип туру</label>
+                    <select th:field="*{tourType}" class="form-select" th:classappend="${#fields.hasErrors('tourType')} ? 'is-invalid'">
+                        <option th:each="type : ${tourTypes}" th:value="${type}" th:text="#{tour.type.__${type}__}"></option>
+                    </select>
+                    <div class="invalid-feedback" th:if="${#fields.hasErrors('tourType')}" th:errors="*{tourType}"></div>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label" th:text="#{tour.transfer}">Трансфер</label>
+                    <select th:field="*{transferType}" class="form-select" th:classappend="${#fields.hasErrors('transferType')} ? 'is-invalid'">
+                        <option th:each="t : ${transferTypes}" th:value="${t}" th:text="#{transfer.type.__${t}__}"></option>
+                    </select>
+                    <div class="invalid-feedback" th:if="${#fields.hasErrors('transferType')}" th:errors="*{transferType}"></div>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label" th:text="#{tour.hotel}">Готель</label>
+                    <select th:field="*{hotelType}" class="form-select" th:classappend="${#fields.hasErrors('hotelType')} ? 'is-invalid'">
+                        <option th:each="h : ${hotelTypes}" th:value="${h}" th:text="#{hotel.type.__${h}__}"></option>
+                    </select>
+                    <div class="invalid-feedback" th:if="${#fields.hasErrors('hotelType')}" th:errors="*{hotelType}"></div>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label" th:text="#{tour.city}">Місто</label>
+                    <select th:field="*{cityId}" class="form-select" th:classappend="${#fields.hasErrors('cityId')} ? 'is-invalid'">
+                        <option th:each="city : ${cities}" th:value="${city.id}" th:text="${city.name}"></option>
+                    </select>
+                    <div class="invalid-feedback" th:if="${#fields.hasErrors('cityId')}" th:errors="*{cityId}"></div>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label" th:text="#{tour.image.path}">Шлях до зображення (URL)</label>
+                    <input type="text" th:field="*{imagePath}" class="form-control" th:classappend="${#fields.hasErrors('imagePath')} ? 'is-invalid'">
+                    <div class="invalid-feedback" th:if="${#fields.hasErrors('imagePath')}" th:errors="*{imagePath}"></div>
+                </div>
+
+                <div class="col-12"><label class="form-label" th:text="#{tour.title.en}">Title (EN)</label><input type="text" th:field="*{titleEn}" class="form-control" th:classappend="${#fields.hasErrors('titleEn')} ? 'is-invalid'"><div class="invalid-feedback" th:if="${#fields.hasErrors('titleEn')}" th:errors="*{titleEn}"></div></div>
+                <div class="col-12"><label class="form-label" th:text="#{tour.description.en}">Description (EN)</label><textarea th:field="*{descriptionEn}" class="form-control" th:classappend="${#fields.hasErrors('descriptionEn')} ? 'is-invalid'"></textarea><div class="invalid-feedback" th:if="${#fields.hasErrors('descriptionEn')}" th:errors="*{descriptionEn}"></div></div>
+
+                <div class="col-12"><label class="form-label" th:text="#{tour.title.ua}">Назва (UA)</label><input type="text" th:field="*{titleUa}" class="form-control" th:classappend="${#fields.hasErrors('titleUa')} ? 'is-invalid'"><div class="invalid-feedback" th:if="${#fields.hasErrors('titleUa')}" th:errors="*{titleUa}"></div></div>
+                <div class="col-12"><label class="form-label" th:text="#{tour.description.ua}">Опис (UA)</label><textarea th:field="*{descriptionUa}" class="form-control" th:classappend="${#fields.hasErrors('descriptionUa')} ? 'is-invalid'"></textarea><div class="invalid-feedback" th:if="${#fields.hasErrors('descriptionUa')}" th:errors="*{descriptionUa}"></div></div>
+
+                <div class="col-12">
+                    <label class="form-label" th:text="#{tour.is.hot}">Гарячий тур?</label>
+                    <select th:field="*{isHot}" class="form-select">
+                        <option value="false" th:text="#{tour.false}">FALSE</option>
+                        <option value="true" th:text="#{tour.true}">TRUE</option>
+                    </select>
+                </div>
+
+                <div class="col-12 mt-4 text-center">
+                    <button type="submit" class="btn btn-red-action" th:text="#{admin.btn.create}">Створити тур</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

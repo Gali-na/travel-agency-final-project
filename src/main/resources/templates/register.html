@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="#{register.title}">Реєстрація - Dream Tour</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <style>
+        .form-container { max-width: 500px; margin: 50px auto; padding: 30px; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .btn-red-action { background-color: #e60000; color: white; font-weight: 700; padding: 10px 24px; border-radius: 50px; border: none; width: 100%; transition: background-color 0.2s; }
+        .btn-red-action:hover { background-color: #b30000; color: white; }
+        .error-text { color: #dc3545; font-size: 0.8rem; margin-top: 5px; }
+        .lang-switcher { margin-bottom: 20px; text-align: right; }
+    </style>
+</head>
+<body class="bg-light">
+
+<div class="container">
+    <div class="form-container">
+        <a th:href="@{/}" class="home-link">
+            <i class="bi bi-house-door"></i> На головну
+        </a>
+        <div class="lang-switcher">
+            <a th:href="@{/register(lang='uk')}" class="text-decoration-none">UA</a> |
+            <a th:href="@{/register(lang='en')}" class="text-decoration-none">EN</a>
+        </div>
+
+        <h2 class="text-center fw-bold mb-4" th:text="#{register.title}">Створення акаунту</h2>
+
+        <form th:action="@{/register}" th:object="${userDto}" method="POST">
+
+            <div th:if="${#fields.hasGlobalErrors()}" class="alert alert-danger">
+                <ul class="mb-0">
+                    <li th:each="err : ${#fields.globalErrors()}" th:text="${err}"></li>
+                </ul>
+            </div>
+
+            <div th:if="${error}" class="alert alert-danger" th:text="${error}"></div>
+
+            <div class="mb-3">
+                <label class="form-label" th:text="#{email.label}">Email</label>
+                <input type="text" th:field="*{email}" class="form-control" th:classappend="${#fields.hasErrors('email')} ? 'is-invalid'">
+                <p class="error-text" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" th:text="#{password.label}">Пароль</label>
+                <input type="password" th:field="*{password}" class="form-control" th:classappend="${#fields.hasErrors('password')} ? 'is-invalid'">
+                <p class="error-text" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" th:text="#{firstname.label}">Ім'я</label>
+                <input type="text" th:field="*{firstName}" class="form-control" th:classappend="${#fields.hasErrors('firstName')} ? 'is-invalid'">
+                <p class="error-text" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></p>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" th:text="#{lastname.label}">Прізвище</label>
+                <input type="text" th:field="*{lastName}" class="form-control" th:classappend="${#fields.hasErrors('lastName')} ? 'is-invalid'">
+                <p class="error-text" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></p>
+            </div>
+
+            <button type="submit" class="btn btn-red-action mt-3" th:text="#{register.submit}">ЗАРЕЄСТРУВАТИСЯ</button>
+        </form>
+
+        <div class="text-center mt-3">
+            <a th:href="@{/login}" class="text-secondary text-decoration-none small" th:text="#{login.link}">Вже маєте акаунт? Увійти</a>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

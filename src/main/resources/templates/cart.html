@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="#{cart.page.title}">Dream Tour - Ваш кошик</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <style>
+        .btn-red-action {
+            background-color: #e60000;
+            color: white;
+            font-weight: 700;
+            padding: 10px 24px;
+            border-radius: 50px;
+            border: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            transition: background-color 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-red-action:hover {
+            background-color: #b30000;
+            color: white;
+        }
+
+        .custom-tour-row {
+            display: flex !important;
+            flex-direction: row;
+            align-items: center;
+            background: #ffffff;
+            border-radius: 8px;
+            border: 1px solid #eaeaea;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        @media (max-width: 767px) {
+            .custom-tour-row {
+                flex-direction: column !important;
+                text-align: center;
+            }
+            .custom-tour-row .col-left, .custom-tour-row .col-right {
+                width: 100% !important;
+                flex: 0 0 100% !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+<div class="w-100 bg-white py-2 border-bottom shadow-sm">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+
+        <div class="d-flex gap-4 fs-6 text-secondary flex-wrap">
+            <span><i class="bi bi-telephone text-dark me-1"></i> +288 888 888 888</span>
+            <span><i class="bi bi-whatsapp text-success me-1"></i> +288 888 888 888</span>
+            <span><i class="bi bi-envelope text-dark me-1"></i> +299 999 999 999</span>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+
+            <div class="btn-group btn-group-sm" role="group" aria-label="Language switcher">
+                <a th:href="@{/cart(lang='uk')}"
+                   th:classappend="${currentLang == 'uk'} ? 'btn btn-dark' : 'btn btn-outline-dark'"
+                   class="px-2 fw-bold" style="font-size: 0.75rem;">
+                    UK
+                </a>
+                <a th:href="@{/cart(lang='en')}"
+                   th:classappend="${currentLang == 'en'} ? 'btn btn-dark' : 'btn btn-outline-dark'"
+                   class="px-2 fw-bold" style="font-size: 0.75rem;">
+                    EN
+                </a>
+            </div>
+
+            <a th:href="@{/tours(lang=${currentLang})}" class="btn btn-outline-dark btn-sm px-3">
+                <i class="bi bi-arrow-left me-1"></i> <span th:text="#{cart.btn.back}">Повернутися до турів</span>
+            </a>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="container my-5">
+    <h2 class="text-center fw-bold mb-4" style="font-family: sans-serif;" th:text="#{cart.header}">
+        Ваш кошик замовлень
+    </h2>
+
+    <div th:if="${cartTours == null || cartTours.isEmpty()}" class="alert alert-info text-center py-5 shadow-sm bg-white border-0">
+        <i class="bi bi-cart-x fs-1 d-block mb-3 text-secondary"></i>
+        <h4 class="fw-bold" th:text="#{cart.empty.title}">Ваш кошик порожній</h4>
+        <p class="text-muted" th:text="#{cart.empty.subtitle}">Ви ще не додали жодного туру.</p>
+        <a th:href="@{/tours(lang=${currentLang})}" class="btn btn-dark btn-sm px-4 rounded-pill mt-2" th:text="#{cart.btn.choose}">ОБРАТИ ТУРИ</a>
+    </div>
+
+    <div th:if="${cartTours != null && !cartTours.isEmpty()}" class="w-100">
+
+        <div th:each="tour : ${cartTours}" class="row custom-tour-row py-3 my-4 mx-0 shadow-sm">
+
+            <div class="col-left text-center" style="flex: 0 0 auto; width: 280px; padding: 15px;">
+                <div class="position-relative d-inline-block">
+                    <img th:src="${tour.imagePath != null && !tour.imagePath.isEmpty()} ? @{'/uploads/' + ${tour.imagePath}} : 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=80'"
+                         class="img-fluid"
+                         alt="Tour Image"
+                         style="width: 240px; height: 240px; object-fit: cover; border-radius: 6px; display: block;">
+                </div>
+            </div>
+
+            <div class="col-right px-4" style="flex: 1 1 0%; min-width: 280px; padding: 15px;">
+
+                <h3 class="fw-bold mb-2" style="color: #1a1a1a; font-size: 1.6rem; margin-top: 0;" th:text="${tour.title}">
+                    Назва туру з бази даних
+                </h3>
+
+                <div class="d-flex flex-wrap gap-2 mb-2 text-uppercase font-monospace" style="font-size: 0.85rem; color: #6c757d; margin-bottom: 12px;">
+                    <span><i class="bi bi-compass me-1"></i><strong th:text="#{ 'tour.type.' + ${tour.tourType} }">ТИП ТУРУ</strong></span>
+                    <span th:if="${tour.cityName != null}">|</span>
+                    <span th:if="${tour.cityName != null}"><i class="bi bi-geo-alt me-1"></i><strong th:text="${tour.cityName}">МІСТО</strong></span>
+                    <span>|</span>
+                    <span>
+                        <span th:text="#{cart.item.quantity}">Кількість</span>:
+                        <strong class="text-dark" th:text="${tour.quantity}">1</strong>
+                        <span th:text="#{cart.item.pcs}">шт.</span>
+                    </span>
+                </div>
+
+                <p class="text-muted mb-3" style="font-size: 0.95rem; line-height: 1.5;" th:text="${tour.description}">
+                    Опис туру з бази даних...
+                </p>
+
+                <div class="d-flex align-items-center justify-content-between border-top pt-3 mt-4" style="border-top: 1px solid #ededed;">
+                    <div>
+                        <span style="font-size: 0.75rem; color: #6c757d; display: block; text-transform: uppercase;" th:text="#{cart.item.price}">Вартість</span>
+                        <span style="font-size: 1.5rem; font-weight: bold; color: #212529;">$<span th:text="${tour.price}">0.00</span></span>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <form th:action="@{/cart/remove}" method="POST" style="margin: 0;">
+                            <input type="hidden" name="tourId" th:value="${tour.id}" />
+                            <input type="hidden" name="lang" th:value="${currentLang}" />
+                            <button type="submit" class="btn btn-outline-danger d-flex align-items-center gap-1"
+                                    style="border-radius: 50px; padding: 10px 24px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">
+                                <i class="bi bi-trash"></i>
+                                <span th:text="#{cart.btn.delete}">Видалити</span>
+                            </button>
+                        </form>
+
+                        <form th:action="@{/checkout}" method="POST" style="margin: 0;">
+                            <input type="hidden" name="tourId" th:value="${tour.id}" />
+                            <button type="submit" class="btn btn-red-action">
+                                <i class="bi bi-credit-card me-1"></i>
+                                <span th:text="#{cart.btn.pay}">Оплатити</span>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

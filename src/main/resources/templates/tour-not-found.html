@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{error.tour.title}">Тур не знайдено</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<div class="lang-switcher">
+    <a th:href="@{/register(lang='uk')}" class="text-decoration-none">UA</a> |
+    <a th:href="@{/register(lang='en')}" class="text-decoration-none">EN</a>
+</div>
+
+<body class="bg-light text-center">
+<div class="container mt-5">
+    <h1 class="display-4 fw-bold text-danger">404</h1>
+    <h2 th:text="#{error.tour.message}">На жаль, такий тур не знайдено або він був видалений.</h2>
+    <a href="/" class="btn btn-primary mt-3" th:text="#{error.btn.home}">Повернутися на головну</a>
+</div>
+</body>
+</html>

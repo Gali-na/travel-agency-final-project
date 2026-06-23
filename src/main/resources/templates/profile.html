@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="#{profile.page.title}">Dream Tour - Мій профіль</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        .profile-card { background: #fff; border-radius: 12px; border: 1px solid #ededed; }
+        .btn-red-action {
+            background-color: #e60000; color: white; font-weight: 700;
+            padding: 10px 24px; border-radius: 50px; border: none;
+            text-transform: uppercase; transition: background-color 0.2s;
+        }
+        .btn-red-action:hover { background-color: #b30000; color: white; }
+    </style>
+</head>
+<body class="bg-light">
+
+<div class="w-100 bg-white py-2 border-bottom shadow-sm">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a class="fw-bold text-dark text-decoration-none fs-4" href="/">DREAM TOUR</a>
+        <div class="d-flex align-items-center gap-3">
+            <div class="btn-group btn-group-sm">
+                <a th:href="@{/profile(lang='uk')}"
+                   th:classappend="${#locale.language == 'uk'} ? 'btn-dark' : 'btn-outline-dark'"
+                   class="btn px-2 fw-bold" style="font-size: 0.75rem;">UK</a>
+                <a th:href="@{/profile(lang='en')}"
+                   th:classappend="${#locale.language == 'en'} ? 'btn-dark' : 'btn-outline-dark'"
+                   class="btn px-2 fw-bold" style="font-size: 0.75rem;">EN</a>
+            </div>
+
+            <a href="/" class="text-dark">
+                <i class="bi bi-house-door fs-5"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="mb-4 fw-bold" th:text="#{profile.header}">Особистий кабінет</h2>
+
+            <div class="profile-card p-4 shadow-sm mb-4">
+                <h4 class="mb-3" th:text="#{profile.info.title}">Інформація про профіль</h4>
+                <p class="fs-4 fw-bold mb-1" th:text="${user.firstName} + ' ' + ${user.lastName}">Ім'я Прізвище</p>
+                <p class="text-muted mb-3" th:text="${user.email}">user@example.com</p>
+                <p class="mb-3">
+                    <strong th:text="#{profile.balance.title}">Баланс:</strong>
+                    <span class="fs-4 fw-bold text-success">$<span th:text="${user.balance}">0.00</span></span>
+                </p>
+
+                <form th:action="@{/profile/top-up}" method="post" class="p-3 bg-light border rounded">
+                    <div class="mb-3">
+                        <input type="number" name="amount" id="amount" class="form-control" placeholder="100" min="1" step="any" required>
+                    </div>
+                    <button type="submit" class="btn btn-red-action w-100" th:text="#{profile.btn.topup}">ПОПОВНИТИ РАХУНОК</button>
+                </form>
+            </div>
+
+            <div class="profile-card p-4 shadow-sm">
+                <h4 class="mb-4" th:text="#{profile.tours.title}">Мої тури</h4>
+
+                <div th:if="${#lists.isEmpty(userTours)}" class="text-muted" th:text="#{profile.tours.empty}">
+                    Ви ще не забронювали жодного туру.
+                </div>
+
+                <table class="table table-hover" th:if="${not #lists.isEmpty(userTours)}">
+                    <thead class="table-light">
+                    <tr>
+                        <th th:text="#{tour.title.label}">Назва туру</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="ut : ${userTours}">
+                        <td th:text="${ut.tour.title}">Назва</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="#{welcome.title}">Dream Tour</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <style>
+        .top-bar {
+            background-color: #f8f9fa;
+            color: #333333;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid #ededed;
+        }
+        .top-bar a {
+            color: #333333 !important;
+        }
+        .navbar-brand-red {
+            font-family: 'Arial Black', Gadget, sans-serif;
+            text-transform: lowercase;
+            color: #e60000 !important;
+        }
+        .btn-profile-circle {
+            background-color: white !important;
+            color: #000000 !important;
+            border: 2px solid #000000 !important;
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease-in-out;
+        }
+        .btn-profile-circle:hover {
+            background-color: #000000 !important;
+            color: white !important;
+        }
+
+        /* Робимо поле з фото нижчим та пропорційним */
+        .hero-banner-slide {
+            height: 480px;
+            display: flex;
+            align-items: center; /* Центруємо текст по вертикалі, як на макеті */
+            position: relative;
+            background-size: cover !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+        }
+
+        /* Внутрішній відступ для тексту всередині слайда */
+        .b-content {
+            padding-left: 60px;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+        }
+
+        .btn-red-action {
+            background-color: #e60000;
+            color: white;
+            font-weight: 700;
+            padding: 12px 28px;
+            border-radius: 50px;
+            border: none;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            transition: background-color 0.2s;
+        }
+        .btn-red-action:hover {
+            background-color: #b30000;
+            color: white;
+        }
+
+        /* Круглі стрілочки навігації поверх фото */
+        .nav-arrow {
+            background: rgba(255,255,255,0.9);
+            color: #000;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            transition: transform 0.2s;
+        }
+        .nav-arrow:hover {
+            transform: scale(1.05);
+        }
+        .carousel-control-prev, .carousel-control-next {
+            opacity: 1 !important;
+            width: 60px !important; /* Обмежуємо зону кліку стрілочок */
+        }
+
+        /* Головний заголовок під фото: більший і жирніший */
+        .features-subtitle {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.65rem;
+            font-weight: 700; /* Робимо жирнішим */
+            line-height: 1.4;
+            color: #1a1a1a;
+        }
+
+        .feature-box {
+            border-left: 1px solid #e0e0e0;
+        }
+
+        @media (max-width: 767px) {
+            .feature-box { border-left: none; border-top: 1px solid #e0e0e0; padding-top: 15px; }
+            .hero-title { font-size: 2.2rem; }
+            .hero-banner-slide { height: 300px; }
+            .b-content { padding-left: 20px; }
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+<div class="top-bar py-2">
+    <div class="container-fluid px-md-5 d-flex justify-content-between align-items-center">
+        <div class="d-flex gap-4 mx-auto mx-sm-0 fw-medium">
+            <span><i class="bi bi-telephone-fill text-dark me-2"></i>+288 888 888 888</span>
+            <span><i class="bi bi-whatsapp text-success me-2"></i>+288 888 888 888</span>
+            <span><i class="bi bi-envelope-fill text-dark me-2"></i>+299 999 999 999</span>
+        </div>
+
+        <div th:if="${isManager}">
+            <a th:href="@{/admin/create-tour}">Створення туру</a>
+        </div>
+
+        <div th:if="${isAdmin}">
+            <a th:href="@{/admin/users}">Список користувачів</a>
+        </div>
+
+        <div class="d-block fw-bold" style="z-index: 10; position: relative;">
+            <a th:href="@{/(lang='en')}" class="text-decoration-none text-dark me-2">EN</a>
+            <span class="text-muted">|</span>
+            <a th:href="@{/(lang='uk')}" class="text-decoration-none text-dark ms-2">UA</a>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-light bg-white">
+    <div class="container-fluid px-md-5">
+
+        <a class="navbar-brand-red fw-bold fs-3 text-decoration-none" href="#">
+            dream tour
+        </a>
+
+        <div class="ms-auto">
+            <a class="btn btn-profile-circle shadow-sm" href="/profile" th:title="#{nav.profile}">
+                <i class="bi bi-person-fill fs-5"></i>
+            </a>
+
+        </div>
+    </div>
+</nav>
+
+<header class="container-fluid px-md-5 my-3">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner" style="border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.08);">
+
+            <div class="carousel-item active">
+                <div class="hero-banner-slide text-white"
+                     th:style="'background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.15)), url(' + @{/images/first.png} + ');'">
+                    <div class="text-start b-content">
+                        <h1 class="hero-title mb-3" th:text="#{hero.headline}">Offers in One Click</h1>
+                        <a th:href="@{/tours}" class="btn btn-red-action" th:text="#{hero.button}">Choose a Trip</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="carousel-item">
+                <div class="hero-banner-slide text-white"
+                     th:style="'background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.15)), url(' + @{/images/health.png} + ');'">
+                    <div class="text-start b-content">
+                        <h1 class="hero-title mb-3">Last Minute Offers</h1>
+                        <a th:href="@{/tours}" class="btn btn-red-action" th:text="#{hero.button}">Choose a Trip</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="hero-banner-slide text-white"
+                     th:style="'background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.15)), url(' + @{/images/culture.png} + ');'">
+                    <div class="text-start b-content">
+                        <h1 class="hero-title mb-3">Last Minute Offers</h1>
+                        <a th:href="@{/tours}" class="btn btn-red-action" th:text="#{hero.button}">Choose a Trip</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="nav-arrow" style="margin-left: 20px;"><i class="bi bi-arrow-left"></i></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="nav-arrow" style="margin-right: 20px;"><i class="bi bi-arrow-right"></i></span>
+        </button>
+    </div>
+</header>
+
+<section class="container my-5 text-center">
+    <h4 class="features-subtitle mb-5 px-3" th:text="#{features.subtitle}">
+        Authentic and amazing journeys in small groups around the world
+    </h4>
+
+    <div class="row g-4 justify-content-center text-muted mt-2" style="font-size: 0.95rem;">
+        <div class="col-md-3">
+            <p class="mb-0" th:text="#{features.item1}">Thousands of experiences,<br>in over 100 countries</p>
+        </div>
+        <div class="col-md-3 feature-box">
+            <p class="mb-0" th:text="#{features.item2}">Shared adventures with<br>like-minded people</p>
+        </div>
+        <div class="col-md-3 feature-box">
+            <p class="mb-0" th:text="#{features.item3}">Creating positive changes<br>since 1989</p>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{admin.tour.created.title}">Тур створено</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f6; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); text-align: center; max-width: 400px; }
+        .icon { font-size: 50px; color: #e60000; margin-bottom: 1rem; }
+        h1 { color: #2c3e50; }
+        a { display: inline-block; margin-top: 1.5rem; padding: 10px 20px; background: #333; color: white; text-decoration: none; border-radius: 5px; }
+        a:hover { background: #000; }
+    </style>
+</head>
+<body>
+<div class="card">
+    <div class="icon">✨</div>
+    <h1 th:text="#{admin.tour.created.header}">Тур успішно створено!</h1>
+    <p th:text="#{admin.tour.created.message}">Ваш новий тур був доданий до системи та доступний для перегляду.</p>
+    <a th:href="@{/tours(lang=${#locale.language})}" th:text="#{admin.tour.created.home}">Повернутися до списку</a>
+</div>
+</body>
+</html>
