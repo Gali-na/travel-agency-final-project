@@ -6,8 +6,6 @@ import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
-
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
@@ -16,8 +14,6 @@ import java.util.UUID;
 
 @Service
 public class СookieServiсe {
-
-    //// ей метод дублюэться в JwtCookieFilter з ыменем extractCookie
   public String extractCookieJWT(HttpServletRequest request, String name) {
         if (request.getCookies() == null) return null;
         return Arrays.stream(request.getCookies())
@@ -27,13 +23,9 @@ public class СookieServiсe {
                 .orElse(null);
     }
 
-
-    //// ей метод дублюэться в CartController removeFromCart
     public boolean updateCartCookieAfterPurchase( UUID tourId,
                                  HttpServletRequest request,
                                  HttpServletResponse response) {
-
-        // 1. Отримуємо поточну куку "cart"
         String rawCartJson = "";
         Cookie[] cookies = request.getCookies();
         if (cookies == null) {
@@ -50,22 +42,13 @@ public class СookieServiсe {
             throw new TourNotFoundException("tour not found");
         }
 
-        // 2. Парсимо кошик
         Cart cart = Cart.fromJson(rawCartJson);
-
-        // 3. Видаляємо обраний тур
         cart.removeTour(tourId);
-
-        // 4. Серіалізуємо оновлений кошик назад у JSON
         String updatedCartJson = URLEncoder.encode(cart.toJson(), StandardCharsets.UTF_8);
-
-        // 5. Оновлюємо куку у відповіді сервера
         Cookie cartCookie = new Cookie("cart", updatedCartJson);
-        cartCookie.setMaxAge(30 * 60); // 30 хвилин
+        cartCookie.setMaxAge(30 * 60);
         cartCookie.setPath("/");
         response.addCookie(cartCookie);
-
-        // Повертаємо користувача назад у кошик, щоб він побачив зміни
         return true ;
     }
 

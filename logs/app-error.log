@@ -1,0 +1,462 @@
+2026-06-24 16:30:16 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: 28c6ae22-5b87-4174-9052-07d84b4f5291
+2026-06-24 16:30:16 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@1af7eb84
+2026-06-24 16:30:16 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: 28c6ae22-5b87-4174-9052-07d84b4f5291
+2026-06-24 16:30:16 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@53106790
+2026-06-24 16:45:22 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 10352 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-24 16:45:22 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-24 16:45:22 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-24 16:45:29 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-24 16:45:31 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.398 seconds (process running for 10.369)
+2026-06-24 16:45:31 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-24 16:45:31 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-24 16:45:31 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-24 16:45:44 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: 28c6ae22-5b87-4174-9052-07d84b4f5291
+2026-06-24 16:45:44 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@5bc92dbc
+2026-06-24 16:45:44 DEBUG token.com.epam.travel_agency_final_project.aspect.service.RotateTokenLoggingAspect - Starting rotation for token: 28c6ae22-5b87-4174-9052-07d84b4f5291
+2026-06-24 16:45:44 INFO  token.com.epam.travel_agency_final_project.aspect.service.RotateTokenLoggingAspect - Refresh token rotated successfully. New token generated.
+2026-06-24 16:45:46 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: 0bf31ec9-7c1b-49e2-bab1-a0521827f4af
+2026-06-24 16:45:46 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@63a14e43
+2026-06-24 16:45:46 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: 0bf31ec9-7c1b-49e2-bab1-a0521827f4af
+2026-06-24 16:45:46 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@386a48d2
+2026-06-24 16:45:49 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Fetching tours. Lang: uk, Page: 0, Size: 2
+2026-06-24 16:45:49 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Tours fetched. Total elements: 10, Total pages: 5
+2026-06-24 16:45:57 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Fetching tours. Lang: uk, Page: 1, Size: 2
+2026-06-24 16:45:57 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Tours fetched. Total elements: 10, Total pages: 5
+2026-06-24 16:45:59 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Fetching tours. Lang: uk, Page: 2, Size: 2
+2026-06-24 16:45:59 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Tours fetched. Total elements: 10, Total pages: 5
+2026-06-24 16:46:01 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Fetching tours. Lang: uk, Page: 3, Size: 2
+2026-06-24 16:46:01 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Tours fetched. Total elements: 10, Total pages: 5
+2026-06-24 16:46:12 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Fetching tours. Lang: uk, Page: 0, Size: 2
+2026-06-24 16:46:12 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Tours fetched. Total elements: 1, Total pages: 1
+2026-06-24 16:46:17 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Fetching tours. Lang: uk, Page: 0, Size: 2
+2026-06-24 16:46:17 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Tours fetched. Total elements: 0, Total pages: 0
+2026-06-24 16:46:21 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Fetching tours. Lang: uk, Page: 0, Size: 2
+2026-06-24 16:46:21 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Tours fetched. Total elements: 0, Total pages: 0
+2026-06-24 16:46:22 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Fetching tours. Lang: uk, Page: 0, Size: 2
+2026-06-24 16:46:22 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Tours fetched. Total elements: 0, Total pages: 0
+2026-06-24 16:46:26 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Fetching tours. Lang: uk, Page: 0, Size: 2
+2026-06-24 16:46:26 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Tours fetched. Total elements: 0, Total pages: 0
+2026-06-24 16:46:31 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Fetching tours. Lang: uk, Page: 0, Size: 2
+2026-06-24 16:46:31 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Tours fetched. Total elements: 2, Total pages: 1
+2026-06-24 16:46:39 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Fetching tours. Lang: uk, Page: 0, Size: 2
+2026-06-24 16:46:39 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Tours fetched. Total elements: 0, Total pages: 0
+2026-06-24 16:46:42 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Fetching tours. Lang: uk, Page: 0, Size: 2
+2026-06-24 16:46:42 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Tours fetched. Total elements: 3, Total pages: 2
+2026-06-24 16:46:48 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Fetching tours. Lang: uk, Page: 0, Size: 2
+2026-06-24 16:46:48 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Tours fetched. Total elements: 1, Total pages: 1
+2026-06-24 16:46:52 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Fetching tours. Lang: uk, Page: 0, Size: 2
+2026-06-24 16:46:52 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Tours fetched. Total elements: 0, Total pages: 0
+2026-06-24 16:46:56 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Fetching tours. Lang: uk, Page: 0, Size: 2
+2026-06-24 16:46:56 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Tours fetched. Total elements: 1, Total pages: 1
+2026-06-24 16:47:00 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Fetching tours. Lang: uk, Page: 0, Size: 2
+2026-06-24 16:47:00 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Tours fetched. Total elements: 0, Total pages: 0
+2026-06-24 16:47:05 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Fetching tours. Lang: uk, Page: 0, Size: 2
+2026-06-24 16:47:05 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Tours fetched. Total elements: 0, Total pages: 0
+2026-06-24 16:47:09 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Fetching tours. Lang: uk, Page: 0, Size: 2
+2026-06-24 16:47:09 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Tours fetched. Total elements: 0, Total pages: 0
+2026-06-24 16:47:13 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Fetching tours. Lang: uk, Page: 0, Size: 2
+2026-06-24 16:47:13 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Tours fetched. Total elements: 1, Total pages: 1
+2026-06-24 16:47:18 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Fetching tours. Lang: uk, Page: 0, Size: 2
+2026-06-24 16:47:18 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Tours fetched. Total elements: 4, Total pages: 2
+2026-06-24 16:47:22 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Fetching tours. Lang: uk, Page: 0, Size: 2
+2026-06-24 16:47:22 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Tours fetched. Total elements: 2, Total pages: 1
+2026-06-24 16:47:26 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Fetching tours. Lang: uk, Page: 0, Size: 2
+2026-06-24 16:47:26 DEBUG tour.com.epam.travel_agency_final_project.aspect.service.TourPaginationLoggingAspect - Tours fetched. Total elements: 1, Total pages: 1
+2026-06-24 17:00:11 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 4396 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-24 17:00:11 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-24 17:00:11 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-24 17:00:18 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-24 17:00:20 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.662 seconds (process running for 10.811)
+2026-06-24 17:00:20 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-24 17:00:20 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-24 17:00:20 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-24 17:00:36 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: 0bf31ec9-7c1b-49e2-bab1-a0521827f4af
+2026-06-24 17:00:36 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@6e2d8149
+2026-06-24 17:00:36 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:00:36 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:00:36 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: 0bf31ec9-7c1b-49e2-bab1-a0521827f4af
+2026-06-24 17:00:36 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@21952151
+2026-06-24 17:00:36 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:00:36 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:00:40 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: 0bf31ec9-7c1b-49e2-bab1-a0521827f4af
+2026-06-24 17:00:40 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@3b00b90c
+2026-06-24 17:00:40 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:00:40 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:00:40 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: 0bf31ec9-7c1b-49e2-bab1-a0521827f4af
+2026-06-24 17:00:40 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@5ae29cd9
+2026-06-24 17:00:40 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:00:40 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:00:40 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 0, Size: 5
+2026-06-24 17:01:24 INFO  user.com.epam.travel_agency_final_project.aspect.service.AuthLoggingAspect - Authentication attempt for email: admin@gmail
+2026-06-24 17:01:24 INFO  user.com.epam.travel_agency_final_project.aspect.service.AuthLoggingAspect - Authentication successful.
+2026-06-24 17:01:24 DEBUG user.com.epam.travel_agency_final_project.aspect.service.FindSecurityByEmailLoggingAspect - Fetching security details for email: admin@gmail
+2026-06-24 17:01:24 DEBUG user.com.epam.travel_agency_final_project.aspect.service.FindSecurityByEmailLoggingAspect - Security details successfully retrieved for user.
+2026-06-24 17:01:24 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:01:24 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:01:24 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:01:24 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@49db32a6
+2026-06-24 17:01:24 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:01:24 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@cef50fb
+2026-06-24 17:01:24 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@65c1fa86
+2026-06-24 17:01:24 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:01:24 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:01:24 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:01:24 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:01:24 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:01:24 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:01:24 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:01:24 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:01:24 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@4506f3a3
+2026-06-24 17:01:24 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:01:24 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@63c78b4c
+2026-06-24 17:01:24 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:01:24 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@6462d67a
+2026-06-24 17:01:24 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:01:24 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:01:24 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:01:24 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:01:26 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:01:26 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@1031f207
+2026-06-24 17:01:26 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:01:26 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:01:26 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:01:26 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@1b280573
+2026-06-24 17:01:26 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:01:26 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:01:26 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 0, Size: 5
+2026-06-24 17:01:42 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:01:42 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@22d03b4d
+2026-06-24 17:01:42 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:01:42 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:01:42 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:01:42 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@72d1188c
+2026-06-24 17:01:42 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:01:42 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:01:42 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 1, Size: 5
+2026-06-24 17:01:44 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:01:44 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@2cb0d95
+2026-06-24 17:01:44 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:01:44 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:01:44 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:01:44 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@15987af
+2026-06-24 17:01:44 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:01:44 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:01:44 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 2, Size: 5
+2026-06-24 17:01:46 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:01:46 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@1a6bd5ce
+2026-06-24 17:01:46 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:01:46 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:01:46 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:01:46 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@65a881e5
+2026-06-24 17:01:46 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:01:46 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:01:46 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 3, Size: 5
+2026-06-24 17:01:47 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:01:47 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@7ad6337a
+2026-06-24 17:01:47 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:01:47 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:01:47 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:01:47 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@fbbd704
+2026-06-24 17:01:47 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:01:47 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:01:47 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 4, Size: 5
+2026-06-24 17:01:53 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:01:53 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@103d8b08
+2026-06-24 17:01:53 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:01:53 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:01:53 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:01:53 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@3bd9195d
+2026-06-24 17:01:53 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:01:53 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:01:53 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 5, Size: 5
+2026-06-24 17:01:57 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:01:57 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@526c6f42
+2026-06-24 17:01:57 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:01:57 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:01:57 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:01:57 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@10e9b34b
+2026-06-24 17:01:57 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:01:57 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:01:57 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 0, Size: 5
+2026-06-24 17:02:00 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:00 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@7af7c99
+2026-06-24 17:02:00 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:00 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:00 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:00 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@1c8e89a
+2026-06-24 17:02:00 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:00 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:00 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 1, Size: 5
+2026-06-24 17:02:02 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:02 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@685c6e03
+2026-06-24 17:02:02 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:02 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:02 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:02 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@34bf0a0
+2026-06-24 17:02:02 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:02 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:02 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 2, Size: 5
+2026-06-24 17:02:03 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:03 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@6a084085
+2026-06-24 17:02:03 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:03 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:03 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:03 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@628089e7
+2026-06-24 17:02:03 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:03 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:03 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 3, Size: 5
+2026-06-24 17:02:04 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:04 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@267d6baa
+2026-06-24 17:02:04 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:04 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:04 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:04 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@4f577083
+2026-06-24 17:02:04 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:04 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:04 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 4, Size: 5
+2026-06-24 17:02:06 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:06 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@72cd2774
+2026-06-24 17:02:06 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:06 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:06 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:06 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@151d295f
+2026-06-24 17:02:06 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:06 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:06 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 3, Size: 5
+2026-06-24 17:02:08 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:08 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@44b09215
+2026-06-24 17:02:08 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:08 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:08 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:08 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@34b5aa36
+2026-06-24 17:02:08 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:08 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:08 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 4, Size: 5
+2026-06-24 17:02:09 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:09 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@2266442
+2026-06-24 17:02:09 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:09 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:09 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:09 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@3d224960
+2026-06-24 17:02:09 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:09 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:09 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 5, Size: 5
+2026-06-24 17:02:39 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:39 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:39 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:39 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@5e453c51
+2026-06-24 17:02:39 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:39 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@6d2e174a
+2026-06-24 17:02:39 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:39 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@34851830
+2026-06-24 17:02:39 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:39 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:39 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:39 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:39 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:39 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:39 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:39 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@7134b48e
+2026-06-24 17:02:39 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:39 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@6f7af02f
+2026-06-24 17:02:39 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:39 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@14760997
+2026-06-24 17:02:39 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:39 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:39 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:39 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:43 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:43 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@38df94d8
+2026-06-24 17:02:43 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:43 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:43 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:43 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@6d0142ad
+2026-06-24 17:02:43 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:43 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:51 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:51 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@67ece793
+2026-06-24 17:02:51 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:51 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:51 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:51 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@4f78d5e3
+2026-06-24 17:02:51 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:51 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:51 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 0, Size: 5
+2026-06-24 17:02:56 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:56 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@3076787d
+2026-06-24 17:02:56 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:56 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:56 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:02:56 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@6b8213e
+2026-06-24 17:02:56 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:02:56 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:02:56 DEBUG city.com.epam.travel_agency_final_project.aspect.service.LoggingCityService - Executing findAll. Method argument count: 0
+2026-06-24 17:02:56 DEBUG city.com.epam.travel_agency_final_project.aspect.service.LoggingCityService - Number of cities found: 19
+2026-06-24 17:06:47 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 14532 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-24 17:06:47 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-24 17:06:47 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-24 17:06:55 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-24 17:06:57 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.67 seconds (process running for 10.623)
+2026-06-24 17:06:57 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-24 17:06:57 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-24 17:06:57 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-24 17:07:23 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:07:23 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@74b2d819
+2026-06-24 17:07:23 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:07:23 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:07:23 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:07:23 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@5ce80615
+2026-06-24 17:07:23 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:07:23 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:08:00 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:08:00 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@1df81eb1
+2026-06-24 17:08:00 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:08:00 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:08:00 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:08:00 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@498f187
+2026-06-24 17:08:00 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:08:00 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:08:00 DEBUG city.com.epam.travel_agency_final_project.aspect.service.LoggingCityService - Executing findAll. Method argument count: 0
+2026-06-24 17:08:00 DEBUG city.com.epam.travel_agency_final_project.aspect.service.LoggingCityService - Number of cities found: 19
+2026-06-24 17:08:11 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:08:11 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@1450f47
+2026-06-24 17:08:11 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:08:11 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:08:11 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:08:11 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@183fe2c6
+2026-06-24 17:08:11 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:08:11 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:08:11 DEBUG city.com.epam.travel_agency_final_project.aspect.service.LoggingCityService - Executing findAll. Method argument count: 0
+2026-06-24 17:08:11 DEBUG city.com.epam.travel_agency_final_project.aspect.service.LoggingCityService - Number of cities found: 19
+2026-06-24 17:10:57 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 1832 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-24 17:10:57 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-24 17:10:57 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-24 17:11:05 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-24 17:11:06 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.648 seconds (process running for 10.615)
+2026-06-24 17:11:06 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-24 17:11:06 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-24 17:11:06 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-24 17:11:23 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:11:23 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@74b2d819
+2026-06-24 17:11:23 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:11:23 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:11:23 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:11:23 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@5ce80615
+2026-06-24 17:11:23 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:11:23 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:11:25 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:11:25 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@1df81eb1
+2026-06-24 17:11:25 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:11:25 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:11:25 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:11:25 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@498f187
+2026-06-24 17:11:25 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:11:25 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:11:25 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 0, Size: 5
+2026-06-24 17:11:30 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:11:30 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@1450f47
+2026-06-24 17:11:30 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:11:30 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:11:30 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:11:30 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@25e6bee4
+2026-06-24 17:11:30 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:11:30 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:11:30 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 1, Size: 5
+2026-06-24 17:11:32 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:11:32 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@580203f3
+2026-06-24 17:11:32 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:11:32 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:11:32 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:11:32 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@2b752806
+2026-06-24 17:11:32 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:11:32 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:11:32 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 2, Size: 5
+2026-06-24 17:11:34 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:11:34 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@17a92696
+2026-06-24 17:11:34 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:11:34 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:11:34 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:11:34 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@6a0a6910
+2026-06-24 17:11:34 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:11:34 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:11:34 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 3, Size: 5
+2026-06-24 17:11:36 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:11:36 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@7583daa5
+2026-06-24 17:11:36 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:11:36 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:11:36 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:11:36 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@6c2da6f1
+2026-06-24 17:11:36 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:11:36 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:11:36 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 4, Size: 5
+2026-06-24 17:11:40 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:11:40 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@4b12a474
+2026-06-24 17:11:40 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:11:40 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:11:40 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:11:40 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@6f577b52
+2026-06-24 17:11:40 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:11:40 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:11:40 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 5, Size: 5
+2026-06-24 17:11:48 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:11:48 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@7f6c7a0a
+2026-06-24 17:11:48 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:11:48 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:11:48 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:11:48 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@21756d2
+2026-06-24 17:11:48 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:11:48 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:11:48 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 0, Size: 5
+2026-06-24 17:11:49 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:11:49 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@45fb81f4
+2026-06-24 17:11:49 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:11:49 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:11:49 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:11:49 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@7b0d0321
+2026-06-24 17:11:49 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:11:49 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:11:49 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 1, Size: 5
+2026-06-24 17:11:51 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:11:51 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@761eb262
+2026-06-24 17:11:51 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:11:51 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:11:51 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:11:51 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@6ed6797a
+2026-06-24 17:11:51 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:11:51 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:11:51 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 2, Size: 5
+2026-06-24 17:11:52 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:11:52 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@59ff7ae0
+2026-06-24 17:11:52 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:11:52 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:11:52 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:11:52 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@463d463c
+2026-06-24 17:11:52 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:11:52 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:11:52 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 3, Size: 5
+2026-06-24 17:11:55 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:11:55 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@21b38ca9
+2026-06-24 17:11:55 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:11:55 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:11:55 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:11:55 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@777359ec
+2026-06-24 17:11:55 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:11:55 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:11:55 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 4, Size: 5
+2026-06-24 17:12:04 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:12:04 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@397629f7
+2026-06-24 17:12:04 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:12:04 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:12:04 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Fetching refresh token: d633683a-d95f-4185-a048-3b28e8c797a7
+2026-06-24 17:12:04 DEBUG token.com.epam.travel_agency_final_project.aspect.service.GetTokenLoggingAspect - Successfully retrieved token DTO. com.epam.travel_agency_final_project.dto.RefreshTokenDTO@7d63c533
+2026-06-24 17:12:04 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Fetching security details for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-24 17:12:04 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserSecurityLoggingAspect - Security details successfully retrieved.
+2026-06-24 17:12:04 DEBUG user.com.epam.travel_agency_final_project.aspect.service.UserLoggingAspect - Fetching all users. Page: 5, Size: 5
+2026-06-24 18:06:34 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 11340 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-24 18:06:34 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-24 18:06:34 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-24 18:06:41 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-24 18:06:43 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.667 seconds (process running for 11.364)
+2026-06-24 18:06:43 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-24 18:06:43 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-24 18:06:43 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================

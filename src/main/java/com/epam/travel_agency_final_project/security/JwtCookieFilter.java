@@ -1,11 +1,7 @@
 package com.epam.travel_agency_final_project.security;
-
-
-        import com.epam.travel_agency_final_project.dto.RefreshTokenDTO;
+import com.epam.travel_agency_final_project.dto.RefreshTokenDTO;
         import com.epam.travel_agency_final_project.dto.UserSecurityDTO;
-        import com.epam.travel_agency_final_project.entity.User;
         import com.epam.travel_agency_final_project.mapper.UserSecurityMapper;
-
         import com.epam.travel_agency_final_project.service.RefreshTokenService;
         import com.epam.travel_agency_final_project.service.UserService;
         import jakarta.servlet.FilterChain;
@@ -21,7 +17,6 @@ package com.epam.travel_agency_final_project.security;
 
         import java.io.IOException;
         import java.util.List;
-        import java.util.UUID;
         import java.util.Arrays;
 @Component
 public class JwtCookieFilter extends OncePerRequestFilter {

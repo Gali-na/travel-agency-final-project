@@ -12,12 +12,11 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 @Service
 public class CityService {
-    private  final CityMapper cityMapper;
+    private final CityMapper cityMapper;
     private final CityRepository cityRepository;
- public   List< CityDTO> findAll(){
-      return cityRepository.findAll().stream()
-               .map(cityMapper::toDTO)
-               .collect(Collectors.toList());
+    public List<CityDTO> findAll() {
+        return cityRepository.findAll().stream()
+                .map(cityMapper::toDTO)
+                .collect(Collectors.toList());
     }
-
 }

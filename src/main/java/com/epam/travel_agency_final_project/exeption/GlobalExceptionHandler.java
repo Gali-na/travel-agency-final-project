@@ -33,6 +33,12 @@ public class GlobalExceptionHandler {
         // Перенаправляємо користувача на логін, якщо немає куки
         return "redirect:/login?error=session_expired";
     }
+    @ExceptionHandler(CityNotFoundException.class)
+    public String handleAuthException(CityNotFoundException ex) {
+        return "redirect:/login?error=session_expired";
+    }
+
+
 
     @ExceptionHandler(TourNotFoundException.class)
     public String handleTourNotFound(TourNotFoundException ex) {

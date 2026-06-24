@@ -2,7 +2,6 @@ package com.epam.travel_agency_final_project.controller;
 
 import com.epam.travel_agency_final_project.dto.UserRegistrationDTO;
 import com.epam.travel_agency_final_project.dto.UserSecurityDTO;
-import com.epam.travel_agency_final_project.entity.User;
 import com.epam.travel_agency_final_project.mapper.UserSecurityMapper;
 import com.epam.travel_agency_final_project.security.JwtProvider;
 import com.epam.travel_agency_final_project.service.RefreshTokenService;
@@ -13,7 +12,6 @@ import jakarta.validation.Valid;
 import jakarta.validation.ValidationException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.MessageSource;
-import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;

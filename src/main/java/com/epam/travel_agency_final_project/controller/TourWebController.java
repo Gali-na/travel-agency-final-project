@@ -1,13 +1,13 @@
 package com.epam.travel_agency_final_project.controller;
 import com.epam.travel_agency_final_project.model.Cart;
 import com.epam.travel_agency_final_project.model.TourFilter;
+import com.epam.travel_agency_final_project.service.TourService;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.data.domain.Page;
 import org.springframework.ui.Model;
 import com.epam.travel_agency_final_project.dto.TourFullDTO;
-import com.epam.travel_agency_final_project.service.TourService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
