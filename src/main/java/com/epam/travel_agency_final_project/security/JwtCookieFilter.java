@@ -1,7 +1,10 @@
 package com.epam.travel_agency_final_project.security;
+
+import com.epam.travel_agency_final_project.aspect.controller.logging.AdminTourControllerCreateTourLogging;
 import com.epam.travel_agency_final_project.dto.RefreshTokenDTO;
 import com.epam.travel_agency_final_project.dto.UserSecurityDTO;
 import com.epam.travel_agency_final_project.mapper.UserSecurityMapper;
+import com.epam.travel_agency_final_project.service.CookieService;
 import com.epam.travel_agency_final_project.service.RefreshTokenService;
 import com.epam.travel_agency_final_project.service.UserService;
 import jakarta.servlet.FilterChain;
@@ -10,6 +13,8 @@ import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -28,6 +33,9 @@ public class JwtCookieFilter extends OncePerRequestFilter {
     private final RefreshTokenService refreshTokenService;
     private final UserService userService;
     private final UserSecurityMapper userSecurityMapper;
+    private final CookieService cookieService;
+    private static final Logger logger = LogManager.getLogger(JwtCookieFilter.class);
+
     protected boolean shouldNotFilter(HttpServletRequest request) {
         String path = request.getRequestURI();
         return path.equals("/")
@@ -41,69 +49,130 @@ public class JwtCookieFilter extends OncePerRequestFilter {
                 || path.startsWith("/js/")
                 || path.startsWith("/uploads/");
     }
+//    @Override
+//    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
+//            throws ServletException, IOException {
+//
+//        String accessToken = extractCookie(request, "access_token");
+//        String refreshUUID = extractCookie(request, "refresh_token");
+//
+//        RefreshTokenDTO refreshCurrentToken=null;
+//        UserSecurityDTO userSecurityDTO=null;
+//        if (accessToken != null && jwtProvider.validateAccessToken(accessToken)&& refreshUUID != null) {
+//            refreshCurrentToken = refreshTokenService.getRefreshToken(refreshUUID);
+//            userSecurityDTO = userService.findById(refreshCurrentToken.getUserId());
+//            authenticateUserInContext(accessToken,userSecurityDTO);
+//        }
+//
+//        if (accessToken != null && jwtProvider.validateAccessToken(accessToken)&&refreshUUID != null) {
+//            refreshCurrentToken = refreshTokenService.getRefreshToken(refreshUUID);
+//            userSecurityDTO = userService.findById(refreshCurrentToken.getUserId());
+//            authenticateUserInContext(accessToken,userSecurityDTO);
+//            filterChain.doFilter(request, response);
+//            return;
+//        }
+//
+//        if (refreshUUID != null && jwtProvider.isTokenExpired(accessToken)) {
+//            refreshCurrentToken = refreshTokenService.getRefreshToken(refreshUUID);
+//
+//            if (refreshCurrentToken != null) {
+//                userSecurityDTO = userService.findById(refreshCurrentToken.getUserId());
+//                if (userSecurityDTO == null) {
+//                    response.sendRedirect("/register");
+//                    return;
+//                }
+//                if (userSecurityDTO.isLocked()) {
+//                    response.sendRedirect("/blok");
+//                    return;
+//                }
+//                String rotatedToken = refreshTokenService.rotateRefreshToken(refreshUUID);
+//
+//                if (rotatedToken != null) {
+//                    String newAccessToken = jwtProvider.generateAccessToken(userSecurityDTO);
+//                    cookieService.updateAuthCookies(response, newAccessToken, rotatedToken);
+//                    authenticateUserInContext(newAccessToken, userSecurityDTO);
+//                    filterChain.doFilter(request, response);
+//                    return;
+//                }
+//            }
+//        }
+//        filterChain.doFilter(request, response);
+//    }
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
 
-
         String accessToken = extractCookie(request, "access_token");
         String refreshUUID = extractCookie(request, "refresh_token");
 
-        RefreshTokenDTO refreshCurrentToken=null;
-        UserSecurityDTO userSecurityDTO=null;
-        if (accessToken != null && jwtProvider.validateAccessToken(accessToken)&& refreshUUID != null) {
-            refreshCurrentToken = refreshTokenService.getRefreshToken(refreshUUID);
-            userSecurityDTO = userService.findById(refreshCurrentToken.getUserId());
-            authenticateUserInContext(accessToken,userSecurityDTO);
-
-        }
-
-        if (accessToken != null && jwtProvider.validateAccessToken(accessToken)&&refreshUUID != null) {
-            refreshCurrentToken = refreshTokenService.getRefreshToken(refreshUUID);
-            userSecurityDTO = userService.findById(refreshCurrentToken.getUserId());
-            authenticateUserInContext(accessToken,userSecurityDTO);
+        if (isAccessTokenValid(accessToken, refreshUUID)) {
             filterChain.doFilter(request, response);
+            logger.info(" access and aefresh token  are valid");
             return;
         }
 
         if (refreshUUID != null && jwtProvider.isTokenExpired(accessToken)) {
-            refreshCurrentToken = refreshTokenService.getRefreshToken(refreshUUID);
-
-            if (refreshCurrentToken != null) {
-                userSecurityDTO = userService.findById(refreshCurrentToken.getUserId());
-                if (userSecurityDTO == null) {
-                    response.sendRedirect("/register");
-                    return;
-                }
-                if (userSecurityDTO.isLocked()) {
-                    response.sendRedirect("/blok");
-                    return;
-                }
-                String rotatedToken = refreshTokenService.rotateRefreshToken(refreshUUID);
-
-                if (rotatedToken != null) {
-                    String newAccessToken = jwtProvider.generateAccessToken(userSecurityDTO);
-                    updateAuthCookies(response, newAccessToken, rotatedToken);
-                    authenticateUserInContext(newAccessToken, userSecurityDTO);
-                    filterChain.doFilter(request, response);
-                    return;
-                }
+            if (handleTokenRefresh(refreshUUID, response)) {
+                filterChain.doFilter(request, response);
+                return;
             }
         }
+
         filterChain.doFilter(request, response);
     }
+
+    private boolean isAccessTokenValid(String accessToken, String refreshUUID) {
+        if (accessToken != null && jwtProvider.validateAccessToken(accessToken) && refreshUUID != null) {
+            RefreshTokenDTO token = refreshTokenService.getRefreshToken(refreshUUID);
+            UserSecurityDTO user = (token != null) ? userService.findById(token.getUserId()) : null;
+            if (user != null) {
+                authenticateUserInContext(accessToken, user);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean handleTokenRefresh(String refreshUUID, HttpServletResponse response) throws IOException {
+        RefreshTokenDTO refreshToken = refreshTokenService.getRefreshToken(refreshUUID);
+        if (refreshToken == null) {
+            logger.warn("Refresh token not found in database for UUID: {}", refreshUUID);
+            return false;
+        }
+
+        UserSecurityDTO user = userService.findById(refreshToken.getUserId());
+        if (user == null) {
+            response.sendRedirect("/register");
+            logger.error("User not found for ID: from token {}", refreshToken.getUserId());
+            return true;
+        }
+        if (user.isLocked()) {
+            logger.error("User is blok  userId{}", user.getId());
+            response.sendRedirect("/blok");
+            return true;
+        }
+        String rotatedToken = refreshTokenService.rotateRefreshToken(refreshUUID);
+        if (rotatedToken != null) {
+            String newAccessToken = jwtProvider.generateAccessToken(user);
+            cookieService.updateAuthCookies(response, newAccessToken, rotatedToken);
+            authenticateUserInContext(newAccessToken, user);
+            logger.error("User '{}' successfully authenticated  Access Toke", user.getId());
+            return true;
+        }
+        return false;
+    }
+
     private void authenticateUserInContext(String token, UserSecurityDTO userDTO) {
         String login = jwtProvider.getLoginFromToken(token);
         List<String> roles = userDTO.getRoles();
-
         var authorities = roles.stream()
                 .map(role -> new SimpleGrantedAuthority(role.startsWith("ROLE_") ? role : "ROLE_" + role))
                 .toList();
 
         SecurityContextHolder.getContext().setAuthentication(
-                new UsernamePasswordAuthenticationToken(login, null, authorities)
-        );
+                new UsernamePasswordAuthenticationToken(login, null, authorities));
+        logger.error("User '{}' successfully authenticated  in   SecurityContex", userDTO.getId());
     }
 
     private String extractCookie(HttpServletRequest request, String name) {
@@ -113,19 +182,5 @@ public class JwtCookieFilter extends OncePerRequestFilter {
                 .map(Cookie::getValue)
                 .findFirst()
                 .orElse(null);
-    }
-
-    private void updateAuthCookies(HttpServletResponse response, String accessToken, String refreshUUID) {
-        Cookie accessCookie = new Cookie("access_token", accessToken);
-        accessCookie.setHttpOnly(true);
-        accessCookie.setPath("/");
-        accessCookie.setMaxAge(15 * 60);
-        response.addCookie(accessCookie);
-
-        Cookie refreshCookie = new Cookie("refresh_token", refreshUUID);
-        refreshCookie.setHttpOnly(true);
-        refreshCookie.setPath("/");
-        refreshCookie.setMaxAge(30 * 24 * 60 * 60);
-        response.addCookie(refreshCookie);
     }
 }

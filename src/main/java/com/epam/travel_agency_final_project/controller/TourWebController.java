@@ -34,9 +34,6 @@ public class TourWebController {
         int pageSize = 2;
         TourFilter tourFilter = new TourFilter(isHot, tourType, hotelType);
         Page<TourFullDTO> toursPage = tourService.getTours(lang, tourFilter, page, pageSize);
-        System.out.println("*******************************");
-        System.out.println(page);
-        System.out.println("*******************************");
         model.addAttribute("tours", toursPage.getContent());
         model.addAttribute("currentPage", page);
         model.addAttribute("totalPages", toursPage.getTotalPages());

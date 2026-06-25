@@ -959,3 +959,383 @@
 2026-06-25 23:48:46 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
 2026-06-25 23:48:46 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
 2026-06-25 23:51:53 INFO  com.epam.travel_agency_final_project.aspect.service.loggin.authentication.UserAuthenticationServiceLogging - User successfully authenticated. User ID: 41acc2b9-3e30-41d2-9e8f-6a43fec73334
+2026-06-26 00:12:48 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 12856 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-26 00:12:48 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-26 00:12:48 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-26 00:12:55 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-26 00:12:57 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.718 seconds (process running for 10.77)
+2026-06-26 00:12:57 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-26 00:12:57 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-26 00:12:57 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-26 00:12:59 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 41acc2b9-3e30-41d2-9e8f-6a43fec73334
+2026-06-26 00:12:59 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 00:14:01 INFO  com.epam.travel_agency_final_project.aspect.service.loggin.authentication.UserAuthenticationServiceLogging - User successfully authenticated. User ID: 41acc2b9-3e30-41d2-9e8f-6a43fec73334
+2026-06-26 00:56:47 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 10360 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-26 00:56:47 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-26 00:56:47 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-26 00:56:58 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-26 00:57:00 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 13.43 seconds (process running for 15.2)
+2026-06-26 00:57:00 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-26 00:57:00 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-26 00:57:00 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-26 00:57:28 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 41acc2b9-3e30-41d2-9e8f-6a43fec73334
+2026-06-26 00:57:28 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 41acc2b9-3e30-41d2-9e8f-6a43fec73334
+2026-06-26 00:57:28 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 41acc2b9-3e30-41d2-9e8f-6a43fec73334
+2026-06-26 00:57:28 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 00:57:28 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 00:57:28 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 00:57:29 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:57:29 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  Access Toke
+2026-06-26 00:57:34 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:57:34 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:57:34 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:57:34 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:57:34 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:57:34 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:57:36 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:57:36 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:57:36 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:57:36 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:57:36 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:57:36 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:57:39 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:57:39 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:57:39 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:57:39 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:57:39 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:57:39 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:57:44 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:57:44 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:57:44 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:57:44 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:57:44 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:57:44 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:01 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:01 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:01 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:01 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:01 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:01 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:03 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:03 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:03 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:03 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:05 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:05 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:05 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:05 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:05 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:05 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:10 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:10 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:10 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:10 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:11 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:11 INFO  com.epam.travel_agency_final_project.aspect.service.loggin.authentication.UserAuthenticationServiceLogging - User successfully authenticated. User ID: 41acc2b9-3e30-41d2-9e8f-6a43fec73334
+2026-06-26 00:58:11 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:11 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:11 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:12 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:12 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:12 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:12 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:14 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:15 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:15 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:15 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:15 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:15 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:25 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:25 INFO  com.epam.travel_agency_final_project.aspect.controller.logging.AdminTourControllerShowCreateTourFormLogging - Method showCreateTourForm was invoked.
+2026-06-26 00:58:25 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:25 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:25 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:26 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:26 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:26 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:26 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:36 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:37 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:37 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:37 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:37 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:37 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:54 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:54 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:54 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:54 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:54 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:54 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:54 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:54 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:56 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:56 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:58:56 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:58:56 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:59:00 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:59:00 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:59:00 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:59:00 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:59:06 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:59:06 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:59:06 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:59:06 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:59:11 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:59:11 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:59:11 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:59:11 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:59:13 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:59:13 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:59:13 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:59:13 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:59:15 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:59:15 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:59:16 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:59:16 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:59:17 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:59:17 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:59:17 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:59:17 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:59:19 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:59:19 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 00:59:19 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 00:59:19 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:00:27 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 01:00:27 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '41acc2b9-3e30-41d2-9e8f-6a43fec73334' successfully authenticated  in   SecurityContex
+2026-06-26 01:00:27 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:00:27 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:01:23 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:01:23 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:01:29 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:01:29 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:01:34 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:01:34 INFO  com.epam.travel_agency_final_project.aspect.controller.logging.AdminTourControllerShowCreateTourFormLogging - Method showCreateTourForm was invoked.
+2026-06-26 01:01:34 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:01:36 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:01:36 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:01:37 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:01:37 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:01:43 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:01:43 INFO  com.epam.travel_agency_final_project.aspect.controller.logging.AdminTourControllerShowCreateTourFormLogging - Method showCreateTourForm was invoked.
+2026-06-26 01:01:43 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:01:48 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:01:48 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:01:48 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:01:49 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:01:49 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:01:49 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:01:49 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:01:49 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:01:53 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:01:53 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:02:04 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:02:04 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:02:04 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:02:04 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:02:07 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:02:07 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:27:53 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 5112 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-26 01:27:53 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-26 01:27:53 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-26 01:28:04 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-26 01:28:06 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 13.371 seconds (process running for 15.061)
+2026-06-26 01:28:06 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-26 01:28:06 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-26 01:28:06 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-26 01:28:18 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 01:28:18 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 01:28:18 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:28:18 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  Access Toke
+2026-06-26 01:28:20 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:28:20 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:28:31 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:28:31 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:28:31 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:28:31 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:29:16 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:29:16 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:29:16 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:29:16 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:29:16 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:29:16 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:29:18 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:29:18 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:29:19 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:29:19 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:29:19 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:29:19 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:29:21 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:29:21 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:29:21 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:29:21 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:29:21 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:29:21 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:29:25 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:29:25 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:29:25 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:29:25 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:29:29 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:29:29 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:29:29 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:29:29 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:29:29 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:29:29 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:29:32 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:29:32 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:29:32 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:29:32 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:29:34 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:29:34 INFO  com.epam.travel_agency_final_project.aspect.service.loggin.authentication.UserAuthenticationServiceLogging - User successfully authenticated. User ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 01:29:34 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:29:34 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:29:34 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:29:35 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:29:35 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:29:35 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:29:35 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:29:37 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:29:37 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:29:37 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:29:37 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:29:37 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:29:37 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:30:10 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:30:10 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:30:10 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:30:10 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:30:16 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:30:16 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:30:16 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:30:16 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:30:21 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:30:21 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:30:21 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:30:21 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:30:24 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:30:24 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:30:25 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:30:25 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:33:50 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 12592 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-26 01:33:50 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-26 01:33:50 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-26 01:34:01 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-26 01:34:03 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 14.084 seconds (process running for 15.59)
+2026-06-26 01:34:03 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-26 01:34:03 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-26 01:34:03 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-26 01:34:17 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:34:17 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:34:17 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:34:17 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:34:17 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:34:17 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:34:19 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:34:19 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:34:19 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:34:19 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:34:20 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:34:20 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:34:30 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:34:30 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.FindByEmailExactLogging - Searching user by exact email: dgdafgad. Page: 0
+2026-06-26 01:34:30 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.FindByEmailExactLogging - Search by email returned 0 results.
+2026-06-26 01:34:30 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:34:30 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:34:30 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:34:30 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:34:30 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:34:36 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:34:36 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:34:37 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:34:37 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:34:37 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:34:37 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:34:39 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:34:39 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:34:39 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:34:39 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:34:40 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:34:40 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:34:54 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:34:54 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:34:54 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:34:54 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:34:55 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:34:55 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:34:57 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:34:57 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:34:57 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:34:57 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:34:58 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:34:58 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:34:59 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:34:59 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:34:59 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:34:59 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:34:59 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:34:59 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:35:00 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:35:00 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:35:01 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:35:01 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:35:01 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:35:01 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:35:32 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:35:32 INFO  com.epam.travel_agency_final_project.aspect.service.loggin.user.LockUserLogging - Attempting to lock user with ID: 33f2661a-bbdf-4da2-a2c4-e3df376d2d0b
+2026-06-26 01:35:32 INFO  com.epam.travel_agency_final_project.aspect.service.loggin.user.LockUserLogging - User locked successfully.
+2026-06-26 01:35:32 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:35:32 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:35:32 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:35:32 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:35:32 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:35:33 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:35:33 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:35:43 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:35:43 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.FindByEmailExactLogging - Searching user by exact email: user1@gmail. Page: 0
+2026-06-26 01:35:43 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.FindByEmailExactLogging - Search by email returned 1 results.
+2026-06-26 01:35:43 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:35:43 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:35:43 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:35:43 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:35:43 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:35:50 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:35:50 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:35:50 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:35:50 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:35:50 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:35:50 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:35:51 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:35:51 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:35:52 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:35:52 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:35:52 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:35:52 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:35:56 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:35:56 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:35:56 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:35:56 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:35:56 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:35:56 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:36:01 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:36:01 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:36:06 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:36:06 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:36:18 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:36:18 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:36:18 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:36:18 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:36:19 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:36:19 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:36:21 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:36:21 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:36:21 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:36:21 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:36:21 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:36:21 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:36:26 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:36:26 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:37:10 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:37:10 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:37:10 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 01:37:10 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:37:10 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 01:37:10 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid

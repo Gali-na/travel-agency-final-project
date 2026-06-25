@@ -18,7 +18,6 @@ import java.util.UUID;
 
 @Component
 public class JwtProvider {
-
     @Value("${jwt.secret}")
     private String secret;
     private SecretKey key;
@@ -103,5 +102,4 @@ public class JwtProvider {
         }
         return null;
     }
-
 }

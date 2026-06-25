@@ -46,11 +46,13 @@ public class RefreshTokenService {
 
     @Transactional
     public String rotateRefreshToken(String oldToken) {
+        if (oldToken==null){
+            return null;
+        }
         RefreshToken refreshToken = refreshTokenRepository.findByToken(oldToken)
                 .orElse(null);
 
         if (refreshToken == null || refreshToken.getExpiryDate().isBefore(LocalDateTime.now())) {
-            if (refreshToken != null) refreshTokenRepository.delete(refreshToken);
             return null;
         }
 
