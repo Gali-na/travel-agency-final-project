@@ -6,7 +6,6 @@ import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 import java.math.BigDecimal;
 import java.util.UUID;
-//
 @Aspect
 @Component
 public class IncreaseBalanceLogging {

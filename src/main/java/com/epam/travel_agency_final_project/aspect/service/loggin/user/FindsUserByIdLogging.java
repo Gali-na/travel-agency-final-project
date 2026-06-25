@@ -6,11 +6,10 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 import java.util.UUID;
-//
 @Aspect
 @Component
-public class FindByIdLogging {
-    private static final Logger logger = LogManager.getLogger(FindByIdLogging.class);
+public class FindsUserByIdLogging {
+    private static final Logger logger = LogManager.getLogger(FindsUserByIdLogging.class);
     @Pointcut("execution( com.epam.travel_agency_final_project.service.*.findById(java.util.UUID))")
     public void findByIdMethods() {
     }

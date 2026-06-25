@@ -9,5 +9,5 @@ import java.util.UUID;
 @Setter
 public class CityDTO {
     private UUID id;
-    private String name; // Сюди ми мапитимемо перекладену назву
+    private String name;
 }

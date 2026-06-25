@@ -14,29 +14,21 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TourTranslation {
-
     @EmbeddedId
     private TranslationId id;
-
     private String title;
-
     @Column(columnDefinition = "TEXT")
     private String description;
-
     @Column(name = "tour_type")
     private String tourType;
-
     @Column(name = "transfer_type")
     private String transferType;
-
     @Column(name = "hotel_type")
     private String hotelType;
-
     @ManyToOne
     @MapsId("toursId")
     @JoinColumn(name = "tours_id")
     private Tour tour;
-
     @Embeddable
     @Getter
     @Setter

@@ -460,3 +460,502 @@
 2026-06-24 18:06:43 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
 2026-06-24 18:06:43 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
 2026-06-24 18:06:43 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 08:52:20 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 4060 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 08:52:20 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 08:52:20 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-25 09:00:53 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 18996 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 09:00:53 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 09:00:53 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-25 09:01:00 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 09:01:01 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.097 seconds (process running for 10.096)
+2026-06-25 09:01:01 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 09:01:01 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 09:01:01 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 09:01:13 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-25 09:01:13 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-25 09:01:58 INFO  com.epam.travel_agency_final_project.aspect.controller.logging.AdminTourControllerShowCreateTourFormLogging - Method showCreateTourForm was invoked.
+2026-06-25 15:28:36 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 15304 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 15:28:36 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 15:28:36 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "test"
+2026-06-25 15:28:43 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 15:32:02 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 14936 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 15:32:02 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 15:32:02 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "test"
+2026-06-25 15:32:09 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 15:32:11 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 8.791 seconds (process running for 9.753)
+2026-06-25 15:32:11 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 15:32:11 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 15:32:11 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 15:36:30 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 9328 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 15:36:30 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 15:36:30 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "test"
+2026-06-25 15:36:37 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 15:36:38 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 10.596 seconds (process running for 11.576)
+2026-06-25 15:36:38 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 15:36:38 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 15:36:38 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 15:38:23 INFO  com.epam.travel_agency_final_project.aspect.service.loggin.user.RegisterNewUserLogging - Starting registration for user: user2@gmail
+2026-06-25 15:38:24 INFO  com.epam.travel_agency_final_project.aspect.service.loggin.user.RegisterNewUserLogging - User registered successfully. Assigned ID: 750423f3-36c5-475f-a244-dc54ec8a79cc
+2026-06-25 16:00:01 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 5144 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 16:00:01 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 16:00:01 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "test"
+2026-06-25 16:00:08 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 16:00:10 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.247 seconds (process running for 10.291)
+2026-06-25 16:00:10 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 16:00:10 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 16:00:10 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 16:00:27 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 18076 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 16:00:27 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 16:00:27 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "test"
+2026-06-25 16:00:34 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 16:00:36 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.045 seconds (process running for 10.131)
+2026-06-25 16:00:36 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 16:00:36 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 16:00:36 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 16:03:45 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 17904 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 16:03:45 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 16:03:45 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "test"
+2026-06-25 16:03:53 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 16:03:55 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 11.629 seconds (process running for 12.622)
+2026-06-25 16:03:55 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 16:03:55 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 16:03:55 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 16:09:04 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 17916 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 16:09:04 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 16:09:04 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "test"
+2026-06-25 16:09:11 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 16:09:13 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.214 seconds (process running for 10.38)
+2026-06-25 16:09:13 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 16:09:13 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 16:09:13 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 16:12:42 INFO  com.epam.travel_agency_final_project.aspect.service.loggin.user.RegisterNewUserLogging - Starting registration for user: user2@gmail
+2026-06-25 16:12:42 INFO  com.epam.travel_agency_final_project.aspect.service.loggin.user.RegisterNewUserLogging - User registered successfully. Assigned ID: db289896-0da5-4f12-8405-96bd060a65b6
+2026-06-25 16:19:27 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 3060 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 16:19:27 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 16:19:27 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "test"
+2026-06-25 16:19:35 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 16:19:37 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 10.043 seconds (process running for 11.371)
+2026-06-25 16:19:37 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 16:19:37 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 16:19:37 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 16:35:52 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 11892 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 16:35:52 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 16:35:52 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "test"
+2026-06-25 16:36:00 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 16:36:01 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.144 seconds (process running for 10.191)
+2026-06-25 16:36:01 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 16:36:01 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 16:36:01 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 16:37:24 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 18896 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 16:37:24 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 16:37:24 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "test"
+2026-06-25 16:37:31 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 16:37:32 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.033 seconds (process running for 10.055)
+2026-06-25 16:37:32 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 16:37:32 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 16:37:32 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 16:38:14 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 14964 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 16:38:14 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 16:38:14 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "test"
+2026-06-25 16:38:21 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 16:38:22 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.04 seconds (process running for 10.016)
+2026-06-25 16:38:22 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 16:38:22 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 16:38:22 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 16:38:40 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 15312 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 16:38:40 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 16:38:40 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "test"
+2026-06-25 16:38:48 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 16:38:49 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.274 seconds (process running for 12.393)
+2026-06-25 16:38:49 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 16:38:49 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 16:38:49 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 16:38:55 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 5216 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 16:38:55 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 16:38:55 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "test"
+2026-06-25 16:39:03 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 16:39:04 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.475 seconds (process running for 10.51)
+2026-06-25 16:39:04 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 16:39:04 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 16:39:04 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 16:41:37 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 7120 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 16:41:37 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 16:41:37 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "test"
+2026-06-25 16:41:45 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 16:41:46 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.416 seconds (process running for 10.496)
+2026-06-25 16:41:46 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 7120 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 16:41:46 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 16:41:46 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 2 profiles are active: "prod", "test"
+2026-06-25 16:43:33 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 16440 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 16:43:33 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 16:43:33 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 2 profiles are active: "prod", "test"
+2026-06-25 16:43:40 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 16:43:41 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.102 seconds (process running for 10.098)
+2026-06-25 16:43:41 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 16:43:41 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 16:43:41 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 16:47:02 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 1752 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 16:47:02 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 16:47:02 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "test"
+2026-06-25 16:47:09 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 16:47:10 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.011 seconds (process running for 9.986)
+2026-06-25 16:47:10 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 16:47:10 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 16:47:10 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 16:54:49 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 3040 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 16:54:49 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 16:54:49 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "test"
+2026-06-25 16:54:56 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 16:54:58 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.318 seconds (process running for 10.475)
+2026-06-25 16:54:58 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 16:54:58 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 16:54:58 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 17:02:59 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 11320 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 17:02:59 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 17:02:59 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "test"
+2026-06-25 17:03:08 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 17:03:10 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 11.689 seconds (process running for 12.902)
+2026-06-25 17:03:10 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 17:03:10 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 17:03:10 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 17:09:25 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 12184 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 17:09:25 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 17:09:25 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-25 17:09:33 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 17:09:34 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.168 seconds (process running for 10.175)
+2026-06-25 17:09:34 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 17:09:34 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 17:09:34 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 17:16:17 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 14256 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 17:16:17 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 17:16:17 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-25 17:16:24 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 17:16:25 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 8.974 seconds (process running for 10.027)
+2026-06-25 17:16:25 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 17:16:25 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 17:16:25 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 17:17:14 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 17268 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 17:17:14 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 17:17:14 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-25 17:17:21 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 17:17:22 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.168 seconds (process running for 10.207)
+2026-06-25 17:17:22 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 17:17:22 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 17:17:22 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 17:23:10 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 9804 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 17:23:10 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 17:23:10 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-25 17:23:18 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 17:23:20 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.838 seconds (process running for 10.971)
+2026-06-25 17:23:20 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 17:23:20 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 17:23:20 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 17:24:19 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 5096 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 17:24:19 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 17:24:19 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-25 17:24:26 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 17:24:28 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.505 seconds (process running for 10.566)
+2026-06-25 17:24:28 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 17:24:28 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 17:24:28 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 17:27:24 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 12800 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 17:27:24 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 17:27:24 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-25 17:27:31 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 17:27:33 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 8.76 seconds (process running for 9.809)
+2026-06-25 17:27:33 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 17:27:33 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 17:27:33 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 17:28:23 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 11872 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 17:28:23 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 17:28:23 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-25 17:28:31 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 17:28:32 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.57 seconds (process running for 10.579)
+2026-06-25 17:28:32 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 17:28:32 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 17:28:32 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 17:33:18 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 10168 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 17:33:18 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 17:33:18 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-25 17:33:25 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 17:33:26 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 8.886 seconds (process running for 9.911)
+2026-06-25 17:33:26 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 17:33:26 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 17:33:26 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 17:35:00 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 16172 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 17:35:00 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 17:35:00 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-25 17:35:08 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 17:35:09 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 8.818 seconds (process running for 9.825)
+2026-06-25 17:35:09 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 17:35:09 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 17:35:09 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 17:37:47 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 14080 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 17:37:48 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 17:37:48 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-25 17:37:54 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 17:37:55 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 8.365 seconds (process running for 9.363)
+2026-06-25 17:37:55 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 17:37:55 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 17:37:55 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 17:41:37 INFO  com.epam.travel_agency_final_project.aspect.controller.logging.AdminTourControllerShowCreateTourFormLogging - Method showCreateTourForm was invoked.
+2026-06-25 17:42:09 INFO  com.epam.travel_agency_final_project.aspect.controller.logging.AdminTourControllerShowCreateTourFormLogging - Method showCreateTourForm was invoked.
+2026-06-25 17:42:10 INFO  com.epam.travel_agency_final_project.aspect.controller.logging.AdminTourControllerShowCreateTourFormLogging - Method showCreateTourForm was invoked.
+2026-06-25 17:44:36 INFO  com.epam.travel_agency_final_project.aspect.service.loggin.authentication.UserAuthenticationServiceLogging - User successfully authenticated. User ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-25 17:44:58 INFO  com.epam.travel_agency_final_project.aspect.service.loggin.authentication.UserAuthenticationServiceLogging - User successfully authenticated. User ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-25 18:27:03 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 4800 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 18:27:03 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 18:27:03 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-25 18:27:10 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 18:27:11 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 8.45 seconds (process running for 9.488)
+2026-06-25 18:27:11 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 18:27:11 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 18:27:11 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 18:31:08 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 8624 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 18:31:08 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 18:31:08 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-25 18:31:15 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 18:31:16 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 8.584 seconds (process running for 9.533)
+2026-06-25 18:31:16 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 18:31:16 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 18:31:16 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 18:31:28 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 18:31:28 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-25 18:31:28 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-25 18:31:31 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /favicon.ico
+2026-06-25 18:31:31 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to UserSecurityDTO(id=3ae70cf0-dbe9-4390-b012-1329c8ed15b3, login=admin@gmail, roles=[ROLE_ADMIN], isLocked=false, balance=224.00)
+2026-06-25 18:32:02 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /book
+2026-06-25 18:32:02 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to UserSecurityDTO(id=3ae70cf0-dbe9-4390-b012-1329c8ed15b3, login=admin@gmail, roles=[ROLE_ADMIN], isLocked=false, balance=224.00)
+2026-06-25 18:32:05 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /checkout
+2026-06-25 18:32:05 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to UserSecurityDTO(id=3ae70cf0-dbe9-4390-b012-1329c8ed15b3, login=admin@gmail, roles=[ROLE_ADMIN], isLocked=false, balance=224.00)
+2026-06-25 18:32:05 INFO  com.epam.travel_agency_final_project.aspect.service.loggin.authentication.UserAuthenticationServiceLogging - User successfully authenticated. User ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-25 18:32:05 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /checkoutInfo
+2026-06-25 18:32:05 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to UserSecurityDTO(id=3ae70cf0-dbe9-4390-b012-1329c8ed15b3, login=admin@gmail, roles=[ROLE_ADMIN], isLocked=false, balance=224.00)
+2026-06-25 18:32:12 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 18:32:12 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to UserSecurityDTO(id=3ae70cf0-dbe9-4390-b012-1329c8ed15b3, login=admin@gmail, roles=[ROLE_ADMIN], isLocked=false, balance=224.00)
+2026-06-25 18:32:14 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /profile
+2026-06-25 18:32:14 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to UserSecurityDTO(id=3ae70cf0-dbe9-4390-b012-1329c8ed15b3, login=admin@gmail, roles=[ROLE_ADMIN], isLocked=false, balance=224.00)
+2026-06-25 18:32:19 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/health.png
+2026-06-25 18:32:19 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to UserSecurityDTO(id=3ae70cf0-dbe9-4390-b012-1329c8ed15b3, login=admin@gmail, roles=[ROLE_ADMIN], isLocked=false, balance=224.00)
+2026-06-25 18:32:24 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/culture.png
+2026-06-25 18:32:24 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to UserSecurityDTO(id=3ae70cf0-dbe9-4390-b012-1329c8ed15b3, login=admin@gmail, roles=[ROLE_ADMIN], isLocked=false, balance=224.00)
+2026-06-25 18:32:26 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /.well-known/appspecific/com.chrome.devtools.json
+2026-06-25 18:32:26 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to UserSecurityDTO(id=3ae70cf0-dbe9-4390-b012-1329c8ed15b3, login=admin@gmail, roles=[ROLE_ADMIN], isLocked=false, balance=224.00)
+2026-06-25 18:32:27 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /browser-polyfill.js.map
+2026-06-25 18:32:27 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to UserSecurityDTO(id=3ae70cf0-dbe9-4390-b012-1329c8ed15b3, login=admin@gmail, roles=[ROLE_ADMIN], isLocked=false, balance=224.00)
+2026-06-25 18:32:34 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /profile
+2026-06-25 18:32:34 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to UserSecurityDTO(id=3ae70cf0-dbe9-4390-b012-1329c8ed15b3, login=admin@gmail, roles=[ROLE_ADMIN], isLocked=false, balance=224.00)
+2026-06-25 18:32:41 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /profile/top-up
+2026-06-25 18:32:41 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to UserSecurityDTO(id=3ae70cf0-dbe9-4390-b012-1329c8ed15b3, login=admin@gmail, roles=[ROLE_ADMIN], isLocked=false, balance=224.00)
+2026-06-25 18:32:41 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /profile
+2026-06-25 18:32:41 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to UserSecurityDTO(id=3ae70cf0-dbe9-4390-b012-1329c8ed15b3, login=admin@gmail, roles=[ROLE_ADMIN], isLocked=false, balance=5224.00)
+2026-06-25 18:32:50 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 18:32:50 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to UserSecurityDTO(id=3ae70cf0-dbe9-4390-b012-1329c8ed15b3, login=admin@gmail, roles=[ROLE_ADMIN], isLocked=false, balance=5224.00)
+2026-06-25 18:32:51 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /profile
+2026-06-25 18:32:51 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to UserSecurityDTO(id=3ae70cf0-dbe9-4390-b012-1329c8ed15b3, login=admin@gmail, roles=[ROLE_ADMIN], isLocked=false, balance=5224.00)
+2026-06-25 18:32:54 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 18:32:54 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to UserSecurityDTO(id=3ae70cf0-dbe9-4390-b012-1329c8ed15b3, login=admin@gmail, roles=[ROLE_ADMIN], isLocked=false, balance=5224.00)
+2026-06-25 18:32:58 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /checkout
+2026-06-25 18:32:58 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to UserSecurityDTO(id=3ae70cf0-dbe9-4390-b012-1329c8ed15b3, login=admin@gmail, roles=[ROLE_ADMIN], isLocked=false, balance=5224.00)
+2026-06-25 18:32:58 INFO  com.epam.travel_agency_final_project.aspect.service.loggin.authentication.UserAuthenticationServiceLogging - User successfully authenticated. User ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-25 18:32:58 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /checkout-success
+2026-06-25 18:32:58 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to UserSecurityDTO(id=3ae70cf0-dbe9-4390-b012-1329c8ed15b3, login=admin@gmail, roles=[ROLE_ADMIN], isLocked=false, balance=3744.00)
+2026-06-25 18:32:59 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 18:32:59 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to UserSecurityDTO(id=3ae70cf0-dbe9-4390-b012-1329c8ed15b3, login=admin@gmail, roles=[ROLE_ADMIN], isLocked=false, balance=3744.00)
+2026-06-25 19:01:07 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 14396 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 19:01:07 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 19:01:07 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-25 19:01:13 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 19:01:15 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 8.48 seconds (process running for 9.454)
+2026-06-25 19:01:15 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 19:01:15 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 19:01:15 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 19:01:29 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 19:01:33 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /profile
+2026-06-25 19:01:51 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 19:01:56 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/health.png
+2026-06-25 19:01:57 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /profile
+2026-06-25 19:02:10 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 19:02:10 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/culture.png
+2026-06-25 19:02:10 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/health.png
+2026-06-25 19:02:11 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /profile
+2026-06-25 19:02:31 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 19:02:31 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/culture.png
+2026-06-25 19:02:31 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/health.png
+2026-06-25 19:02:34 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /profile
+2026-06-25 19:03:11 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /HNAP1/
+2026-06-25 19:03:15 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /loginMsg.js
+2026-06-25 19:03:15 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /cgi/get.cgi
+2026-06-25 19:03:47 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 11480 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 19:03:47 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 19:03:47 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-25 19:03:54 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 19:03:55 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 8.793 seconds (process running for 9.796)
+2026-06-25 19:03:55 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 19:03:55 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 19:03:55 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 19:04:06 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 19:04:08 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /profile
+2026-06-25 19:04:11 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 19:04:11 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/culture.png
+2026-06-25 19:04:11 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/health.png
+2026-06-25 19:04:12 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /profile
+2026-06-25 19:04:15 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 19:04:28 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/health.png
+2026-06-25 19:04:33 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/culture.png
+2026-06-25 19:07:19 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 15624 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 19:07:20 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 19:07:20 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-25 19:07:27 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 19:07:28 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.184 seconds (process running for 10.238)
+2026-06-25 19:07:28 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 19:07:28 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 19:07:28 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 19:07:33 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 19:07:40 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 19:07:43 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /profile
+2026-06-25 19:07:45 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 19:07:54 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /profile
+2026-06-25 19:07:55 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 19:07:59 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /profile
+2026-06-25 19:08:01 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 19:08:01 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/health.png
+2026-06-25 19:08:01 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/culture.png
+2026-06-25 19:08:07 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /profile
+2026-06-25 19:08:13 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 19:08:13 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/health.png
+2026-06-25 19:08:13 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/culture.png
+2026-06-25 19:08:17 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /profile
+2026-06-25 19:08:20 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 19:08:20 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/culture.png
+2026-06-25 19:08:20 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/health.png
+2026-06-25 19:08:25 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /profile
+2026-06-25 19:08:35 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 19:08:48 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/health.png
+2026-06-25 19:08:53 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/culture.png
+2026-06-25 19:09:32 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /.well-known/appspecific/com.chrome.devtools.json
+2026-06-25 19:09:32 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /browser-polyfill.js.map
+2026-06-25 19:09:33 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /profile
+2026-06-25 19:09:33 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /.well-known/appspecific/com.chrome.devtools.json
+2026-06-25 19:09:33 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /browser-polyfill.js.map
+2026-06-25 19:09:36 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /.well-known/appspecific/com.chrome.devtools.json
+2026-06-25 19:09:36 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 19:09:36 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /browser-polyfill.js.map
+2026-06-25 19:09:43 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /profile
+2026-06-25 19:09:43 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /.well-known/appspecific/com.chrome.devtools.json
+2026-06-25 19:09:43 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /browser-polyfill.js.map
+2026-06-25 19:09:47 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /.well-known/appspecific/com.chrome.devtools.json
+2026-06-25 19:09:47 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 19:09:47 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /browser-polyfill.js.map
+2026-06-25 19:09:54 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/health.png
+2026-06-25 19:10:44 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/culture.png
+2026-06-25 19:10:47 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /profile
+2026-06-25 19:10:47 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /.well-known/appspecific/com.chrome.devtools.json
+2026-06-25 19:10:47 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /browser-polyfill.js.map
+2026-06-25 19:10:51 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /.well-known/appspecific/com.chrome.devtools.json
+2026-06-25 19:10:51 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 19:10:51 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /browser-polyfill.js.map
+2026-06-25 19:11:03 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/health.png
+2026-06-25 19:11:08 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/culture.png
+2026-06-25 19:12:08 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /profile
+2026-06-25 19:12:08 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /.well-known/appspecific/com.chrome.devtools.json
+2026-06-25 19:12:08 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /browser-polyfill.js.map
+2026-06-25 19:13:24 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 2644 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 19:13:24 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 19:13:24 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-25 19:13:30 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 19:13:32 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 8.526 seconds (process running for 9.477)
+2026-06-25 19:13:32 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 19:13:32 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 19:13:32 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 19:13:48 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 19:13:52 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /profile
+2026-06-25 19:13:54 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 19:13:56 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /profile
+2026-06-25 19:14:00 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 19:14:29 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 19:14:34 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/health.png
+2026-06-25 19:14:36 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /.well-known/appspecific/com.chrome.devtools.json
+2026-06-25 19:14:37 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /browser-polyfill.js.map
+2026-06-25 19:14:39 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/culture.png
+2026-06-25 19:14:41 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /profile
+2026-06-25 19:14:41 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /.well-known/appspecific/com.chrome.devtools.json
+2026-06-25 19:14:41 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /browser-polyfill.js.map
+2026-06-25 19:14:46 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /.well-known/appspecific/com.chrome.devtools.json
+2026-06-25 19:14:46 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/first.png
+2026-06-25 19:14:46 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /browser-polyfill.js.map
+2026-06-25 19:16:17 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Request to /images/health.png
+2026-06-25 20:01:34 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 16324 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 20:01:34 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 20:01:34 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-25 20:02:06 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 9668 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 20:02:06 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 20:02:06 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-25 20:04:26 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 6660 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 20:04:26 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 20:04:26 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-25 20:04:33 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 20:04:35 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.134 seconds (process running for 10.12)
+2026-06-25 20:04:35 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 20:04:35 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 20:04:35 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 20:10:27 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 16416 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 20:10:27 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 20:10:27 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-25 20:10:34 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 20:10:35 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 8.904 seconds (process running for 9.909)
+2026-06-25 20:10:35 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 20:10:35 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 20:10:35 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 20:19:56 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 13692 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 20:19:56 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 20:19:56 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-25 20:20:03 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 20:20:05 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 8.946 seconds (process running for 10.011)
+2026-06-25 20:20:05 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 20:20:05 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 20:20:05 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 20:30:57 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 16704 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 20:30:57 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 20:30:57 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-25 20:31:04 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 20:31:06 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 8.976 seconds (process running for 10.059)
+2026-06-25 20:31:06 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 20:31:06 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 20:31:06 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 20:35:55 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 17312 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 20:35:56 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 20:35:56 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-25 20:36:02 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 20:36:03 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 8.405 seconds (process running for 9.385)
+2026-06-25 20:36:03 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 20:36:03 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 20:36:03 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 20:43:18 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 15200 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 20:43:18 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 20:43:18 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-25 20:43:26 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 20:43:27 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.501 seconds (process running for 10.551)
+2026-06-25 20:43:27 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 20:43:27 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 20:43:27 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 20:51:41 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 13772 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 20:51:41 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 20:51:41 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-25 20:51:48 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 20:51:49 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 8.495 seconds (process running for 9.564)
+2026-06-25 20:51:49 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 20:51:49 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 20:51:49 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 20:53:28 INFO  com.epam.travel_agency_final_project.aspect.service.loggin.authentication.UserAuthenticationServiceLogging - User successfully authenticated. User ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-25 23:48:25 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-25 23:48:25 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-25 23:48:37 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 6904 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-25 23:48:37 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-25 23:48:37 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-25 23:48:45 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-25 23:48:46 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.113 seconds (process running for 10.256)
+2026-06-25 23:48:46 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 23:48:46 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-25 23:48:46 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-25 23:51:53 INFO  com.epam.travel_agency_final_project.aspect.service.loggin.authentication.UserAuthenticationServiceLogging - User successfully authenticated. User ID: 41acc2b9-3e30-41d2-9e8f-6a43fec73334

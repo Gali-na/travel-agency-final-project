@@ -53,7 +53,7 @@ public class UserService {
 
     public boolean authenticate(String email, String rawPassword) {
         return userRepository.findByEmail(email)
-                .map(user -> passwordEncoder.matches(rawPassword, user.getPasswordHash())) // Порівнюємо хеші
+                .map(user -> passwordEncoder.matches(rawPassword, user.getPasswordHash()))
                 .orElse(false);
     }
 
@@ -68,7 +68,6 @@ public class UserService {
     }
 
     public boolean isExistUser(String email) {
-
         return userRepository.findByEmail(email).isPresent();
     }
 

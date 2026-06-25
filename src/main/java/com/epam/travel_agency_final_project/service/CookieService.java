@@ -13,7 +13,7 @@ import java.util.Arrays;
 import java.util.UUID;
 
 @Service
-public class СookieServiсe {
+public class CookieService {
   public String extractCookieJWT(HttpServletRequest request, String name) {
         if (request.getCookies() == null) return null;
         return Arrays.stream(request.getCookies())
@@ -61,5 +61,44 @@ public class СookieServiсe {
                 .orElse(null);
     }
 
+   public void updateAuthCookies(HttpServletResponse response, String accessToken, String refreshUUID) {
+        Cookie refreshCookie = new Cookie("refresh_token", refreshUUID);
+        refreshCookie.setHttpOnly(true);
+        refreshCookie.setPath("/");
+        refreshCookie.setMaxAge(30 * 24 * 60 * 60);
+        response.addCookie(refreshCookie);
+
+        Cookie accessCookie = new Cookie("access_token",accessToken);
+        accessCookie.setHttpOnly(true);
+        accessCookie.setPath("/");
+        accessCookie.setMaxAge(30 * 24 * 60 * 60);
+        response.addCookie(accessCookie);
+  }
+    public Cart getCartFromCookie(HttpServletRequest request) {
+        String rawCartJson = "";
+        Cookie[] cookies = request.getCookies();
+        if (cookies != null) {
+            for (Cookie c : cookies) {
+                if ("cart".equals(c.getName())) {
+                    rawCartJson = URLDecoder.decode(c.getValue(), StandardCharsets.UTF_8);
+                    break;
+                }
+            }
+        }
+        Cart cart= Cart.fromJson(rawCartJson);
+        return cart;
+    }
+    public String parseCookieDecoder ( Cookie[] cookies){
+        String rawCartJson="";
+        if (cookies != null) {
+            for (Cookie c : cookies) {
+                if ("cart".equals(c.getName())) {
+                    rawCartJson = URLDecoder.decode(c.getValue(), StandardCharsets.UTF_8);
+                    break;
+                }
+            }
+        }
+        return rawCartJson;
+    }
 }
 

@@ -23,7 +23,7 @@ public class TourRepositoryCustomImpl implements TourRepositoryCustom {
                     "ct.name AS city_name " +
                     "FROM tours t " +
                     "JOIN tours_translations tr ON t.id = tr.tours_id " +
-                    "LEFT JOIN city_translations ct ON t.city_id = ct.city_id " + // ЗМІНЕНО ТУТ
+                    "LEFT JOIN city_translations ct ON t.city_id = ct.city_id " +
                     "AND LOWER(ct.lang) = LOWER(:lang) " +
                     "WHERE LOWER(tr.lang) = LOWER(:lang)";
     private static final String BASE_COUNT_SQL =
@@ -76,8 +76,6 @@ public class TourRepositoryCustomImpl implements TourRepositoryCustom {
             dto.setId(UUID.fromString(rs.getString("tour_id")));
             dto.setPrice(rs.getBigDecimal("price"));
             dto.setCityId(UUID.fromString(rs.getString("city_id")));
-
-            // Конвертація TIMESTAMP у LocalDateTime
             if (rs.getTimestamp("arrival_date") != null) {
                 dto.setArrivalDate(rs.getTimestamp("arrival_date").toLocalDateTime());
             }

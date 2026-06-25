@@ -20,15 +20,11 @@ public class TourFullDTO {
     private LocalDateTime evictionDate;
     private boolean isHot;
     private String imagePath;
-
-    // Поля з таблиці перекладів туру
     private String title;
     private String description;
     private String tourType;
     private String transferType;
     private String hotelType;
-
-    // НОВЕ ПОЛЕ: Назва міста з таблиці перекладів міст
     private String cityName;
     private Integer quantity;
 }

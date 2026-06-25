@@ -12,21 +12,16 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserTranslation {
-
     @EmbeddedId
     private UserTranslationId id;
-
     @Column(name = "first_name")
     private String firstName;
-
     @Column(name = "last_name")
     private String lastName;
-
     @ManyToOne
     @MapsId("userId")
     @JoinColumn(name = "user_id")
     private User user;
-
     @Embeddable
     @Getter
     @Setter

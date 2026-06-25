@@ -10,7 +10,6 @@ import java.util.Set;
 import java.util.UUID;
 
 public interface TourRepositoryCustom {
-    Page<TourFullDTO> findToursWithJdbc(String lang, TourFilter filter, Pageable pageable
-    );
+    Page<TourFullDTO> findToursWithJdbc(String lang, TourFilter filter, Pageable pageable);
     List<TourFullDTO> findToursByIdsAndInLanguage(Set<UUID> ids, String lang);
 }

@@ -12,10 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import java.util.UUID;
-
-
 @RequiredArgsConstructor
 @Controller
 public class AdminUserController {
@@ -36,7 +33,6 @@ public class AdminUserController {
         }
         return "admin/users";
     }
-
     @PostMapping("/admin/users/lock/{id}")
     public String lockUser(@PathVariable("id") UUID id) {
         userService.lockUser(id);

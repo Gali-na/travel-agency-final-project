@@ -7,11 +7,7 @@ public class ModelMapperConfig {
     @Bean
     public ModelMapper modelMapper() {
         ModelMapper mapper = new ModelMapper();
-
-        // Додаткове налаштування (корисно для складних мапінгів, щоб уникнути конфліктів)
-        mapper.getConfiguration()
-                .setAmbiguityIgnored(true);
-
+        mapper.getConfiguration().setAmbiguityIgnored(true);
         return mapper;
     }
 }

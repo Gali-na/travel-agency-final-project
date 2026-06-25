@@ -6,7 +6,7 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
-//
+
 @Aspect
 @Component
 public class LockUserLogging {

@@ -15,7 +15,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-//
+
 @RequiredArgsConstructor
 @Controller
 public class AdminTourController {
@@ -41,10 +41,9 @@ public class AdminTourController {
         tourService.createFullTour(dto);
         return "redirect:/admin/tour-createdInfo";
     }
-
     private void addAttributesToModel(Model model) {
-        model.addAttribute("cities", cityService.findAll()); // Приклад вашого сервісу міст
-        model.addAttribute("tourTypes", TourType.values());   // Або список рядків
+        model.addAttribute("cities", cityService.findAll());
+        model.addAttribute("tourTypes", TourType.values());
         model.addAttribute("transferTypes", TransferType.values());
         model.addAttribute("hotelTypes", HotelType.values());
     }

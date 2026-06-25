@@ -12,15 +12,15 @@ import java.util.UUID;
 @AllArgsConstructor
 @ToString
 public class UserProfileDTO {
-        private UUID userId; // Змінено з id
-        private String email;
-        private BigDecimal balance;
+    private UUID userId;
+    private String email;
+    private BigDecimal balance;
 
-        private String firstName;
-        private String lastName;
+    private String firstName;
+    private String lastName;
 
-        private boolean isLocked;
+    private boolean isLocked;
 
-        private List<UserTourDTO> userTours;
-    }
+    private List<UserTourDTO> userTours;
+}
 

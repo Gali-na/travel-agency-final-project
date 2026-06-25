@@ -15,25 +15,17 @@ import java.util.UUID;
 public class User {
 
     @Id
-  //  @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-
     private String email;
-
     @Column(name = "password_hash")
     private String passwordHash;
-
     private BigDecimal balance;
-
     @Column(name = "is_locked")
     private boolean isLocked;
-
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private List<UserTranslation> translations;
-
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<UserTour> userTours;
-
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "user_roles",

@@ -15,6 +15,5 @@ public class UserTourDTO {
     private UUID bookingId;
     private String status;
     private LocalDateTime createdAt;
-
     private TourFullDTO tour;
 }

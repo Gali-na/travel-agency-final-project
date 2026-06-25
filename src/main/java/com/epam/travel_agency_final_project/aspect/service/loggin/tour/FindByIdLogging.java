@@ -9,7 +9,7 @@ import org.apache.logging.log4j.Logger;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
 import java.util.UUID;
-//
+
 @Aspect
 @Component
 public class FindByIdLogging {

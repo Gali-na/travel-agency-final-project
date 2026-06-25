@@ -10,18 +10,14 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CitiesTranslation {
-
     @EmbeddedId
     private CityTranslationId id;
-
     @Column(nullable = false)
-    private String name; // Тут зберігається "Лондон" або "London"
-
+    private String name;
     @ManyToOne
     @MapsId("cityId")
     @JoinColumn(name = "city_id")
     private City city;
-
     @Embeddable
     @Getter
     @Setter

@@ -10,6 +10,5 @@ import java.util.UUID;
 
 @Repository
 public interface RoleRepository extends JpaRepository<RoleEntity, UUID> {
-    // Цей метод дозволяє знайти сутність ролі за Enum
     Optional<RoleEntity> findByName(Role name);
 }

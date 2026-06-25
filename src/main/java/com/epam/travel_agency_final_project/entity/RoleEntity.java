@@ -15,7 +15,6 @@ public class RoleEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-
     @Enumerated(EnumType.STRING)
     private Role name; // Ваш enum Role
 }

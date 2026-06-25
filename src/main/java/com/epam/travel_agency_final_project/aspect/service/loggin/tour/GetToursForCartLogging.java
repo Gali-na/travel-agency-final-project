@@ -9,7 +9,6 @@ import org.aspectj.lang.annotation.*;
 
 import java.util.List;
 import java.util.Set;
-//
 @Aspect
 @Component
 public class GetToursForCartLogging {

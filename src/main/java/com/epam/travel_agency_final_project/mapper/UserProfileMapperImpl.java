@@ -14,16 +14,13 @@ public class UserProfileMapperImpl implements UserProfileMapper {
     public UserProfileDTO toDTO(User user) {
         UserProfileDTO dto = modelMapper.map(user, UserProfileDTO.class);
 
-        // Маппінг для складних полів
         if (user.getTranslations() != null && !user.getTranslations().isEmpty()) {
             UserTranslation translation = user.getTranslations().get(0);
             dto.setFirstName(translation.getFirstName());
             dto.setLastName(translation.getLastName());
         }
 
-        // Встановлюємо ID, якщо ModelMapper не підхопив через різницю імен (userId vs id)
         dto.setUserId(user.getId());
-
         return dto;
     }
 }

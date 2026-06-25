@@ -9,12 +9,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class TravelAgencyFinalProjectApplication {
 	private static final Logger logger = LogManager.getLogger(TravelAgencyFinalProjectApplication.class);
 	public static void main(String[] args) {
+		System.setProperty("spring.profiles.active", "prod");
 		SpringApplication.run(TravelAgencyFinalProjectApplication.class, args);
-
 		logger.info("==========================================");
 		logger.info("Application started successfully!");
 		logger.info("==========================================");
 
 	}
-
 }

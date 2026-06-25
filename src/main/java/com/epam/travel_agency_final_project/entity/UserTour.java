@@ -13,25 +13,17 @@ import java.util.UUID;
 @Getter
 @Setter
 public class UserTour {
-
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private User user;
-
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "tour_id")
     private Tour tour;
-
     private String status;
     @CreationTimestamp
     @Column(name = "created_at")
     private LocalDateTime createdAt;
-
-//    @CreationTimestamp // Автоматично встановить час при створенні об'єкта
-//    @Column(name = "created_at", updatable = false)
-//    private LocalDateTime createdAt;
 }

@@ -15,7 +15,7 @@ import java.util.UUID;
 @ToString
 public class UserSecurityDTO {
     private UUID id;
-    private String login; // Це ваш email, що використовується як логін
+    private String login;
     private List<String> roles = new ArrayList<>();
     private boolean isLocked;
     private BigDecimal balance;
