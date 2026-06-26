@@ -1,0 +1,140 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > UpdateCartCookieAfterPurchaseLogging</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.epam.travel_agency_final_project.aspect.service.loggin.cooki</a>
+</div>
+
+<h1>Coverage Summary for Class: UpdateCartCookieAfterPurchaseLogging (com.epam.travel_agency_final_project.aspect.service.loggin.cooki)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">UpdateCartCookieAfterPurchaseLogging</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/6)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/11)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.epam.travel_agency_final_project.aspect.service.loggin.cooki;
+&nbsp;
+&nbsp;import com.epam.travel_agency_final_project.exeption.TourNotFoundException;
+&nbsp;import org.apache.logging.log4j.Logger;
+&nbsp;import org.apache.logging.log4j.LogManager;
+&nbsp;import org.aspectj.lang.JoinPoint;
+&nbsp;import org.aspectj.lang.annotation.*;
+&nbsp;import org.springframework.stereotype.Component;
+&nbsp;import java.util.UUID;
+&nbsp;@Aspect
+&nbsp;@Component
+<b class="nc">&nbsp;public class UpdateCartCookieAfterPurchaseLogging {</b>
+<b class="nc">&nbsp;    private static final Logger logger = LogManager.getLogger(UpdateCartCookieAfterPurchaseLogging.class);</b>
+&nbsp;    @Pointcut(&quot;execution(com.epam.travel_agency_final_project.service.ÑookieServiñe.updateCartCookieAfterPurchase(..))&quot;)
+&nbsp;    public void UpdateCartCookieAfterPurchase() {
+<b class="nc">&nbsp;    }</b>
+&nbsp;    @Before(&quot;cartCookieMethods()&quot;)
+&nbsp;    public void logBefore(JoinPoint joinPoint) {
+<b class="nc">&nbsp;        Object[] args = joinPoint.getArgs();</b>
+<b class="nc">&nbsp;        if (args != null &amp;&amp; args.length &gt; 0 &amp;&amp; args[0] instanceof UUID) {</b>
+<b class="nc">&nbsp;            logger.info(&quot;Attempting to update cart cookie after purchase for tour ID: {}&quot;, args[0]);</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;    @AfterReturning(pointcut = &quot;cartCookieMethods()&quot;, returning = &quot;result&quot;)
+&nbsp;    public void logAfterReturning(Object result) {
+<b class="nc">&nbsp;        if (Boolean.TRUE.equals(result)) {</b>
+<b class="nc">&nbsp;            logger.info(&quot;Cart cookie updated successfully after purchase.&quot;);</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;    @AfterThrowing(pointcut = &quot;cartCookieMethods()&quot;, throwing = &quot;ex&quot;)
+&nbsp;    public void logAfterThrowing(TourNotFoundException ex) {
+<b class="nc">&nbsp;        if (ex != null) {</b>
+<b class="nc">&nbsp;            logger.error(&quot;Failed to update cart cookie: {}&quot;,</b>
+<b class="nc">&nbsp;                    (ex.getMessage() != null ? ex.getMessage() : &quot;Unknown error&quot;));</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2026-06-26 16:08</div>
+</div>
+</body>
+</html>

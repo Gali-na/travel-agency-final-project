@@ -33,6 +33,11 @@ public class RefreshTokenServiceTest {
     @InjectMocks
     private RefreshTokenService refreshTokenService;
     @Test
+    void rotateRefreshToken_ShouldReturnNull_WhenTokenIsNull() {
+        String result = refreshTokenService.rotateRefreshToken(null);
+        assertNull(result, "The result should be null if the input token is null");
+    }
+    @Test
     void getRefreshTokenByUserId_ShouldReturnDto_WhenTokenExists() {
         UUID userId = UUID.randomUUID();
         User user = new User();

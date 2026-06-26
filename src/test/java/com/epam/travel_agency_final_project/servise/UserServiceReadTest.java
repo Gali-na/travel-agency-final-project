@@ -4,9 +4,7 @@ import com.epam.travel_agency_final_project.dto.TourFullDTO;
 import com.epam.travel_agency_final_project.dto.UserProfileDTO;
 import com.epam.travel_agency_final_project.dto.UserRegistrationDTO;
 import com.epam.travel_agency_final_project.dto.UserSecurityDTO;
-import com.epam.travel_agency_final_project.entity.Tour;
-import com.epam.travel_agency_final_project.entity.User;
-import com.epam.travel_agency_final_project.entity.UserTranslation;
+import com.epam.travel_agency_final_project.entity.*;
 import com.epam.travel_agency_final_project.exeption.UserAlreadyExistsException;
 import com.epam.travel_agency_final_project.mapper.TourMapper;
 import com.epam.travel_agency_final_project.mapper.UserSecurityMapper;
@@ -15,7 +13,6 @@ import com.epam.travel_agency_final_project.repository.UserTourRepository;
 import com.epam.travel_agency_final_project.repository.UserTranslationRepository;
 import com.epam.travel_agency_final_project.service.UserService;
 import org.junit.jupiter.api.Test;
-import com.epam.travel_agency_final_project.entity.UserTour;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -47,7 +44,6 @@ public class UserServiceReadTest {
     private UserRepository userRepository;
     @InjectMocks
     private UserService userService;
-
     @Test
     @ExtendWith(MockitoExtension.class)
     void blockUser_ShouldUpdateUserToLocked_WhenUserExists() {
@@ -157,49 +153,57 @@ public class UserServiceReadTest {
     void registerUser_ShouldThrowException_WhenEmailAlreadyExists() {
         UserRegistrationDTO dto = new UserRegistrationDTO();
         dto.setEmail("existing@example.com");
-
         when(userRepository.findByEmail(dto.getEmail())).thenReturn(Optional.of(new User()));
-
         assertThrows(UserAlreadyExistsException.class, () -> {
             userService.registerUser(dto, "uk");
         });
         verify(userRepository, never()).save(any(User.class));
     }
-
     @Test
-    void getProfileData_ShouldReturnDto_WhenUserExists() {
+    void getProfileData_ShouldReturnNull_WhenUserNotFound() {
         UUID userId = UUID.randomUUID();
-        String lang = "uk";
-
-        User user = new User();
-        user.setId(userId);
-        user.setEmail("test@test.com");
-        user.setBalance(BigDecimal.TEN);
-        user.setLocked(false);
-
-        UserTranslation translation = new UserTranslation();
-        translation.setFirstName("John");
-        translation.setLastName("Doe");
-        UserTranslation.UserTranslationId id = new UserTranslation.UserTranslationId();
-        id.setLang("uk");
-        translation.setId(id);
-        user.setTranslations(List.of(translation));
-        user.setUserTours(Collections.emptyList());
-
-        when(userRepository.findById(userId)).thenReturn(Optional.of(user));
-
-        UserProfileDTO result = userService.getProfileData(userId, lang);
-
-        assertEquals("John", result.getFirstName());
-        assertEquals("test@test.com", result.getEmail());
-        verify(userRepository).findById(userId);
+        when(userRepository.findById(userId)).thenReturn(Optional.empty());
+        UserProfileDTO result = userService.getProfileData(userId, "en");
+        assertNull(result);
     }
 
     @Test
-    void getProfileData_ShouldThrowException_WhenUserDoesNotExist() {
+    void getProfileData_ShouldReturnDto_WhenUserExistsAndTranslationFound() {
         UUID userId = UUID.randomUUID();
-        when(userRepository.findById(userId)).thenReturn(Optional.empty());
+        User user = createMockUser(userId);
+        when(userRepository.findById(userId)).thenReturn(Optional.of(user));
 
-        assertThrows(RuntimeException.class, () -> userService.getProfileData(userId, "uk"));
+        UserProfileDTO result = userService.getProfileData(userId, "en");
+        assertNotNull(result);
+        assertEquals("John", result.getFirstName());
+
+        assertNotNull(result.getUserTours());
+        assertEquals(1, result.getUserTours().size());
+    }
+    @Test
+    void getProfileData_ShouldReturnEmptyFields_WhenTranslationNotFound() {
+        UUID userId = UUID.randomUUID();
+        User user = createMockUser(userId);
+        user.setTranslations(Collections.emptyList());
+
+        when(userRepository.findById(userId)).thenReturn(Optional.of(user), Optional.of(user));
+        UserProfileDTO result = userService.getProfileData(userId, "fr");
+        assertNull(result.getFirstName());
+        assertNull(result.getLastName());
+    }
+    private User createMockUser(UUID userId) {
+        User user = new User();
+        user.setId(userId);
+        user.setEmail("test@test.com");
+        UserTranslation.UserTranslationId translationId = new UserTranslation.UserTranslationId(userId, "en");
+        UserTranslation trans = new UserTranslation();
+        trans.setId(translationId);
+        trans.setFirstName("John");
+        trans.setLastName("Doe");
+        trans.setUser(user);
+        user.setTranslations(List.of(trans));
+        UserTour tour = new UserTour();
+        user.setUserTours(List.of(tour));
+        return user;
     }
 }

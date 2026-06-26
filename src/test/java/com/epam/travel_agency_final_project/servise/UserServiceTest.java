@@ -34,8 +34,6 @@ class UserServiceTest {
     private PasswordEncoder passwordEncoder;
     @Mock
     private UserProfileMapper userProfileMapper;
-
-
     @InjectMocks
     private UserService userService;
     @Test
@@ -113,7 +111,7 @@ class UserServiceTest {
     @Test
     void authenticate_ShouldReturnFalse_WhenUserDoesNotExist() {
         String email = "nonexistent@example.com";
-        String rawPassword = "anyPassword"; // Оголошуємо змінну тут
+        String rawPassword = "anyPassword";
         when(userRepository.findByEmail(email)).thenReturn(Optional.empty());
         boolean result = userService.authenticate(email, rawPassword);
         assertFalse(result);
@@ -124,12 +122,9 @@ class UserServiceTest {
         UUID userId = UUID.randomUUID();
         BigDecimal amount = new BigDecimal("100.00");
         BigDecimal expectedBalance = new BigDecimal("250.00");
-
         when(userRepository.depositBalanceById(userId, amount)).thenReturn(1);
         when(userRepository.getBalanceById(userId)).thenReturn(expectedBalance);
-
         BigDecimal result = userService.increaseBalance(userId, amount);
-
         assertEquals(expectedBalance, result);
         verify(userRepository).depositBalanceById(userId, amount);
         verify(userRepository).getBalanceById(userId);
@@ -140,24 +135,19 @@ class UserServiceTest {
         UUID id = UUID.randomUUID();
         User user = new User();
         UserSecurityDTO expectedDto = new UserSecurityDTO();
-
         when(userRepository.findById(id)).thenReturn(Optional.of(user));
         when(userSecurityMapper.toSecurityDto(user)).thenReturn(expectedDto);
-
         UserSecurityDTO result = userService.findById(id);
-
         assertEquals(expectedDto, result);
         verify(userRepository).findById(id);
         verify(userSecurityMapper).toSecurityDto(user);
     }
-
 
     @Test
     void isExistUser_ShouldReturnTrue_WhenUserExists() {
         String email = "test@example.com";
         User user = new User();
         when(userRepository.findByEmail(email)).thenReturn(Optional.of(user));
-
         assertTrue(userService.isExistUser(email));
     }
 
@@ -165,7 +155,6 @@ class UserServiceTest {
     void isExistUser_ShouldReturnFalse_WhenUserDoesNotExist() {
         String email = "unknown@example.com";
         when(userRepository.findByEmail(email)).thenReturn(Optional.empty());
-
         assertFalse(userService.isExistUser(email));
     }
 
@@ -173,7 +162,6 @@ class UserServiceTest {
     void isExistUser_ShouldReturnFalse_WhenEmailIsEmpty() {
         String email = "";
         when(userRepository.findByEmail(email)).thenReturn(Optional.empty());
-
         assertFalse(userService.isExistUser(email));
     }
 
@@ -181,18 +169,14 @@ class UserServiceTest {
     void isExistUser_ShouldReturnFalse_WhenEmailIsNull() {
         String email = null;
         when(userRepository.findByEmail(null)).thenReturn(Optional.empty());
-
         assertFalse(userService.isExistUser(email));
     }
     @Test
     void findById_ShouldReturnNull_WhenUserDoesNotExist() {
         UUID id = UUID.randomUUID();
-
         when(userRepository.findById(id)).thenReturn(Optional.empty());
         when(userSecurityMapper.toSecurityDto(null)).thenReturn(null);
-
         UserSecurityDTO result = userService.findById(id);
-
         assertNull(result);
         verify(userRepository).findById(id);
         verify(userSecurityMapper).toSecurityDto(null);
@@ -202,11 +186,8 @@ class UserServiceTest {
         UUID id = UUID.randomUUID();
         User user = new User();
         user.setLocked(true);
-
         when(userRepository.findById(id)).thenReturn(Optional.of(user));
-
         boolean result = userService.isBlockUser(id);
-
         assertTrue(result);
         verify(userRepository).findById(id);
     }
@@ -216,11 +197,8 @@ class UserServiceTest {
         UUID id = UUID.randomUUID();
         User user = new User();
         user.setLocked(false);
-
         when(userRepository.findById(id)).thenReturn(Optional.of(user));
-
         boolean result = userService.isBlockUser(id);
-
         assertFalse(result);
         verify(userRepository).findById(id);
     }
@@ -228,11 +206,8 @@ class UserServiceTest {
     @Test
     void isBlockUser_ShouldReturnTrue_WhenUserDoesNotExist() {
         UUID id = UUID.randomUUID();
-
         when(userRepository.findById(id)).thenReturn(Optional.empty());
-
         boolean result = userService.isBlockUser(id);
-
         assertTrue(result);
         verify(userRepository).findById(id);
     }

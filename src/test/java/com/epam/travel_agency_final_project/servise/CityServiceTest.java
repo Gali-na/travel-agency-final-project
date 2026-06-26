@@ -32,17 +32,11 @@ class CityServiceTest {
     @Test
     @DisplayName("Should return list of CityDTO when cities exist")
     void findAll_ShouldReturnListOfCityDTO_WhenCitiesExist() {
-        // Arrange
-        City city = new City(); // припустимо, є така сутність
+        City city = new City();
         CityDTO cityDTO = new CityDTO();
-
         when(cityRepository.findAll()).thenReturn(List.of(city));
         when(cityMapper.toDTO(city)).thenReturn(cityDTO);
-
-        // Act
         List<CityDTO> result = cityService.findAll();
-
-        // Assert
         assertThat(result).hasSize(1);
         assertThat(result).containsExactly(cityDTO);
         verify(cityRepository, times(1)).findAll();
@@ -51,13 +45,8 @@ class CityServiceTest {
     @Test
     @DisplayName("Should return empty list when no cities found")
     void findAll_ShouldReturnEmptyList_WhenNoCitiesFound() {
-        // Arrange
         when(cityRepository.findAll()).thenReturn(Collections.emptyList());
-
-        // Act
         List<CityDTO> result = cityService.findAll();
-
-        // Assert
         assertThat(result).isEmpty();
         verify(cityMapper, never()).toDTO(any());
     }

@@ -1,0 +1,175 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > SecurityConfig</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.epam.travel_agency_final_project.config</a>
+</div>
+
+<h1>Coverage Summary for Class: SecurityConfig (com.epam.travel_agency_final_project.config)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">SecurityConfig</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/6)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/21)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.epam.travel_agency_final_project.config;
+&nbsp;import com.epam.travel_agency_final_project.repository.UserRepository;
+&nbsp;import com.epam.travel_agency_final_project.security.JwtCookieFilter;
+&nbsp;import lombok.RequiredArgsConstructor;
+&nbsp;import org.springframework.context.annotation.Bean;
+&nbsp;import org.springframework.context.annotation.Configuration;
+&nbsp;import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+&nbsp;import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+&nbsp;import org.springframework.security.config.http.SessionCreationPolicy;
+&nbsp;import org.springframework.security.core.userdetails.User;
+&nbsp;import org.springframework.security.core.userdetails.UserDetails;
+&nbsp;import org.springframework.security.core.userdetails.UserDetailsService;
+&nbsp;import org.springframework.security.core.userdetails.UsernameNotFoundException;
+&nbsp;import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+&nbsp;import org.springframework.security.crypto.password.PasswordEncoder;
+&nbsp;import org.springframework.security.web.SecurityFilterChain;
+&nbsp;import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+&nbsp;import org.thymeleaf.extras.springsecurity6.dialect.SpringSecurityDialect;
+&nbsp;
+&nbsp;import java.util.Collections;
+&nbsp;
+&nbsp;@RequiredArgsConstructor
+&nbsp;@Configuration
+&nbsp;public class SecurityConfig {
+&nbsp;    private final UserRepository userRepository;
+&nbsp;    @Bean
+&nbsp;    public SecurityFilterChain securityFilterChain(HttpSecurity http, JwtCookieFilter jwtCookieFilter) throws Exception {
+<b class="nc">&nbsp;        http</b>
+<b class="nc">&nbsp;                .csrf(csrf -&gt; csrf.disable())</b>
+<b class="nc">&nbsp;                .sessionManagement(session -&gt; session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))</b>
+<b class="nc">&nbsp;                .authorizeHttpRequests(auth -&gt; auth</b>
+<b class="nc">&nbsp;                        .requestMatchers(&quot;/&quot;, &quot;/index&quot;, &quot;/tours/**&quot;, &quot;/cart/**&quot;, &quot;/book/**&quot;,</b>
+&nbsp;                                        &quot;/blocked/**&quot;, &quot;/register&quot;, &quot;/login&quot;,
+<b class="nc">&nbsp;                                        &quot;/css/**&quot;, &quot;/js/**&quot;, &quot;/images/**&quot;, &quot;/uploads/**&quot;, &quot;/error&quot;).permitAll()</b>
+<b class="nc">&nbsp;                        .requestMatchers(&quot;/admin/create-tour&quot;, &quot;/admin/tours/create&quot;, &quot;/admin/tour-createdInfo&quot;)</b>
+<b class="nc">&nbsp;                        .hasAnyRole(&quot;MANAGER&quot;, &quot;ADMIN&quot;)</b>
+<b class="nc">&nbsp;                        .requestMatchers(&quot;/admin/users&quot;, &quot;/admin/users/lock/**&quot;, &quot;/admin/invalid-email&quot;)</b>
+<b class="nc">&nbsp;                        .hasRole(&quot;ADMIN&quot;)</b>
+<b class="nc">&nbsp;                        .requestMatchers(&quot;/profile/**&quot;).authenticated()</b>
+<b class="nc">&nbsp;                        .anyRequest().authenticated())</b>
+<b class="nc">&nbsp;                .exceptionHandling(exception -&gt; exception</b>
+<b class="nc">&nbsp;                        .authenticationEntryPoint((request, response, authException) -&gt; {</b>
+<b class="nc">&nbsp;                            response.sendRedirect(&quot;/login&quot;);</b>
+&nbsp;                        })
+&nbsp;                )
+<b class="nc">&nbsp;                .formLogin(form -&gt; form.disable())</b>
+<b class="nc">&nbsp;                .logout(logout -&gt; logout.logoutSuccessUrl(&quot;/tours&quot;).permitAll())</b>
+<b class="nc">&nbsp;                .addFilterBefore(jwtCookieFilter, UsernamePasswordAuthenticationFilter.class);</b>
+<b class="nc">&nbsp;        return http.build();</b>
+&nbsp;    }
+&nbsp;//    @Bean
+&nbsp;//    public UserDetailsService userDetailsService() {
+&nbsp;//        return email -&gt; {
+&nbsp;//            var user = userRepository.findByEmail(email)
+&nbsp;//                    .orElseThrow(() -&gt; new UsernameNotFoundException(&quot;User not found: &quot; + email));
+&nbsp;//            return new User(
+&nbsp;//                    user.getEmail(),
+&nbsp;//                    user.getPasswordHash(),
+&nbsp;//                    Collections.emptyList()
+&nbsp;//            );
+&nbsp;//        };
+&nbsp;//    }
+&nbsp;
+&nbsp;    @Bean
+&nbsp;    public PasswordEncoder passwordEncoder() {
+<b class="nc">&nbsp;        return new BCryptPasswordEncoder();</b>
+&nbsp;    }
+&nbsp;    @Bean
+&nbsp;    public SpringSecurityDialect springSecurityDialect() {
+<b class="nc">&nbsp;        return new SpringSecurityDialect();</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2026-06-26 16:08</div>
+</div>
+</body>
+</html>
