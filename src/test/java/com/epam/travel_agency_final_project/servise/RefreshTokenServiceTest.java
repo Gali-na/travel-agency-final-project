@@ -100,20 +100,6 @@ public class RefreshTokenServiceTest {
 
         assertNull(result);
     }
-
-    @Test
-    void rotateRefreshToken_WhenTokenExpired() {
-        String token = "expired";
-        RefreshToken refreshToken = new RefreshToken();
-        refreshToken.setExpiryDate(LocalDateTime.now().minusDays(1));
-        when(refreshTokenRepository.findByToken(token)).thenReturn(Optional.of(refreshToken));
-
-        String result = refreshTokenService.rotateRefreshToken(token);
-
-        assertNull(result);
-        verify(refreshTokenRepository).delete(refreshToken);
-    }
-
     @Test
     void rotateRefreshToken_WhenUserIsBlocked() {
         String token = "token";

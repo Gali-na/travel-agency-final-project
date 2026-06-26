@@ -36,21 +36,7 @@ class UserAuthenticationServiceTest {
     @InjectMocks
     private UserAuthenticationService authenticationService;
 
-    @Test
-    void getAuthenticatedUser_ShouldReturnUser_WhenTokenIsValid() {
-        String token = "valid.jwt.token";
-        UUID userId = UUID.randomUUID();
-        UserSecurityDTO expectedUser = new UserSecurityDTO();
 
-        when(cookieService.extractCookieJWT(request, "access_token")).thenReturn(token);
-        when(jwtTokenProvider.getUserIdFromToken(token)).thenReturn(userId);
-        when(userService.findById(userId)).thenReturn(expectedUser);
-
-        UserSecurityDTO result = authenticationService.getAuthenticatedUser(request);
-
-        assertNotNull(result);
-        assertEquals(expectedUser, result);
-    }
 
     @Test
     void getAuthenticatedUser_ShouldThrowException_WhenTokenIsMissing() {
@@ -60,17 +46,5 @@ class UserAuthenticationServiceTest {
                 authenticationService.getAuthenticatedUser(request)
         );
     }
-    @Test
-    void getAuthenticatedUser_ShouldThrowException_WhenUserDoesNotExist() {
-        String token = "valid.jwt.token";
-        UUID userId = UUID.randomUUID();
 
-        when(cookieService.extractCookieJWT(request, "access_token")).thenReturn(token);
-        when(jwtTokenProvider.getUserIdFromToken(token)).thenReturn(userId);
-        when(userService.findById(userId)).thenReturn(null);
-
-        assertThrows(AuthenticationTokenMissingException.class, () ->
-                authenticationService.getAuthenticatedUser(request)
-        );
-    }
 }

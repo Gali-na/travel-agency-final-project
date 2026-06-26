@@ -1339,3 +1339,156 @@
 2026-06-26 01:37:10 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
 2026-06-26 01:37:10 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
 2026-06-26 01:37:10 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and aefresh token  are valid
+2026-06-26 02:13:54 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 2116 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-26 02:13:54 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-26 02:13:54 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-26 02:14:01 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-26 02:14:03 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.588 seconds (process running for 10.61)
+2026-06-26 02:14:03 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-26 02:14:03 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-26 02:14:03 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-26 02:15:09 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 18392 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-26 02:15:09 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-26 02:15:09 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-26 02:15:16 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-26 02:15:17 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 8.865 seconds (process running for 10.155)
+2026-06-26 02:15:17 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-26 02:15:17 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-26 02:15:17 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-26 02:28:15 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 11384 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-26 02:28:15 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-26 02:28:15 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-26 02:28:22 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-26 02:28:23 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.101 seconds (process running for 10.105)
+2026-06-26 02:28:23 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-26 02:28:23 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-26 02:28:23 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-26 02:58:32 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 4644 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-26 02:58:32 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-26 02:58:32 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-26 02:58:39 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-26 02:58:40 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.017 seconds (process running for 10.035)
+2026-06-26 02:58:40 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-26 02:58:40 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-26 02:58:40 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-26 02:58:51 INFO  com.epam.travel_agency_final_project.security.JwtProvider - access token expired
+2026-06-26 02:58:54 INFO  com.epam.travel_agency_final_project.security.JwtProvider - access token expired
+2026-06-26 03:05:09 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 3568 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-26 03:05:09 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-26 03:05:09 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-26 03:05:16 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-26 03:05:17 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.057 seconds (process running for 10.186)
+2026-06-26 03:05:17 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-26 03:05:17 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-26 03:05:17 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-26 03:05:29 INFO  com.epam.travel_agency_final_project.security.JwtProvider - access token expired
+2026-06-26 03:22:22 INFO  com.epam.travel_agency_final_project.security.JwtProvider - access token expired
+2026-06-26 03:42:46 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 12316 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-26 03:42:46 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-26 03:42:46 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-26 03:42:53 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-26 03:42:54 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 8.759 seconds (process running for 9.772)
+2026-06-26 03:42:54 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-26 03:42:54 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-26 03:42:54 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-26 03:43:33 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:43:33 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 03:43:33 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 03:43:33 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter - Session refreshed for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:43:33 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:43:33 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 03:43:33 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 03:43:33 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter - Session refreshed for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:43:42 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:43:42 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 03:43:42 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 03:43:42 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter - Session refreshed for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:43:47 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:43:47 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 03:43:47 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 03:43:47 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter - Session refreshed for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:43:52 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:43:52 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 03:43:52 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 03:43:52 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter - Session refreshed for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:44:06 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:44:06 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 03:44:06 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 03:44:06 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter - Session refreshed for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:44:12 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:44:12 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 03:44:12 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 03:44:12 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter - Session refreshed for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:44:12 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:44:12 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 03:44:12 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 03:44:12 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter - Session refreshed for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:44:16 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:44:16 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 03:44:16 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 03:44:16 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter - Session refreshed for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:44:16 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:44:16 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 03:44:16 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 03:44:16 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter - Session refreshed for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:44:18 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:44:18 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 03:44:18 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 03:44:18 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter - Session refreshed for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:44:45 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:44:45 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 03:44:45 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 03:44:45 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter - Session refreshed for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:44:52 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:44:52 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 03:44:52 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 03:44:52 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter - Session refreshed for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:44:52 INFO  com.epam.travel_agency_final_project.aspect.service.loggin.authentication.UserAuthenticationServiceLogging - User successfully authenticated. User ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:44:52 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:44:52 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 03:44:52 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 03:44:52 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter - Session refreshed for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:44:53 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:44:53 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 03:44:53 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 03:44:53 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter - Session refreshed for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:44:55 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:44:55 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 03:44:55 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 03:44:55 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter - Session refreshed for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:44:56 INFO  com.epam.travel_agency_final_project.aspect.controller.logging.AdminTourControllerShowCreateTourFormLogging - Method showCreateTourForm was invoked.
+2026-06-26 03:45:15 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:45:15 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 03:45:15 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 03:45:15 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter - Session refreshed for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:45:15 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:45:15 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 03:45:15 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 03:45:15 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter - Session refreshed for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:45:38 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:45:38 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 03:45:38 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 03:45:38 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter - Session refreshed for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:45:40 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:45:40 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 03:45:40 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 03:45:40 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter - Session refreshed for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:45:40 INFO  com.epam.travel_agency_final_project.aspect.controller.logging.AdminTourControllerShowCreateTourFormLogging - Method showCreateTourForm was invoked.
+2026-06-26 03:45:45 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:45:45 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 03:45:45 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 03:45:45 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter - Session refreshed for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:45:46 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:45:46 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 03:45:46 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 03:45:46 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter - Session refreshed for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:46:02 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:46:02 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 03:46:02 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 03:46:02 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter - Session refreshed for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:46:02 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.FindByEmailExactLogging - Searching user by exact email: ssggr. Page: 0
+2026-06-26 03:46:02 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.FindByEmailExactLogging - Search by email returned 0 results.
+2026-06-26 03:46:04 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - Checking block status for user ID: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-26 03:46:04 DEBUG com.epam.travel_agency_final_project.aspect.service.loggin.user.IsBlockUserLogging - User block status: ACTIVE
+2026-06-26 03:46:04 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContex
+2026-06-26 03:46:04 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter - Session refreshed for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3

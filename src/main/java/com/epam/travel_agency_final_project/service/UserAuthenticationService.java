@@ -3,6 +3,7 @@ package com.epam.travel_agency_final_project.service;
 import com.epam.travel_agency_final_project.dto.UserRegistrationDTO;
 import com.epam.travel_agency_final_project.dto.UserSecurityDTO;
 import com.epam.travel_agency_final_project.exeption.AuthenticationTokenMissingException;
+import com.epam.travel_agency_final_project.exeption.JwtAuthenticationException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
@@ -23,7 +24,13 @@ public class UserAuthenticationService {
         if (accessToken == null) {
             throw new AuthenticationTokenMissingException("Access token is missing");
         }
-        UUID userId = jwtTokenProvider.getUserIdFromToken(accessToken);
+        UUID userId = null;
+        try {
+            userId = jwtTokenProvider.getUserIdFromToken(accessToken);
+        } catch (JwtAuthenticationException e) {
+            throw new AuthenticationTokenMissingException("Access token is invalid or user not found");
+        }
+
         UserSecurityDTO userSecurityDTO = userService.findById(userId);
         if (userSecurityDTO == null) {
             throw new AuthenticationTokenMissingException("Access token is invalid or user not found");
@@ -35,13 +42,15 @@ public class UserAuthenticationService {
         String accessToken = jwtTokenProvider.generateAccessToken(userSecurityDTO);
         String refreshToken = UUID.randomUUID().toString();
         refreshTokenService.createRefreshToken(userSecurityDTO, refreshToken);
-        cookieService.updateAuthCookies(resp, accessToken, refreshToken);
+       // cookieService.updateAuthCookies(resp, accessToken, refreshToken);
+        cookieService.updateAuthCookies(resp, accessToken);
     }
     public void registerAndAuthenticate(UUID userId,HttpServletResponse resp) {
         UserSecurityDTO userSecurityDTO = userService.findById(userId);
         String accessToken = jwtTokenProvider.generateAccessToken(userSecurityDTO);
         String refreshToken = UUID.randomUUID().toString();
         refreshTokenService.createRefreshToken(userSecurityDTO, refreshToken);
-        cookieService.updateAuthCookies(resp, accessToken, refreshToken);
+       // cookieService.updateAuthCookies(resp, accessToken, refreshToken);
+        cookieService.updateAuthCookies(resp, accessToken);
     }
 }

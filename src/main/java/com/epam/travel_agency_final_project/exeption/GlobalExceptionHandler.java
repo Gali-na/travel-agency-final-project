@@ -33,7 +33,6 @@ public class GlobalExceptionHandler {
     }
     @ExceptionHandler(TourNotFoundException.class)
     public String handleTourNotFound(TourNotFoundException ex) {
-        // Перенаправляємо на сторінку, яка повідомляє, що тур відсутній
         return "redirect:/tour-not-found";
     }
     @ExceptionHandler(EmailNotFoundException.class)

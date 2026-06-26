@@ -1,6 +1,7 @@
 package com.epam.travel_agency_final_project.controller;
 import com.epam.travel_agency_final_project.dto.UserProfileDTO;
 import com.epam.travel_agency_final_project.exeption.AuthenticationTokenMissingException;
+import com.epam.travel_agency_final_project.exeption.JwtAuthenticationException;
 import com.epam.travel_agency_final_project.security.JwtProvider;
 import com.epam.travel_agency_final_project.service.CookieService;
 import com.epam.travel_agency_final_project.service.UserService;
@@ -33,7 +34,12 @@ public class ProfileController {
         if (accessToken == null) {
             return "redirect:/login";
         }
-        UUID userId = jwtTokenProvider.getUserIdFromToken(accessToken);
+        UUID userId = null;
+        try {
+            userId = jwtTokenProvider.getUserIdFromToken(accessToken);
+        } catch (JwtAuthenticationException e) {
+            return "redirect:/login";
+        }
 
         if(userId==null) {
             return "redirect:/login";
@@ -53,8 +59,13 @@ public class ProfileController {
         if (accessToken == null) {
             throw new AuthenticationTokenMissingException("Access token is missing in cookies");
         }
-          UUID userIdFromToken = jwtTokenProvider.getUserIdFromToken(accessToken);
-         userService.increaseBalance(userIdFromToken, amount);
+        UUID userIdFromToken = null;
+        try {
+            userIdFromToken = jwtTokenProvider.getUserIdFromToken(accessToken);
+        } catch (JwtAuthenticationException e) {
+            return "redirect:/login";
+        }
+        userService.increaseBalance(userIdFromToken, amount);
 
         return "redirect:/profile?success";
     }

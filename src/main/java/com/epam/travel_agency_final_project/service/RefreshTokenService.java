@@ -80,4 +80,9 @@ public class RefreshTokenService {
                 .expiryDate(entity.getExpiryDate())
                 .build();
     }
+    public RefreshTokenDTO getRefreshTokenByUserId(UUID userId) {
+        return refreshTokenRepository.findByUserId(userId)
+                .map(this::mapToDto)
+                .orElse(null);
+    }
 }
