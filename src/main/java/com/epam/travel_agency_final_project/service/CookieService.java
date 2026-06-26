@@ -60,20 +60,6 @@ public class CookieService {
                 .findFirst()
                 .orElse(null);
     }
-
-//   public void updateAuthCookies(HttpServletResponse response, String accessToken, String refreshUUID) {
-//        Cookie refreshCookie = new Cookie("refresh_token", refreshUUID);
-//        refreshCookie.setHttpOnly(true);
-//        refreshCookie.setPath("/");
-//        refreshCookie.setMaxAge(30 * 24 * 60 * 60);
-//        response.addCookie(refreshCookie);
-//
-//        Cookie accessCookie = new Cookie("access_token",accessToken);
-//        accessCookie.setHttpOnly(true);
-//        accessCookie.setPath("/");
-//        accessCookie.setMaxAge(30 * 24 * 60 * 60);
-//        response.addCookie(accessCookie);
-//  }
     public void updateAuthCookies(HttpServletResponse response, String accessToken) {
         Cookie accessCookie = new Cookie("access_token",accessToken);
         accessCookie.setHttpOnly(true);

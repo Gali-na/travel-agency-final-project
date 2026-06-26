@@ -2,10 +2,6 @@ package com.epam.travel_agency_final_project.servise;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
-
-import java.util.UUID;
-
-import com.epam.travel_agency_final_project.dto.UserSecurityDTO;
 import com.epam.travel_agency_final_project.exeption.AuthenticationTokenMissingException;
 import com.epam.travel_agency_final_project.security.JwtProvider;
 import com.epam.travel_agency_final_project.service.CookieService;
@@ -20,31 +16,21 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
 class UserAuthenticationServiceTest {
-
     @Mock
     private CookieService cookieService;
-
     @Mock
     private JwtProvider jwtTokenProvider;
-
     @Mock
     private UserService userService;
-
     @Mock
     private HttpServletRequest request;
-
     @InjectMocks
     private UserAuthenticationService authenticationService;
-
-
-
     @Test
     void getAuthenticatedUser_ShouldThrowException_WhenTokenIsMissing() {
         when(cookieService.extractCookieJWT(request, "access_token")).thenReturn(null);
-
         assertThrows(AuthenticationTokenMissingException.class, () ->
                 authenticationService.getAuthenticatedUser(request)
         );
     }
-
 }

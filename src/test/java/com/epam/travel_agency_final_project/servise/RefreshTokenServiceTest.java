@@ -33,6 +33,31 @@ public class RefreshTokenServiceTest {
     @InjectMocks
     private RefreshTokenService refreshTokenService;
     @Test
+    void getRefreshTokenByUserId_ShouldReturnDto_WhenTokenExists() {
+        UUID userId = UUID.randomUUID();
+        User user = new User();
+        user.setId(userId);
+        RefreshToken token = new RefreshToken();
+        token.setId(UUID.randomUUID());
+        token.setToken("token-value");
+        token.setUser(user);
+        when(refreshTokenRepository.findByUserId(userId)).thenReturn(Optional.of(token));
+        RefreshTokenDTO result = refreshTokenService.getRefreshTokenByUserId(userId);
+        assertNotNull(result);
+        assertEquals(token.getToken(), result.getToken());
+    }
+
+    @Test
+    void getRefreshTokenByUserId_ShouldReturnNull_WhenTokenDoesNotExist() {
+        UUID userId = UUID.randomUUID();
+
+        when(refreshTokenRepository.findByUserId(userId)).thenReturn(Optional.empty());
+
+        RefreshTokenDTO result = refreshTokenService.getRefreshTokenByUserId(userId);
+
+        assertNull(result);
+    }
+    @Test
     @DisplayName("Should update existing refresh token")
     void createRefreshToken_ShouldUpdateExistingToken_WhenTokenExists() {
         UUID userId = UUID.randomUUID();
@@ -100,6 +125,7 @@ public class RefreshTokenServiceTest {
 
         assertNull(result);
     }
+
     @Test
     void rotateRefreshToken_WhenUserIsBlocked() {
         String token = "token";

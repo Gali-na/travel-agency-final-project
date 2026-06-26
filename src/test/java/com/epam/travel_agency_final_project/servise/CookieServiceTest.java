@@ -3,8 +3,10 @@ package com.epam.travel_agency_final_project.servise;
 import com.epam.travel_agency_final_project.exeption.TourNotFoundException;
 import com.epam.travel_agency_final_project.model.Cart;
 import com.epam.travel_agency_final_project.service.CookieService;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.ArgumentCaptor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -28,6 +30,72 @@ class CookieServiceTest {
     private HttpServletRequest request;
     @InjectMocks
     private CookieService cookieService;
+    @BeforeEach
+    void setUp() {
+        cookieService = new CookieService();
+        response = mock(HttpServletResponse.class);
+    }
+    @Test
+    void parseCookieDecoder_ShouldReturnDecodedValue_WhenCartCookieExists() {
+        String originalValue = "{\"id\":1, \"name\":\"item\"}";
+        String encodedValue = URLEncoder.encode(originalValue, StandardCharsets.UTF_8);
+        Cookie[] cookies = { new Cookie("other", "data"), new Cookie("cart", encodedValue) };
+
+        String result = cookieService.parseCookieDecoder(cookies);
+
+        assertEquals(originalValue, result);
+    }
+
+    @Test
+    void parseCookieDecoder_ShouldReturnEmptyString_WhenCookiesArrayIsNull() {
+        String result = cookieService.parseCookieDecoder(null);
+
+        assertEquals("", result);
+    }
+
+    @Test
+    void parseCookieDecoder_ShouldReturnEmptyString_WhenCartCookieNotFound() {
+        Cookie[] cookies = { new Cookie("theme", "dark"), new Cookie("session", "123") };
+
+        String result = cookieService.parseCookieDecoder(cookies);
+
+        assertEquals("", result);
+    }
+
+    @Test
+    void parseCookieDecoder_ShouldHandleEmptyCookieValue() {
+        Cookie[] cookies = { new Cookie("cart", "") };
+
+        String result = cookieService.parseCookieDecoder(cookies);
+
+        assertEquals("", result);
+    }
+    @Test
+    void updateAuthCookies_ShouldAddCorrectCookie() {
+        String token = "test-token-123";
+        ArgumentCaptor<Cookie> cookieCaptor = ArgumentCaptor.forClass(Cookie.class);
+
+        cookieService.updateAuthCookies(response, token);
+
+        verify(response).addCookie(cookieCaptor.capture());
+        Cookie capturedCookie = cookieCaptor.getValue();
+
+        assertEquals("access_token", capturedCookie.getName());
+        assertEquals(token, capturedCookie.getValue());
+        assertTrue(capturedCookie.isHttpOnly());
+        assertEquals("/", capturedCookie.getPath());
+        assertEquals(2592000, capturedCookie.getMaxAge());
+    }
+
+    @Test
+    void updateAuthCookies_ShouldHandleNullToken() {
+        ArgumentCaptor<Cookie> cookieCaptor = ArgumentCaptor.forClass(Cookie.class);
+
+        cookieService.updateAuthCookies(response, null);
+
+        verify(response).addCookie(cookieCaptor.capture());
+        assertNull(cookieCaptor.getValue().getValue());
+    }
     @Test
     void extractCookieJWT_ShouldReturnToken_WhenCookieExists() {
         String cookieName = "jwt";

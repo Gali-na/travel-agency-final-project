@@ -26,7 +26,7 @@ public class TourCreationDTO {
     private LocalDateTime arrivalDate;
     @NotNull(message = "Eviction date is required")
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-    private LocalDateTime evictionDate;/**/
+    private LocalDateTime evictionDate;
     @NotNull(message = "IsHot status is required")
     private Boolean isHot;
     @NotBlank

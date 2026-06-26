@@ -45,6 +45,11 @@ public class ProfileController {
             return "redirect:/login";
         }
         UserProfileDTO profile = userService.getProfileData(userId,"uk");
+
+        if(profile==null){
+            return "redirect:/register";
+        }
+
         model.addAttribute("user", profile);
         model.addAttribute("userTours", profile.getUserTours());
         return "profile";

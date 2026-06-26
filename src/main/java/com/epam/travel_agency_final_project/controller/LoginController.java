@@ -60,7 +60,6 @@ public class LoginController {
         String accessToken = jwtProvider.generateAccessToken(userSecurityDTO);
         String refreshToken = UUID.randomUUID().toString();
         refreshTokenService.createRefreshToken(userSecurityDTO, refreshToken);
-        //cookieService.updateAuthCookies(response, accessToken, refreshToken);
         cookieService.updateAuthCookies(response, accessToken);
         return "redirect:/";
     }

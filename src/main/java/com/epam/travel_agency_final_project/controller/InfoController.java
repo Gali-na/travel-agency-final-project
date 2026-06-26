@@ -9,7 +9,6 @@ public class InfoController {
     public String showBlockedPage() {
         return "blocked";
     }
-
     @GetMapping("/tour-not-found")
     public String showTourNotFoundPage() {
         return "tour-not-found";

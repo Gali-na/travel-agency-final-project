@@ -25,16 +25,11 @@ public class JwtProvider {
     @Value("${jwt.secret}")
     private String secret;
     private SecretKey key;
-
     @PostConstruct
     public void init() {
+
         this.key = Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8));
     }
-
-    public SecretKey getKey() {
-        return this.key;
-    }
-
     private final long ACCESS_TOKEN_EXPIRATION_MS = 15 * 60 * 1000;
     private static final Logger logger = LogManager.getLogger(JwtProvider.class);
 
@@ -64,17 +59,6 @@ public class JwtProvider {
             return false;
         }
     }
-
-//    public String getLoginFromToken(String token) {
-//        Claims claims = Jwts.parser()
-//                .verifyWith(key)
-//                .build()
-//                .parseSignedClaims(token)
-//                .getPayload();
-//
-//        return claims.getSubject();
-//    }
-
     public boolean isTokenExpired(String token) throws JwtAuthenticationException {
         try {
             Jwts.parser()
@@ -99,21 +83,6 @@ public class JwtProvider {
 
         return claims.get("roles", java.util.List.class);
     }
-
-//    public UUID getUserIdFromToken(String token) {
-//        Claims claims = Jwts.parser()
-//                .verifyWith(key)
-//                .build()
-//                .parseSignedClaims(token)
-//                .getPayload();
-//        Object userIdObj = claims.get("userId");
-//
-//        if (userIdObj != null) {
-//            return UUID.fromString(userIdObj.toString());
-//        }
-//        return null;
-//    }
-
     private Claims getClaims(String token) {
         return Jwts.parser()
                 .verifyWith(key)

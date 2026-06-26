@@ -31,14 +31,12 @@ import java.util.UUID;
 @RequiredArgsConstructor
 @Component
 public class JwtCookieFilter extends OncePerRequestFilter {
-
     private final JwtProvider jwtProvider;
     private final RefreshTokenService refreshTokenService;
     private final UserService userService;
     private final UserSecurityMapper userSecurityMapper;
     private final CookieService cookieService;
     private static final Logger logger = LogManager.getLogger(JwtCookieFilter.class);
-
     protected boolean shouldNotFilter(HttpServletRequest request) {
         String path = request.getRequestURI();
         return path.equals("/")
@@ -52,57 +50,6 @@ public class JwtCookieFilter extends OncePerRequestFilter {
                 || path.startsWith("/js/")
                 || path.startsWith("/uploads/");
     }
-//    @Override
-//    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
-//            throws ServletException, IOException {
-//
-//        String accessToken = extractCookie(request, "access_token");
-//        String refreshUUID = extractCookie(request, "refresh_token");
-//
-//        RefreshTokenDTO refreshCurrentToken=null;
-//        UserSecurityDTO userSecurityDTO=null;
-//        if (accessToken != null && jwtProvider.validateAccessToken(accessToken)&& refreshUUID != null) {
-//            refreshCurrentToken = refreshTokenService.getRefreshToken(refreshUUID);
-//            userSecurityDTO = userService.findById(refreshCurrentToken.getUserId());
-//            authenticateUserInContext(accessToken,userSecurityDTO);
-//        }
-//
-//        if (accessToken != null && jwtProvider.validateAccessToken(accessToken)&&refreshUUID != null) {
-//            refreshCurrentToken = refreshTokenService.getRefreshToken(refreshUUID);
-//            userSecurityDTO = userService.findById(refreshCurrentToken.getUserId());
-//            authenticateUserInContext(accessToken,userSecurityDTO);
-//            filterChain.doFilter(request, response);
-//            return;
-//        }
-//
-//        if (refreshUUID != null && jwtProvider.isTokenExpired(accessToken)) {
-//            refreshCurrentToken = refreshTokenService.getRefreshToken(refreshUUID);
-//
-//            if (refreshCurrentToken != null) {
-//                userSecurityDTO = userService.findById(refreshCurrentToken.getUserId());
-//                if (userSecurityDTO == null) {
-//                    response.sendRedirect("/register");
-//                    return;
-//                }
-//                if (userSecurityDTO.isLocked()) {
-//                    response.sendRedirect("/blok");
-//                    return;
-//                }
-//                String rotatedToken = refreshTokenService.rotateRefreshToken(refreshUUID);
-//
-//                if (rotatedToken != null) {
-//                    String newAccessToken = jwtProvider.generateAccessToken(userSecurityDTO);
-//                    cookieService.updateAuthCookies(response, newAccessToken, rotatedToken);
-//                    authenticateUserInContext(newAccessToken, userSecurityDTO);
-//                    filterChain.doFilter(request, response);
-//                    return;
-//                }
-//            }
-//        }
-//        filterChain.doFilter(request, response);
-//    }
-
-
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
@@ -113,8 +60,6 @@ public class JwtCookieFilter extends OncePerRequestFilter {
             if (accessToken != null && jwtProvider.validateAccessToken(accessToken)) {
                 UUID userId = jwtProvider.getUserIdFromToken(accessToken);
                 UserSecurityDTO user = userService.findById(userId);
-
-                // 1. Перевірка користувача
                 if (user == null) {
                     logger.info("User {} not found", userId);
                     response.sendRedirect("/login");
@@ -126,17 +71,13 @@ public class JwtCookieFilter extends OncePerRequestFilter {
                     return;
                 }
 
-                // 2. Отримання поточного Refresh Token через сервіс (або пошук через userId)
-                // Примітка: ви повинні додати метод findByUserId в RefreshTokenService
                 RefreshTokenDTO refreshTokenDto = refreshTokenService.getRefreshTokenByUserId(userId);
-
                 if (refreshTokenDto == null) {
                     logger.error("No refresh token for user {}", userId);
                     response.sendRedirect("/login");
                     return;
                 }
 
-                // 3. Ротація (оновлюємо токен в базі)
                 String newRefreshToken = refreshTokenService.rotateRefreshToken(refreshTokenDto.getToken());
                 if (newRefreshToken == null) {
                     logger.warn("Failed to rotate token for user {}", userId);
@@ -144,14 +85,10 @@ public class JwtCookieFilter extends OncePerRequestFilter {
                     return;
                 }
 
-                // 4. Оновлюємо Access Token
                 String newAccessToken = jwtProvider.generateAccessToken(user);
                 cookieService.updateAuthCookies(response, newAccessToken);
-
-                // 5. Авторизація
                 authenticateUserInContext(newAccessToken, user);
-
-                logger.info("Session refreshed for user: {}", userId);
+                logger.info("user: {}  authenticated in context", userId);
                 filterChain.doFilter(request, response);
                 return;
             }
@@ -163,49 +100,6 @@ public class JwtCookieFilter extends OncePerRequestFilter {
 
         filterChain.doFilter(request, response);
     }
-
-    private boolean isAccessTokenValid(String accessToken, String refreshUUID) {
-        if (accessToken != null && jwtProvider.validateAccessToken(accessToken) && refreshUUID != null) {
-            RefreshTokenDTO token = refreshTokenService.getRefreshToken(refreshUUID);
-            UserSecurityDTO user = (token != null) ? userService.findById(token.getUserId()) : null;
-            if (user != null) {
-                authenticateUserInContext(accessToken, user);
-                return true;
-            }
-        }
-        return false;
-    }
-
-    private boolean handleTokenRefresh(String refreshUUID, HttpServletResponse response) throws IOException {
-        RefreshTokenDTO refreshToken = refreshTokenService.getRefreshToken(refreshUUID);
-        if (refreshToken == null) {
-            logger.warn("Refresh token not found in database for UUID: {}", refreshUUID);
-            return false;
-        }
-
-        UserSecurityDTO user = userService.findById(refreshToken.getUserId());
-        if (user == null) {
-            response.sendRedirect("/register");
-            logger.error("User not found for ID: from token {}", refreshToken.getUserId());
-            return true;
-        }
-        if (user.isLocked()) {
-            logger.error("User is blok  userId{}", user.getId());
-            response.sendRedirect("/blok");
-            return true;
-        }
-        String rotatedToken = refreshTokenService.rotateRefreshToken(refreshUUID);
-        if (rotatedToken != null) {
-            String newAccessToken = jwtProvider.generateAccessToken(user);
-            // cookieService.updateAuthCookies(response, newAccessToken, rotatedToken);
-            cookieService.updateAuthCookies(response, newAccessToken);
-            authenticateUserInContext(newAccessToken, user);
-            logger.error("User '{}' successfully authenticated  Access Toke", user.getId());
-            return true;
-        }
-        return false;
-    }
-
     private void authenticateUserInContext(String token, UserSecurityDTO userDTO) {
         String login = "";
         try {
@@ -214,7 +108,6 @@ public class JwtCookieFilter extends OncePerRequestFilter {
             logger.error("invalid access toke");
         }
 
-
         List<String> roles = userDTO.getRoles();
         var authorities = roles.stream()
                 .map(role -> new SimpleGrantedAuthority(role.startsWith("ROLE_") ? role : "ROLE_" + role))
@@ -222,7 +115,7 @@ public class JwtCookieFilter extends OncePerRequestFilter {
 
         SecurityContextHolder.getContext().setAuthentication(
                 new UsernamePasswordAuthenticationToken(login, null, authorities));
-        logger.error("User '{}' successfully authenticated  in   SecurityContex", userDTO.getId());
+        logger.error("User '{}' successfully authenticated  in   SecurityContext", userDTO.getId());
     }
 
     private String extractCookie(HttpServletRequest request, String name) {

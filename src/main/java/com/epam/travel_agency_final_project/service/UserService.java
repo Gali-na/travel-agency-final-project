@@ -37,11 +37,9 @@ public class UserService {
     private final UserProfileMapper userProfileMapper;
 
     @Transactional
-
     public void lockUser(UUID id) {
         userRepository.lockUserById(id);
     }
-
 
     public Page<UserProfileDTO> findAll(Pageable pageable) {
         return userRepository.findAll(pageable).map(userProfileMapper::toDTO);
@@ -74,7 +72,7 @@ public class UserService {
     public boolean isBlockUser(UUID id) {
         return userRepository.findById(id)
                 .map(User::isLocked)
-                .orElse(true); // Якщо користувача немає, вважаємо заблокованим
+                .orElse(true);
     }
 
     @Transactional
@@ -148,8 +146,12 @@ public class UserService {
     }
 
     public UserProfileDTO getProfileData(UUID userId, String lang) {
-        User user = userRepository.findById(userId)
-                .orElseThrow(() -> new RuntimeException("Користувача з ID " + userId + " не знайдено"));
+//        User user = userRepository.findById(userId)
+//                .orElseThrow(() -> new RuntimeException("Користувача з ID " + userId + " не знайдено"));
+        if (userRepository.findById(userId).isEmpty()){
+            return null;
+        }
+        User user = userRepository.findById(userId).get();
         UserTranslation trans = user.getTranslations().stream()
                 .filter(t -> t.getId() != null && t.getId().getLang().equalsIgnoreCase(lang))
                 .findFirst()
