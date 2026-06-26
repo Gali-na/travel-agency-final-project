@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="uk">
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +10,21 @@
         .btn-red-action { background-color: #e60000; color: white; border-radius: 50px; padding: 12px 30px; border: none; font-weight: 700; text-transform: uppercase; text-decoration: none; display: inline-block; }
         .btn-red-action:hover { background-color: #b30000; color: white; }
         .icon-error { font-size: 4rem; color: #e60000; margin-bottom: 20px; }
+        .lang-switcher { position: absolute; top: 20px; right: 20px; }
     </style>
 </head>
 <body class="bg-light">
 
+
+
 <div class="container">
     <div class="form-container">
+        <div class="d-flex justify-content-end p-3">
+            <div class="btn-group" role="group">
+                <a href="?lang=uk" class="btn btn-outline-secondary btn-sm">UA</a>
+                <a href="?lang=en" class="btn btn-outline-secondary btn-sm">EN</a>
+            </div>
+        </div>
         <div class="icon-error"><i class="bi bi-exclamation-circle"></i></div>
 
         <h2 class="fw-bold mb-3" th:text="#{error.balance.header}">Недостатньо коштів</h2>

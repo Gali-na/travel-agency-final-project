@@ -29,7 +29,7 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/", "/index", "/tours/**", "/cart/**", "/book/**",
+                        .requestMatchers("/", "/index", "/tours/**", "/cart/**", "/book/**", "/error/**",
                                         "/blocked/**", "/register", "/login",
                                         "/css/**", "/js/**", "/images/**", "/uploads/**", "/error").permitAll()
                         .requestMatchers("/admin/create-tour", "/admin/tours/create", "/admin/tour-createdInfo")
@@ -38,8 +38,7 @@ public class SecurityConfig {
                         .hasRole("ADMIN")
                         .requestMatchers("/profile/**").authenticated()
                         .anyRequest().authenticated())
-                .exceptionHandling(exception -> exception
-                        .authenticationEntryPoint((request, response, authException) -> {
+                        .exceptionHandling(exception -> exception.authenticationEntryPoint((request, response, authException) -> {
                             response.sendRedirect("/login");
                         })
                 )
@@ -48,25 +47,14 @@ public class SecurityConfig {
                 .addFilterBefore(jwtCookieFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
-//    @Bean
-//    public UserDetailsService userDetailsService() {
-//        return email -> {
-//            var user = userRepository.findByEmail(email)
-//                    .orElseThrow(() -> new UsernameNotFoundException("User not found: " + email));
-//            return new User(
-//                    user.getEmail(),
-//                    user.getPasswordHash(),
-//                    Collections.emptyList()
-//            );
-//        };
-//    }
-
     @Bean
     public PasswordEncoder passwordEncoder() {
+
         return new BCryptPasswordEncoder();
     }
     @Bean
     public SpringSecurityDialect springSecurityDialect() {
+
         return new SpringSecurityDialect();
     }
 }

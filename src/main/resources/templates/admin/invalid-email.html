@@ -1,25 +1,62 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="uk">
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}">
 <head>
     <meta charset="UTF-8">
-    <title>Помилка пошуку</title>
+    <title th:text="#{error.email.notfound.title}">Email не знайдено</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f6; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); text-align: center; max-width: 400px; }
-        /* Змінено колір іконки на помаранчевий для помилки */
-        .icon { font-size: 50px; color: #e67e22; margin-bottom: 1rem; }
-        h1 { color: #2c3e50; }
-        p { color: #555; }
-        a { display: inline-block; margin-top: 1.5rem; padding: 10px 20px; background: #e60000; color: white; text-decoration: none; border-radius: 5px; }
-        a:hover { background: #b30000; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 450px;
+            width: 90%;
+        }
+        .icon { font-size: 60px; color: #e67e22; margin-bottom: 1rem; }
+        h1 { color: #2c3e50; margin-bottom: 0.5rem; }
+        p { color: #7f8c8d; line-height: 1.6; margin-bottom: 2rem; }
+        .lang-switcher { margin-bottom: 1.5rem; }
+        .lang-switcher a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 5px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #e60000;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        .btn:hover { background: #b30000; }
     </style>
 </head>
 <body>
+
 <div class="card">
+    <div class="lang-switcher">
+        <a href="?lang=uk">UA</a> | <a href="?lang=en">EN</a>
+    </div>
+
     <div class="icon">⚠</div>
-    <h1>Email не знайдено</h1>
-    <p>Вибачте, користувача з такою електронною адресою не існує в системі.</p>
-    <a href="/admin/users">Повернутися до списку</a>
+    <h1 th:text="#{error.email.notfound.title}">Email не знайдено</h1>
+    <p th:text="#{error.email.notfound.text}">Вибачте, користувача з такою електронною адресою не існує в системі.</p>
+
+    <a href="/admin/users" class="btn" th:text="#{error.email.notfound.button}">Повернутися до списку</a>
 </div>
+
 </body>
 </html>

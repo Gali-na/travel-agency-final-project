@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}">
 <head>
     <meta charset="UTF-8">
     <title th:text="#{blocked.page.title}">Акаунт заблоковано</title>
@@ -14,20 +14,19 @@
 </head>
 <body class="bg-light">
 
-<div class="lang-switcher">
-    <div class="btn-group" role="group">
-        <a href="?lang=uk" class="btn btn-outline-primary btn-sm">UA</a>
-        <a href="?lang=en" class="btn btn-outline-primary btn-sm">EN</a>
-    </div>
-</div>
+
 
 <div class="container d-flex justify-content-center align-items-center vh-100">
     <div class="card text-center shadow p-4" style="max-width: 500px;">
         <div class="card-body">
             <h1 class="text-danger display-1">🚫</h1>
-
+            <div class="lang-switcher">
+                <div class="btn-group" role="group">
+                    <a href="?lang=uk" class="btn btn-outline-primary btn-sm">UA</a>
+                    <a href="?lang=en" class="btn btn-outline-primary btn-sm">EN</a>
+                </div>
+            </div>
             <h2 class="card-title mt-3" th:text="#{blocked.header}">Акаунт заблоковано</h2>
-
             <p class="card-text text-muted mt-3" th:text="#{blocked.message}">
                 Ваш обліковий запис було заблоковано адміністратором.
             </p>

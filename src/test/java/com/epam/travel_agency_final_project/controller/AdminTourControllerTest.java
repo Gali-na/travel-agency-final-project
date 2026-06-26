@@ -38,9 +38,7 @@ class AdminTourControllerTest {
     void createTour_ValidationErrors_ReturnsForm() {
         when(bindingResult.hasErrors()).thenReturn(true);
         TourCreationDTO dto = new TourCreationDTO();
-
         String viewName = controller.createTour(dto, bindingResult, model);
-
         assertEquals("admin/create-tour", viewName);
         verify(tourService, never()).createFullTour(any());
         verify(cityService, times(1)).findAll();
