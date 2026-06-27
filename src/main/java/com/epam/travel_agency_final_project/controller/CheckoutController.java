@@ -23,7 +23,7 @@ public class CheckoutController {
     private final CookieService cookieService;
     private final JwtProvider jwtTokenProvider;
     private final UserService userService;
-    private final TourService tourServiceImpl;
+    private final TourService tourService;
     private final UserAuthenticationService userAuthenticationService;
     @PostMapping("/checkout")
     public String processCheckout(@RequestParam("tourId") UUID tourId,
@@ -34,12 +34,10 @@ public class CheckoutController {
         if (userSecurityDTO.isLocked()) {
             return "redirect:/blocked";
         }
-        TourFullDTO tourDTO = tourServiceImpl.findById(tourId, locale.getLanguage());
-        BigDecimal balance = (userSecurityDTO.getBalance() != null) ? userSecurityDTO.getBalance() : BigDecimal.ZERO;
-        BigDecimal price = (tourDTO.getPrice() != null) ? tourDTO.getPrice() : BigDecimal.ZERO;
-        if (balance.compareTo(price) < 0) {
-            return "redirect:/checkoutInfo";
-        }
+        TourFullDTO tourDTO = tourService.findById(tourId, locale.getLanguage());
+        if (tourService.checkPaymentAvailability(userSecurityDTO,tourDTO) < 0) {
+           return "redirect:/checkoutInfo";
+         }
         userService.finalizePurchase(userSecurityDTO, tourDTO);
         cookieService.updateCartCookieAfterPurchase(tourId,request, response);
         return "redirect:/checkout-success";

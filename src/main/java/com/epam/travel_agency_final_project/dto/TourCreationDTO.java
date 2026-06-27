@@ -1,5 +1,6 @@
 package com.epam.travel_agency_final_project.dto;
 
+import jakarta.validation.ValidationException;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.NotBlank;
@@ -16,35 +17,49 @@ import java.util.UUID;
 @AllArgsConstructor
 @Builder
 @ToString
-public class TourCreationDTO {
-    @NotNull(message = "Price is required")
-    @DecimalMin(value = "1.00", message = "Price must be at least 1")
+public class TourCreationDTO implements Validatable{
+
+    @NotNull(message = "{error.price.required}")
+    @DecimalMin(value = "1.00", message = "{error.price.min}")
     private BigDecimal price;
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-    @NotNull(message = "Arrival date is required")
-    @FutureOrPresent(message = "Arrival date must be in the present or future")
+    @NotNull(message = "{error.arrival.required}")
+    @FutureOrPresent(message = "{error.arrival.future}")
     private LocalDateTime arrivalDate;
-    @NotNull(message = "Eviction date is required")
+    @NotNull(message = "{error.eviction.required}")
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private LocalDateTime evictionDate;
-    @NotNull(message = "IsHot status is required")
+
+    @NotNull(message = "{error.hot.required}")
     private Boolean isHot;
-    @NotBlank
+
+    @NotBlank(message = "{error.image.required}")
     private String imagePath;
-    @NotBlank(message = "Tour type cannot be empty")
+
+    @NotBlank(message = "{error.type.required}")
     private String tourType;
-    @NotBlank(message = "Transfer type cannot be empty")
+
+    @NotBlank(message = "{error.transfer.required}")
     private String transferType;
-    @NotBlank(message = "Hotel type cannot be empty")
+    @NotBlank(message = "{error.hotel.required}")
     private String hotelType;
-    @NotNull(message = "City is required")
+    @NotNull(message = "{error.city.required}")
     private UUID cityId;
-    @NotBlank(message = "TitleEn cannot be empty")
-    @NotBlank private String titleEn;
-    @NotBlank(message = "DescriptionEn cannot be empty")
-    @NotBlank private String descriptionEn;
-    @NotBlank(message = "TitleUa cannot be empty")
-    @NotBlank private String titleUa;
-    @NotBlank(message = "DescriptionUK cannot be empty")
+    @NotBlank(message = "{error.titleEn.required}")
+    private String titleEn;
+    @NotBlank(message = "{error.descEn.required}")
+    private String descriptionEn;
+    @NotBlank(message = "{error.titleUa.required}")
+    private String titleUa;
+    @NotBlank(message = "{error.descUa.required}")
     private String descriptionUa;
+
+    @Override
+    public void validate() {
+        if (arrivalDate != null && evictionDate != null) {
+            if (!evictionDate.isAfter(arrivalDate)) {
+                throw new ValidationException("error.eviction.before.arrival");
+            }
+        }
+    }
 }

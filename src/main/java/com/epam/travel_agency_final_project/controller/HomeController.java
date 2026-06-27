@@ -18,7 +18,6 @@ public class HomeController {
     @GetMapping("/")
     public String index(HttpServletRequest request, Model model) {
         String accessToken = cookieServiсe.extractCookie(request, "access_token");
-
         if (accessToken != null && jwtProvider.validateAccessToken(accessToken)) {
             List<String> roles = jwtProvider.getRolesFromToken(accessToken);
             boolean isAdmin = roles.contains("ROLE_ADMIN");
@@ -29,7 +28,6 @@ public class HomeController {
             model.addAttribute("isAdmin", false);
             model.addAttribute("isManager", false);
         }
-
         return "index";
     }
 }

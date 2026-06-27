@@ -1,7 +1,5 @@
 package com.epam.travel_agency_final_project.security;
 import com.epam.travel_agency_final_project.dto.UserSecurityDTO;
-import com.epam.travel_agency_final_project.exeption.AuthenticationTokenMissingException;
-import com.epam.travel_agency_final_project.exeption.JwtAuthenticationException;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.JwtException;
@@ -27,18 +25,19 @@ public class JwtProvider {
     private SecretKey key;
     @PostConstruct
     public void init() {
-
         this.key = Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8));
     }
+    public SecretKey getKey() {
+        return this.key;
+    }
     private final long ACCESS_TOKEN_EXPIRATION_MS = 15 * 60 * 1000;
-    private static final Logger logger = LogManager.getLogger(JwtProvider.class);
-
     public String generateAccessToken(UserSecurityDTO userDto) {
         Date now = new Date();
         Date expiryDate = new Date(now.getTime() + ACCESS_TOKEN_EXPIRATION_MS);
         Map<String, Object> claims = new HashMap<>();
         claims.put("roles", userDto.getRoles());
         claims.put("userId", userDto.getId());
+
         return Jwts.builder()
                 .subject(userDto.getLogin())
                 .claims(claims)
@@ -47,7 +46,6 @@ public class JwtProvider {
                 .signWith(key)
                 .compact();
     }
-
     public boolean validateAccessToken(String token) {
         try {
             Jwts.parser()
@@ -59,7 +57,16 @@ public class JwtProvider {
             return false;
         }
     }
-    public boolean isTokenExpired(String token) throws JwtAuthenticationException {
+    public String getLoginFromToken(String token) {
+        Claims claims = Jwts.parser()
+                .verifyWith(key)
+                .build()
+                .parseSignedClaims(token)
+                .getPayload();
+
+        return claims.getSubject();
+    }
+    public boolean isTokenExpired(String token) {
         try {
             Jwts.parser()
                     .verifyWith(key)
@@ -70,10 +77,9 @@ public class JwtProvider {
         } catch (ExpiredJwtException e) {
             return true;
         } catch (JwtException | IllegalArgumentException e) {
-            throw new JwtAuthenticationException("access token expired");
+            return false;
         }
     }
-
     public java.util.List<String> getRolesFromToken(String token) {
         Claims claims = Jwts.parser()
                 .verifyWith(key)
@@ -83,30 +89,19 @@ public class JwtProvider {
 
         return claims.get("roles", java.util.List.class);
     }
-    private Claims getClaims(String token) {
-        return Jwts.parser()
+
+    public UUID getUserIdFromToken(String token) {
+        Claims claims = Jwts.parser()
                 .verifyWith(key)
                 .build()
                 .parseSignedClaims(token)
                 .getPayload();
-    }
-
-    public String getLoginFromToken(String token) throws JwtAuthenticationException {
-        try {
-            return getClaims(token).getSubject();
-        } catch (JwtException e) {
-            logger.info("access token expired");
-            throw new JwtAuthenticationException("access token expired");
+        Object userIdObj = claims.get("userId");
+        if (userIdObj != null) {
+            return UUID.fromString(userIdObj.toString());
         }
-    }
 
-    public UUID getUserIdFromToken(String token) throws JwtAuthenticationException {
-        try {
-            Object userIdObj = getClaims(token).get("userId");
-            return (userIdObj != null) ? UUID.fromString(userIdObj.toString()) : null;
-        } catch (JwtException | IllegalArgumentException e) {
-            logger.info("access token expired");
-            throw new JwtAuthenticationException("access token expired");
-        }
+        return null;
     }
 }
+

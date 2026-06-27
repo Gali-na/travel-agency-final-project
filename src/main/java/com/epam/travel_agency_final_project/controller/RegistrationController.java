@@ -28,12 +28,7 @@ import java.util.UUID;
 public class RegistrationController {
     private final UserService userService;
     private final MessageSource messageSource;
-    private final JwtProvider jwtProvider;
-    private final RefreshTokenService refreshTokenService;
-    private final UserSecurityMapper userSecurityMapper;
-    private final CookieService cookieService;
     private final UserAuthenticationService userAuthenticationService;
-
     @GetMapping("/register")
     public String showRegistrationForm(Model model) {
         model.addAttribute("userDto", new UserRegistrationDTO());
@@ -44,9 +39,8 @@ public class RegistrationController {
                                BindingResult bindingResult,
                                HttpServletResponse response,
                                Locale locale) {
-
-        try {userDto.validate();
-        } catch (ValidationException e) {
+        try {userDto.validate();}
+        catch (ValidationException e) {
             bindingResult.reject(null, messageSource.getMessage(e.getMessage(), null, locale));
             return "register";
         }
@@ -54,10 +48,7 @@ public class RegistrationController {
                bindingResult.rejectValue("email", "error.user.exists", "User with this email address already exists");
                 return "register";
         }
-        UUID userId = userService.registerNewUser(userDto);
-        if (userService.findById(userId).isLocked()) {
-            return "redirect:/login?blocked";
-        }
+       UUID userId = userService.registerNewUser(userDto);
         userAuthenticationService.registerAndAuthenticate(userId , response);
         return "redirect:/";
     }

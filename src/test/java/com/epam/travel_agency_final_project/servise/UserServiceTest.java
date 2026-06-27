@@ -3,7 +3,7 @@ package com.epam.travel_agency_final_project.servise;
 import com.epam.travel_agency_final_project.dto.UserProfileDTO;
 import com.epam.travel_agency_final_project.dto.UserSecurityDTO;
 import com.epam.travel_agency_final_project.entity.User;
-import com.epam.travel_agency_final_project.mapper.UserProfileMapper;
+import com.epam.travel_agency_final_project.mapper.UserProfileMapper1;
 import com.epam.travel_agency_final_project.mapper.UserSecurityMapper;
 import com.epam.travel_agency_final_project.repository.UserRepository;
 import com.epam.travel_agency_final_project.service.UserService;
@@ -33,7 +33,7 @@ class UserServiceTest {
     @Mock
     private PasswordEncoder passwordEncoder;
     @Mock
-    private UserProfileMapper userProfileMapper;
+    private UserProfileMapper1 userProfileMapper;
     @InjectMocks
     private UserService userService;
     @Test

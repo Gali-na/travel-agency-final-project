@@ -11,7 +11,6 @@ public class InfoController {
     }
     @GetMapping("/tour-not-found")
     public String showTourNotFoundPage() {
-
         return "tour-not-found";
     }
     @GetMapping("/checkoutInfo")
@@ -21,10 +20,12 @@ public class InfoController {
     }
     @GetMapping("/admin/invalid-email")
     public String showInvalidEmailPage() {
+
         return "/admin/invalid-email";
     }
     @GetMapping("/admin/tour-createdInfo")
     public String showTourCreatedPage() {
+
         return "admin/tour-createdInfo";
     }
     @GetMapping("/checkout-success")

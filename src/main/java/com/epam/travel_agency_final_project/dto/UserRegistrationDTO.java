@@ -19,9 +19,19 @@ public class UserRegistrationDTO implements Validatable {
     private String lastName;
     @Override
     public void validate() {
-        String passRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{6,10}$";
-        if (!password.matches(passRegex)) {
+        String basicRegex = "^[a-zA-Z0-9]{6,10}$";
+        if (!password.matches(basicRegex)) {
             throw new ValidationException("error.password.invalid");
+        }
+
+        if (!password.matches(".*[a-z].*")) {
+            throw new ValidationException("error.password.no.lowercase");
+        }
+        if (!password.matches(".*[A-Z].*")) {
+            throw new ValidationException("error.password.no.uppercase");
+        }
+        if (!password.matches(".*[0-9].*")) {
+            throw new ValidationException("error.password.no.digit");
         }
 
         if (!email.matches("^[a-zA-Z0-9]+@[a-zA-Z0-9]+$")) {

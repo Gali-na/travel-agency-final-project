@@ -13,7 +13,6 @@ import java.util.UUID;
 @Getter
 @Setter
 public class User {
-
     @Id
     private UUID id;
     private String email;

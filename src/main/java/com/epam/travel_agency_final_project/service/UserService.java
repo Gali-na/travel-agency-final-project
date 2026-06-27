@@ -21,13 +21,13 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Service
 public class UserService {
-
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final UserSecurityMapper userSecurityMapper;
@@ -54,7 +54,6 @@ public class UserService {
                 .map(user -> passwordEncoder.matches(rawPassword, user.getPasswordHash()))
                 .orElse(false);
     }
-
     @Transactional
     public BigDecimal increaseBalance(UUID userId, BigDecimal amount) {
         int updatedRows = userRepository.depositBalanceById(userId, amount);
@@ -64,17 +63,14 @@ public class UserService {
     public UserSecurityDTO findById(UUID id) {
         return userSecurityMapper.toSecurityDto(userRepository.findById(id).orElse(null));
     }
-
     public boolean isExistUser(String email) {
         return userRepository.findByEmail(email).isPresent();
     }
-
     public boolean isBlockUser(UUID id) {
         return userRepository.findById(id)
                 .map(User::isLocked)
                 .orElse(true);
     }
-
     @Transactional
     public void blockUser(String email) {
         userRepository.findByEmail(email).ifPresent(user -> {
@@ -140,18 +136,15 @@ public class UserService {
         id.setUserId(userId);
         id.setLang(lang);
         translation.setId(id);
-
         user.setTranslations(List.of(translation));
         userRepository.save(user);
     }
-
     public UserProfileDTO getProfileData(UUID userId, String lang) {
-//        User user = userRepository.findById(userId)
-//                .orElseThrow(() -> new RuntimeException("Користувача з ID " + userId + " не знайдено"));
-        if (userRepository.findById(userId).isEmpty()){
+       Optional<User> userOptional = userRepository.findById(userId);
+       if (userOptional.isEmpty()){
             return null;
         }
-        User user = userRepository.findById(userId).get();
+        User user = userOptional.get();
         UserTranslation trans = user.getTranslations().stream()
                 .filter(t -> t.getId() != null && t.getId().getLang().equalsIgnoreCase(lang))
                 .findFirst()
@@ -161,7 +154,6 @@ public class UserService {
                 .map(ut -> new UserTourDTO(ut.getId(), ut.getStatus(), ut.getCreatedAt(), tourMapper.toDto(ut.getTour(), lang)
                 ))
                 .collect(Collectors.toList());
-
         return new UserProfileDTO(user.getId(), user.getEmail(), user.getBalance(), trans.getFirstName(), trans.getLastName(), user.isLocked(), tourDTOs
         );
     }

@@ -12,11 +12,13 @@ import com.epam.travel_agency_final_project.dto.TourFullDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.util.Locale;
 import java.util.UUID;
 @RequiredArgsConstructor
 @Controller
@@ -46,7 +48,7 @@ public class TourWebController {
                             @RequestParam(value = "lang", defaultValue = "uk") String lang,
                             HttpServletRequest request,
                             HttpServletResponse response) {
-        Cart cart = cookieService.getCartFromCookie( request);
+        Cart cart = cookieService.getCartFromCookie(request);
         cart.addTour(tourId);
         String updatedCartJson = URLEncoder.encode(cart.toJson(), StandardCharsets.UTF_8);
         Cookie cartCookie = new Cookie("cart", updatedCartJson);
@@ -56,4 +58,3 @@ public class TourWebController {
         return "redirect:/tours?lang=" + lang;
     }
 }
-

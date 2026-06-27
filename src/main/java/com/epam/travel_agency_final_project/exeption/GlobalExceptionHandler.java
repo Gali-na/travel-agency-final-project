@@ -22,7 +22,6 @@ public class GlobalExceptionHandler {
         model.addAttribute("userDto", new UserRegistrationDTO());
         return "register";
     }
-
     @ExceptionHandler(AuthenticationTokenMissingException.class)
     public String handleAuthException(AuthenticationTokenMissingException ex) {
         return "redirect:/login?error=session_expired";

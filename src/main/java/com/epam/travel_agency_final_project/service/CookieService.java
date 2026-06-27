@@ -14,7 +14,7 @@ import java.util.UUID;
 
 @Service
 public class CookieService {
-  public String extractCookieJWT(HttpServletRequest request, String name) {
+    public String extractCookie(HttpServletRequest request, String name) {
         if (request.getCookies() == null) return null;
         return Arrays.stream(request.getCookies())
                 .filter(c -> name.equals(c.getName()))
@@ -22,7 +22,6 @@ public class CookieService {
                 .findFirst()
                 .orElse(null);
     }
-
     public boolean updateCartCookieAfterPurchase( UUID tourId,
                                  HttpServletRequest request,
                                  HttpServletResponse response) {
@@ -41,7 +40,6 @@ public class CookieService {
         if(rawCartJson.isEmpty()){
             throw new TourNotFoundException("tour not found");
         }
-
         Cart cart = Cart.fromJson(rawCartJson);
         cart.removeTour(tourId);
         String updatedCartJson = URLEncoder.encode(cart.toJson(), StandardCharsets.UTF_8);
@@ -51,21 +49,18 @@ public class CookieService {
         response.addCookie(cartCookie);
         return true ;
     }
-
-    public String extractCookie(HttpServletRequest request, String name) {
-        if (request.getCookies() == null) return null;
-        return Arrays.stream(request.getCookies())
-                .filter(c -> name.equals(c.getName()))
-                .map(Cookie::getValue)
-                .findFirst()
-                .orElse(null);
-    }
-    public void updateAuthCookies(HttpServletResponse response, String accessToken) {
-        Cookie accessCookie = new Cookie("access_token",accessToken);
+    public void updateAuthCookies(HttpServletResponse response, String accessToken, String refreshUUID) {
+        Cookie accessCookie = new Cookie("access_token", accessToken);
         accessCookie.setHttpOnly(true);
         accessCookie.setPath("/");
-        accessCookie.setMaxAge(30 * 24 * 60 * 60);
+        accessCookie.setMaxAge(15 * 60);
         response.addCookie(accessCookie);
+
+        Cookie refreshCookie = new Cookie("refresh_token", refreshUUID);
+        refreshCookie.setHttpOnly(true);
+        refreshCookie.setPath("/");
+        refreshCookie.setMaxAge(30 * 24 * 60 * 60);
+        response.addCookie(refreshCookie);
     }
     public Cart getCartFromCookie(HttpServletRequest request) {
         String rawCartJson = "";

@@ -10,7 +10,7 @@ import com.epam.travel_agency_final_project.entity.TourTranslation;
 import com.epam.travel_agency_final_project.exeption.CityNotFoundException;
 import com.epam.travel_agency_final_project.exeption.TourNotFoundException;
 import com.epam.travel_agency_final_project.mapper.TourCreateMapper;
-import com.epam.travel_agency_final_project.mapper.TourMapper;
+import com.epam.travel_agency_final_project.mapper.TourMapper1;
 import com.epam.travel_agency_final_project.model.TourFilter;
 import com.epam.travel_agency_final_project.repository.CityRepository;
 import com.epam.travel_agency_final_project.repository.TourRepository;
@@ -38,7 +38,7 @@ class TourServiceTest {
     @Mock
     private TourRepository tourRepository;
     @Mock
-    private TourMapper tourMapper;
+    private TourMapper1 tourMapper;
     @Mock
     private TourTranslationRepository translationRepository;
     @Mock

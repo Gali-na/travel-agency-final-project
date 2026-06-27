@@ -3,6 +3,7 @@ package com.epam.travel_agency_final_project.service;
 import com.epam.travel_agency_final_project.dto.TourCreationDTO;
 import com.epam.travel_agency_final_project.dto.TourDTO;
 import com.epam.travel_agency_final_project.dto.TourFullDTO;
+import com.epam.travel_agency_final_project.dto.UserSecurityDTO;
 import com.epam.travel_agency_final_project.entity.City;
 import com.epam.travel_agency_final_project.entity.TourTranslation;
 import com.epam.travel_agency_final_project.exeption.CityNotFoundException;
@@ -21,6 +22,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -69,5 +71,11 @@ public class TourService{
         return tourMapper.toDto(tour.get(),lang);
         }
        throw  new TourNotFoundException("Tour with ID " + id + " not found");
+    }
+
+    public int checkPaymentAvailability(UserSecurityDTO userSecurityDTO, TourFullDTO tourDTO){
+        BigDecimal balance = (userSecurityDTO.getBalance() != null) ? userSecurityDTO.getBalance() : BigDecimal.ZERO;
+        BigDecimal price = (tourDTO.getPrice() != null) ? tourDTO.getPrice() : BigDecimal.ZERO;
+        return balance.compareTo(price);
     }
 }

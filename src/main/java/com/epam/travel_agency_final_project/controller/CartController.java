@@ -2,6 +2,7 @@ package com.epam.travel_agency_final_project.controller;
 
 import com.epam.travel_agency_final_project.dto.TourFullDTO;
 import com.epam.travel_agency_final_project.model.Cart;
+import com.epam.travel_agency_final_project.service.CookieService;
 import com.epam.travel_agency_final_project.service.TourService;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
@@ -23,13 +24,14 @@ import java.util.UUID;
 @Controller
 @RequiredArgsConstructor
 public class CartController {
+    private final CookieService cookieService;
     private final TourService tourService;
     @GetMapping("/cart")
     public String showCart(HttpServletRequest request,
                            Model model,
                            @RequestParam(value = "lang", defaultValue = "uk") String lang) {
 
-        Cart cart = Cart.fromJson(parseCookie(request.getCookies()));
+        Cart cart = Cart.fromJson(cookieService.parseCookieDecoder(request.getCookies()));
         Set<UUID> tourIds = cart.getItems().keySet();
         List<TourFullDTO> cartTours = new ArrayList<>();
         if (!tourIds.isEmpty()) {
@@ -50,7 +52,7 @@ public class CartController {
                                  HttpServletRequest request,
                                  HttpServletResponse response) {
 
-        Cart cart = Cart.fromJson(parseCookie(request.getCookies()));
+        Cart cart = Cart.fromJson(cookieService.parseCookieDecoder(request.getCookies()));
         cart.removeTour(tourId);
         String updatedCartJson = URLEncoder.encode(cart.toJson(), StandardCharsets.UTF_8);
         Cookie cartCookie = new Cookie("cart", updatedCartJson);
@@ -58,17 +60,5 @@ public class CartController {
         cartCookie.setPath("/");
         response.addCookie(cartCookie);
         return "redirect:/cart?lang=" + lang;
-    }
-    private String parseCookie ( Cookie[] cookies){
-        String rawCartJson="";
-        if (cookies != null) {
-            for (Cookie c : cookies) {
-                if ("cart".equals(c.getName())) {
-                    rawCartJson = URLDecoder.decode(c.getValue(), StandardCharsets.UTF_8);
-                    break;
-                }
-            }
-        }
-        return rawCartJson;
     }
 }

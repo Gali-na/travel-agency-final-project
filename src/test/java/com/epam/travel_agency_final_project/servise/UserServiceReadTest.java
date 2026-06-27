@@ -6,7 +6,7 @@ import com.epam.travel_agency_final_project.dto.UserRegistrationDTO;
 import com.epam.travel_agency_final_project.dto.UserSecurityDTO;
 import com.epam.travel_agency_final_project.entity.*;
 import com.epam.travel_agency_final_project.exeption.UserAlreadyExistsException;
-import com.epam.travel_agency_final_project.mapper.TourMapper;
+import com.epam.travel_agency_final_project.mapper.TourMapper1;
 import com.epam.travel_agency_final_project.mapper.UserSecurityMapper;
 import com.epam.travel_agency_final_project.repository.UserRepository;
 import com.epam.travel_agency_final_project.repository.UserTourRepository;
@@ -31,7 +31,7 @@ import static org.mockito.Mockito.*;
 @ExtendWith(MockitoExtension.class)
 public class UserServiceReadTest {
     @Mock
-    private TourMapper tourMapper;
+    private TourMapper1 tourMapper;
     @Mock
     private UserTranslationRepository userTranslationRepository;
     @Mock

@@ -27,9 +27,6 @@ import java.util.UUID;
 public class LoginController {
     private final UserService userService;
     private final MessageSource messageSource;
-    private final JwtProvider jwtProvider;
-    private final RefreshTokenService refreshTokenService;
-    private final CookieService cookieService;
     private final UserAuthenticationService userAuthenticationService;
 
     @GetMapping("/login")
@@ -57,10 +54,7 @@ public class LoginController {
         if (userSecurityDTO.isLocked()) {
             return "redirect:/blocked";
         }
-        String accessToken = jwtProvider.generateAccessToken(userSecurityDTO);
-        String refreshToken = UUID.randomUUID().toString();
-        refreshTokenService.createRefreshToken(userSecurityDTO, refreshToken);
-        cookieService.updateAuthCookies(response, accessToken);
+        userAuthenticationService.updateRefreshAccessToken(response, userSecurityDTO);
         return "redirect:/";
     }
 }
