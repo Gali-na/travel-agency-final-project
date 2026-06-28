@@ -7,6 +7,7 @@ import com.epam.travel_agency_final_project.entity.User;
 import com.epam.travel_agency_final_project.model.Role;
 import com.epam.travel_agency_final_project.repository.RoleRepository;
 import com.epam.travel_agency_final_project.repository.UserRepository;
+import com.epam.travel_agency_final_project.service.UserAuthenticationService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.PropertyMap;
@@ -19,9 +20,6 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 @Component
 public class UserSecurityMapper {
-
-    private final RoleRepository roleRepository;
-    private final UserRepository userRepository;
     public UserSecurityDTO toSecurityDto(User user) {
         if (user == null) return null;
 
@@ -38,22 +36,41 @@ public class UserSecurityMapper {
                 .build();
     }
 
-    public User toEntity(UserSecurityDTO dto) {
-        if (dto == null) return null;
-        User user = userRepository.findById(dto.getId())
-                .orElse(new User());
-        user.setId(dto.getId());
-        user.setEmail(dto.getLogin());
-        user.setLocked(dto.isLocked());
-        user.setBalance(dto.getBalance());
-        if (dto.getRoles() != null) {
-            List<RoleEntity> roleEntities = dto.getRoles().stream()
-                    .map(roleName -> roleRepository.findByName(Role.valueOf(roleName))
-                            .orElseThrow(() -> new RuntimeException("Role not found: " + roleName)))
-                    .collect(Collectors.toList());
-            user.setRoles(roleEntities);
-        }
+//    public User toEntity(UserSecurityDTO dto) {
+//        User user = new User();
+//        user.setId(dto.getId());
+//        user.setEmail(dto.getLogin());
+//        user.setLocked(dto.isLocked());
+//        user.setBalance(dto.getBalance());
+//        //user.setRoles(userAuthenticationService.getUserRolesByUserSecurityDTO( dto));
+//        return user;
+//    }
+//getUserRolesByUserSecurityDTO(UserSecurityDTO dto)
+/*public class UserSecurityDTO {
+    private UUID id;
+    private String login;
+    private List<String> roles = new ArrayList<>();//
+    private boolean isLocked;
+    private BigDecimal balance;
+}*/
 
-        return user;
-    }
+//    public User toEntity(UserSecurityDTO dto) {
+//        if (dto == null) return null;
+//        User user = userRepository.findById(dto.getId())
+//                .orElse(new User());
+//        user.setId(dto.getId());
+//        user.setEmail(dto.getLogin());
+//        user.setLocked(dto.isLocked());
+//        user.setBalance(dto.getBalance());
+//        if (dto.getRoles() != null) {
+//            List<RoleEntity> roleEntities = dto.getRoles().stream()
+//                    .map(roleName -> roleRepository.findByName(Role.valueOf(roleName))
+//                            .orElseThrow(() -> new RuntimeException("Role not found: " + roleName)))
+//                    .collect(Collectors.toList());
+//            user.setRoles(roleEntities);
+//        }
+//
+//        return user;
+//    }
+
 }

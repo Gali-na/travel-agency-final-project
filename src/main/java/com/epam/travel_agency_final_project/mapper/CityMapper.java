@@ -31,7 +31,6 @@ public class CityMapper {
     }
 
     public CityDTO toDTO(City city) {
-
         return modelMapper.map(city, CityDTO.class);
     }
 }

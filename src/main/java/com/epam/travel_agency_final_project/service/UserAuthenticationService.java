@@ -2,7 +2,11 @@ package com.epam.travel_agency_final_project.service;
 
 import com.epam.travel_agency_final_project.dto.RefreshTokenDTO;
 import com.epam.travel_agency_final_project.dto.UserSecurityDTO;
+import com.epam.travel_agency_final_project.entity.RoleEntity;
+import com.epam.travel_agency_final_project.entity.User;
 import com.epam.travel_agency_final_project.exeption.AuthenticationTokenMissingException;
+import com.epam.travel_agency_final_project.model.Role;
+import com.epam.travel_agency_final_project.repository.RoleRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
@@ -10,7 +14,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 import com.epam.travel_agency_final_project.security.JwtProvider;
+
+import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -19,6 +26,7 @@ public class UserAuthenticationService {
     private final JwtProvider jwtTokenProvider;
     private final UserService userService;
     private final RefreshTokenService refreshTokenService;
+    private final RoleRepository roleRepository;
     private static final Logger log = LogManager.getLogger(UserAuthenticationService.class);
 
     public UserSecurityDTO getAuthenticatedUser(HttpServletRequest request) {
@@ -56,4 +64,5 @@ public class UserAuthenticationService {
         UserSecurityDTO userSecurityDTO = userService.findById(userId);
         updateRefreshAccessToken( resp, userSecurityDTO);
     }
+
 }

@@ -5,6 +5,7 @@ import com.epam.travel_agency_final_project.dto.UserSecurityDTO;
 import com.epam.travel_agency_final_project.entity.RefreshToken;
 import com.epam.travel_agency_final_project.mapper.UserSecurityMapper;
 import com.epam.travel_agency_final_project.repository.RefreshTokenRepository;
+import com.epam.travel_agency_final_project.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,24 +19,7 @@ public class RefreshTokenService {
     private final RefreshTokenRepository refreshTokenRepository;
     private final UserService userService;
     private final UserSecurityMapper userSecurityMapper;
-    @Transactional
-    public void createRefreshToken(UserSecurityDTO userDto, String token) {
-        Optional<RefreshToken> existingToken = refreshTokenRepository.findByUserId(userDto.getId());
-
-        if (existingToken.isPresent()) {
-            RefreshToken tokenEntity = existingToken.get();
-            tokenEntity.setToken(token);
-            tokenEntity.setExpiryDate(LocalDateTime.now().plusDays(30));
-            refreshTokenRepository.save(tokenEntity);
-        } else {
-            RefreshToken newToken = new RefreshToken();
-            newToken.setUser(userSecurityMapper.toEntity(userDto));
-            newToken.setToken(token);
-            newToken.setExpiryDate(LocalDateTime.now().plusDays(30));
-            refreshTokenRepository.save(newToken);
-        }
-    }
-
+    private final UserRepository userRepository;
     @Transactional
     public boolean deleteRefreshToken(String token) {
         return refreshTokenRepository.findByToken(token).map(t -> {
@@ -43,7 +27,6 @@ public class RefreshTokenService {
             return true;
         }).orElse(false);
     }
-
     @Transactional
     public String rotateRefreshToken(String oldToken) {
         if (oldToken==null){
@@ -84,5 +67,25 @@ public class RefreshTokenService {
         return refreshTokenRepository.findByUserId(userId)
                 .map(this::mapToDto)
                 .orElse(null);
+    }
+
+    @Transactional
+    public void createRefreshToken(UserSecurityDTO userDto, String token) {
+        Optional<RefreshToken> existingToken = refreshTokenRepository.findByUserId(userDto.getId());
+
+        if (existingToken.isPresent()) {
+            RefreshToken tokenEntity = existingToken.get();
+            tokenEntity.setToken(token);
+            tokenEntity.setExpiryDate(LocalDateTime.now().plusDays(30));
+            refreshTokenRepository.save(tokenEntity);
+        } else {
+            RefreshToken newToken = new RefreshToken();
+
+            newToken.setUser(userRepository.findById(userDto.getId()).get());
+          //  newToken.setUser(userSecurityMapper.toEntity(userDto));
+            newToken.setToken(token);
+            newToken.setExpiryDate(LocalDateTime.now().plusDays(30));
+            refreshTokenRepository.save(newToken);
+        }
     }
 }

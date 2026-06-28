@@ -2173,3 +2173,184 @@
 2026-06-27 18:25:08 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
 2026-06-27 18:25:08 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
 2026-06-27 18:25:08 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-27 18:33:37 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 6340 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-27 18:33:37 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-27 18:33:37 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-28 00:52:03 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 13080 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-28 00:52:03 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-28 00:52:03 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-28 00:52:11 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-28 00:52:12 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 9.295 seconds (process running for 11.207)
+2026-06-28 00:52:12 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-28 00:52:12 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-28 00:52:12 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-28 00:52:30 DEBUG com.epam.travel_agency_final_project.service.UserAuthenticationService - Updating access and refresh tokens for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-28 00:52:30 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 00:52:30 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:52:30 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 00:52:30 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:52:39 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 00:52:40 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:52:46 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 00:52:46 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:52:48 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 00:52:48 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:52:51 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 00:52:51 INFO  com.epam.travel_agency_final_project.service.UserAuthenticationService - User 3ae70cf0-dbe9-4390-b012-1329c8ed15b3 successfully authenticated via refresh token.
+2026-06-28 00:52:52 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:53:04 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 00:53:04 INFO  com.epam.travel_agency_final_project.service.UserAuthenticationService - User 3ae70cf0-dbe9-4390-b012-1329c8ed15b3 successfully authenticated via refresh token.
+2026-06-28 00:53:04 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:53:13 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 00:53:13 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:53:14 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 00:53:14 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:53:46 INFO  com.epam.travel_agency_final_project.aspect.service.loggin.user.RegisterNewUserLogging - Starting registration for user: 1admin@gmail
+2026-06-28 00:53:46 INFO  com.epam.travel_agency_final_project.aspect.service.loggin.user.RegisterNewUserLogging - User registered successfully. Assigned ID: c9eb4482-160e-40fc-9954-d6f4f6a41caa
+2026-06-28 00:53:46 DEBUG com.epam.travel_agency_final_project.service.UserAuthenticationService - registered and authenticate: c9eb4482-160e-40fc-9954-d6f4f6a41caa
+2026-06-28 00:53:46 DEBUG com.epam.travel_agency_final_project.service.UserAuthenticationService - Updating access and refresh tokens for user: c9eb4482-160e-40fc-9954-d6f4f6a41caa
+2026-06-28 00:53:46 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User 'c9eb4482-160e-40fc-9954-d6f4f6a41caa' successfully authenticated  in   SecurityContext
+2026-06-28 00:53:46 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:53:46 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User 'c9eb4482-160e-40fc-9954-d6f4f6a41caa' successfully authenticated  in   SecurityContext
+2026-06-28 00:53:46 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:53:46 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User 'c9eb4482-160e-40fc-9954-d6f4f6a41caa' successfully authenticated  in   SecurityContext
+2026-06-28 00:53:46 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:53:49 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User 'c9eb4482-160e-40fc-9954-d6f4f6a41caa' successfully authenticated  in   SecurityContext
+2026-06-28 00:53:49 INFO  com.epam.travel_agency_final_project.service.UserAuthenticationService - User c9eb4482-160e-40fc-9954-d6f4f6a41caa successfully authenticated via refresh token.
+2026-06-28 00:53:49 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:53:49 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User 'c9eb4482-160e-40fc-9954-d6f4f6a41caa' successfully authenticated  in   SecurityContext
+2026-06-28 00:53:49 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:53:50 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User 'c9eb4482-160e-40fc-9954-d6f4f6a41caa' successfully authenticated  in   SecurityContext
+2026-06-28 00:53:50 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:53:53 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User 'c9eb4482-160e-40fc-9954-d6f4f6a41caa' successfully authenticated  in   SecurityContext
+2026-06-28 00:53:53 INFO  com.epam.travel_agency_final_project.service.UserAuthenticationService - User c9eb4482-160e-40fc-9954-d6f4f6a41caa successfully authenticated via refresh token.
+2026-06-28 00:53:53 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:53:53 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User 'c9eb4482-160e-40fc-9954-d6f4f6a41caa' successfully authenticated  in   SecurityContext
+2026-06-28 00:53:53 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:53:53 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User 'c9eb4482-160e-40fc-9954-d6f4f6a41caa' successfully authenticated  in   SecurityContext
+2026-06-28 00:53:53 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:53:54 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User 'c9eb4482-160e-40fc-9954-d6f4f6a41caa' successfully authenticated  in   SecurityContext
+2026-06-28 00:53:54 INFO  com.epam.travel_agency_final_project.service.UserAuthenticationService - User c9eb4482-160e-40fc-9954-d6f4f6a41caa successfully authenticated via refresh token.
+2026-06-28 00:53:54 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:53:54 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User 'c9eb4482-160e-40fc-9954-d6f4f6a41caa' successfully authenticated  in   SecurityContext
+2026-06-28 00:53:54 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:53:54 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User 'c9eb4482-160e-40fc-9954-d6f4f6a41caa' successfully authenticated  in   SecurityContext
+2026-06-28 00:53:54 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:53:55 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User 'c9eb4482-160e-40fc-9954-d6f4f6a41caa' successfully authenticated  in   SecurityContext
+2026-06-28 00:53:55 INFO  com.epam.travel_agency_final_project.service.UserAuthenticationService - User c9eb4482-160e-40fc-9954-d6f4f6a41caa successfully authenticated via refresh token.
+2026-06-28 00:53:55 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:53:55 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User 'c9eb4482-160e-40fc-9954-d6f4f6a41caa' successfully authenticated  in   SecurityContext
+2026-06-28 00:53:55 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:53:55 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User 'c9eb4482-160e-40fc-9954-d6f4f6a41caa' successfully authenticated  in   SecurityContext
+2026-06-28 00:53:55 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:53:56 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User 'c9eb4482-160e-40fc-9954-d6f4f6a41caa' successfully authenticated  in   SecurityContext
+2026-06-28 00:53:56 INFO  com.epam.travel_agency_final_project.service.UserAuthenticationService - User c9eb4482-160e-40fc-9954-d6f4f6a41caa successfully authenticated via refresh token.
+2026-06-28 00:53:56 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:53:56 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User 'c9eb4482-160e-40fc-9954-d6f4f6a41caa' successfully authenticated  in   SecurityContext
+2026-06-28 00:53:56 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:53:56 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User 'c9eb4482-160e-40fc-9954-d6f4f6a41caa' successfully authenticated  in   SecurityContext
+2026-06-28 00:53:56 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:53:57 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User 'c9eb4482-160e-40fc-9954-d6f4f6a41caa' successfully authenticated  in   SecurityContext
+2026-06-28 00:53:57 INFO  com.epam.travel_agency_final_project.service.UserAuthenticationService - User c9eb4482-160e-40fc-9954-d6f4f6a41caa successfully authenticated via refresh token.
+2026-06-28 00:53:57 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:53:57 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User 'c9eb4482-160e-40fc-9954-d6f4f6a41caa' successfully authenticated  in   SecurityContext
+2026-06-28 00:53:57 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 00:53:57 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User 'c9eb4482-160e-40fc-9954-d6f4f6a41caa' successfully authenticated  in   SecurityContext
+2026-06-28 00:53:57 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 01:02:59 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 13244 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-28 01:02:59 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-28 01:02:59 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-28 01:03:06 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-28 01:03:07 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 8.551 seconds (process running for 9.511)
+2026-06-28 01:03:07 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-28 01:03:07 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-28 01:03:07 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-28 02:40:43 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 19264 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-28 02:40:43 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-28 02:40:43 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-28 02:56:32 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 12604 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-28 02:56:32 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-28 02:56:32 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-28 02:56:44 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-28 02:56:46 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 15.07 seconds (process running for 16.717)
+2026-06-28 02:56:46 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-28 02:56:46 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-28 02:56:46 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-28 02:58:37 DEBUG com.epam.travel_agency_final_project.service.UserAuthenticationService - Updating access and refresh tokens for user: 3ae70cf0-dbe9-4390-b012-1329c8ed15b3
+2026-06-28 02:58:37 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 02:58:37 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 02:58:48 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 02:58:48 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 02:58:48 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 02:58:49 INFO  com.epam.travel_agency_final_project.service.UserAuthenticationService - User 3ae70cf0-dbe9-4390-b012-1329c8ed15b3 successfully authenticated via refresh token.
+2026-06-28 02:58:49 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 02:58:58 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 02:58:58 INFO  com.epam.travel_agency_final_project.service.UserAuthenticationService - User 3ae70cf0-dbe9-4390-b012-1329c8ed15b3 successfully authenticated via refresh token.
+2026-06-28 02:58:59 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 02:58:59 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 02:58:59 INFO  com.epam.travel_agency_final_project.service.UserAuthenticationService - User 3ae70cf0-dbe9-4390-b012-1329c8ed15b3 successfully authenticated via refresh token.
+2026-06-28 02:58:59 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 02:59:01 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 02:59:01 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 02:59:03 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 02:59:03 INFO  com.epam.travel_agency_final_project.service.UserAuthenticationService - User 3ae70cf0-dbe9-4390-b012-1329c8ed15b3 successfully authenticated via refresh token.
+2026-06-28 02:59:03 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 02:59:06 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 02:59:06 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 02:59:08 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 02:59:08 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 02:59:11 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 02:59:11 INFO  com.epam.travel_agency_final_project.service.UserAuthenticationService - User 3ae70cf0-dbe9-4390-b012-1329c8ed15b3 successfully authenticated via refresh token.
+2026-06-28 03:08:44 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Starting TravelAgencyFinalProjectApplication using Java 17.0.8 with PID 13616 (D:\IdeaProjects\travel-agency-final-project\target\classes started by Acer Nitro 5 in D:\IdeaProjects\travel-agency-final-project)
+2026-06-28 03:08:44 DEBUG com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-28 03:08:44 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - The following 1 profile is active: "prod"
+2026-06-28 03:08:55 DEBUG com.epam.travel_agency_final_project.security.JwtCookieFilter - Filter 'jwtCookieFilter' configured for use
+2026-06-28 03:08:58 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Started TravelAgencyFinalProjectApplication in 14.945 seconds (process running for 16.478)
+2026-06-28 03:08:58 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-28 03:08:58 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - Application started successfully!
+2026-06-28 03:08:58 INFO  com.epam.travel_agency_final_project.TravelAgencyFinalProjectApplication - ==========================================
+2026-06-28 03:09:10 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 03:09:10 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 03:09:11 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 03:09:11 INFO  com.epam.travel_agency_final_project.service.UserAuthenticationService - User 3ae70cf0-dbe9-4390-b012-1329c8ed15b3 successfully authenticated via refresh token.
+2026-06-28 03:09:11 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 03:09:15 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 03:09:15 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 03:09:23 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 03:09:23 INFO  com.epam.travel_agency_final_project.service.UserAuthenticationService - User 3ae70cf0-dbe9-4390-b012-1329c8ed15b3 successfully authenticated via refresh token.
+2026-06-28 03:09:23 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 03:09:23 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 03:09:23 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 03:09:24 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 03:09:24 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 03:09:26 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 03:09:26 INFO  com.epam.travel_agency_final_project.service.UserAuthenticationService - User 3ae70cf0-dbe9-4390-b012-1329c8ed15b3 successfully authenticated via refresh token.
+2026-06-28 03:09:26 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 03:09:29 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 03:09:29 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 03:09:34 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 03:09:34 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 03:09:40 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 03:09:40 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 03:09:44 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 03:09:44 INFO  com.epam.travel_agency_final_project.service.UserAuthenticationService - User 3ae70cf0-dbe9-4390-b012-1329c8ed15b3 successfully authenticated via refresh token.
+2026-06-28 03:09:44 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 03:09:44 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 03:09:44 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 03:09:48 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 03:09:48 INFO  com.epam.travel_agency_final_project.service.UserAuthenticationService - User 3ae70cf0-dbe9-4390-b012-1329c8ed15b3 successfully authenticated via refresh token.
+2026-06-28 03:09:48 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 03:09:54 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 03:09:54 INFO  com.epam.travel_agency_final_project.service.UserAuthenticationService - User 3ae70cf0-dbe9-4390-b012-1329c8ed15b3 successfully authenticated via refresh token.
+2026-06-28 03:09:54 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 03:09:54 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 03:09:54 INFO  com.epam.travel_agency_final_project.service.UserAuthenticationService - User 3ae70cf0-dbe9-4390-b012-1329c8ed15b3 successfully authenticated via refresh token.
+2026-06-28 03:09:54 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 03:10:00 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 03:10:00 INFO  com.epam.travel_agency_final_project.service.UserAuthenticationService - User 3ae70cf0-dbe9-4390-b012-1329c8ed15b3 successfully authenticated via refresh token.
+2026-06-28 03:10:00 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 03:10:00 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 03:10:00 INFO  com.epam.travel_agency_final_project.service.UserAuthenticationService - User 3ae70cf0-dbe9-4390-b012-1329c8ed15b3 successfully authenticated via refresh token.
+2026-06-28 03:10:01 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid
+2026-06-28 03:10:05 ERROR com.epam.travel_agency_final_project.security.JwtCookieFilter - User '3ae70cf0-dbe9-4390-b012-1329c8ed15b3' successfully authenticated  in   SecurityContext
+2026-06-28 03:10:05 INFO  com.epam.travel_agency_final_project.security.JwtCookieFilter -  access and refresh token  are valid

@@ -1,6 +1,7 @@
 package com.epam.travel_agency_final_project.service;
 
 import com.epam.travel_agency_final_project.dto.*;
+import com.epam.travel_agency_final_project.entity.RoleEntity;
 import com.epam.travel_agency_final_project.entity.User;
 import com.epam.travel_agency_final_project.entity.UserTour;
 import com.epam.travel_agency_final_project.entity.UserTranslation;
@@ -8,7 +9,9 @@ import com.epam.travel_agency_final_project.exeption.UserAlreadyExistsException;
 import com.epam.travel_agency_final_project.mapper.TourMapper;
 import com.epam.travel_agency_final_project.mapper.UserProfileMapper;
 import com.epam.travel_agency_final_project.mapper.UserSecurityMapper;
+import com.epam.travel_agency_final_project.model.Role;
 import com.epam.travel_agency_final_project.model.StatusTour;
+import com.epam.travel_agency_final_project.repository.RoleRepository;
 import com.epam.travel_agency_final_project.repository.UserRepository;
 import com.epam.travel_agency_final_project.repository.UserTourRepository;
 import com.epam.travel_agency_final_project.repository.UserTranslationRepository;
@@ -31,10 +34,11 @@ public class UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final UserSecurityMapper userSecurityMapper;
-    private final UserTranslationRepository userTranslationRepository;
     private final TourMapper tourMapper;
     private final UserTourRepository userTourRepository;
     private final UserProfileMapper userProfileMapper;
+
+    private final RoleRepository roleRepository;
 
     @Transactional
     public void lockUser(UUID id) {
@@ -83,16 +87,57 @@ public class UserService {
         return userSecurityMapper.toSecurityDto(userRepository.findByEmail(email).orElse(null));
     }
 
+//    @Transactional
+//    public void finalizePurchase(UserSecurityDTO userSecurityDTO, TourFullDTO tourDTO) {
+//        userSecurityDTO.setBalance(userSecurityDTO.getBalance().subtract(tourDTO.getPrice()));
+//        userRepository.save(userSecurityMapper.toEntity(userSecurityDTO));
+//        UserTour userTour = new UserTour();
+//        userTour.setUser(userSecurityMapper.toEntity(userSecurityDTO));
+//        userTour.setTour(tourMapper.toEntity(tourDTO));
+//        userTour.setStatus(String.valueOf(StatusTour.PAID));
+//        userTourRepository.save(userTour);
+//    }
+
     @Transactional
     public void finalizePurchase(UserSecurityDTO userSecurityDTO, TourFullDTO tourDTO) {
-        userSecurityDTO.setBalance(userSecurityDTO.getBalance().subtract(tourDTO.getPrice()));
-        userRepository.save(userSecurityMapper.toEntity(userSecurityDTO));
+      //  userSecurityDTO.setBalance(userSecurityDTO.getBalance().subtract(tourDTO.getPrice()));
+
+        User user = userRepository.findByEmail(userSecurityDTO.getLogin()).get();
+        user.setBalance(userSecurityDTO.getBalance().subtract(tourDTO.getPrice()));
+
+        userRepository.save(user);
         UserTour userTour = new UserTour();
-        userTour.setUser(userSecurityMapper.toEntity(userSecurityDTO));
+        userTour.setUser(user);
         userTour.setTour(tourMapper.toEntity(tourDTO));
         userTour.setStatus(String.valueOf(StatusTour.PAID));
         userTourRepository.save(userTour);
     }
+    public List<RoleEntity> getUserRolesByUserSecurityDTO(UserSecurityDTO dto) {
+        List<Role> roleEnums = dto.getRoles().stream()
+                .map(Role::valueOf)
+                .collect(Collectors.toList());
+        return roleRepository.findByNameIn(roleEnums);
+    }
+//    @Transactional
+//    public UUID registerNewUser(UserRegistrationDTO dto) {
+//        User user = new User();
+//        user.setId(UUID.randomUUID());
+//        user.setEmail(dto.getEmail());
+//        user.setPasswordHash(passwordEncoder.encode(dto.getPassword()));
+//        user.setLocked(false);
+//        user.setBalance(BigDecimal.ZERO);
+//        User savedUser = userRepository.save(user);
+//
+//        UserTranslation translation = new UserTranslation();
+//        UserTranslation.UserTranslationId id = new UserTranslation.UserTranslationId(user.getId(), "uk");
+//        translation.setId(id);
+//        translation.setUser(user);
+//        translation.setFirstName(dto.getFirstName());
+//        translation.setLastName(dto.getLastName());
+//        userTranslationRepository.save(translation);
+//        return savedUser.getId();
+//    }
+
 
     @Transactional
     public UUID registerNewUser(UserRegistrationDTO dto) {
@@ -103,17 +148,16 @@ public class UserService {
         user.setLocked(false);
         user.setBalance(BigDecimal.ZERO);
 
-        User savedUser = userRepository.save(user);
         UserTranslation translation = new UserTranslation();
-        UserTranslation.UserTranslationId id = new UserTranslation.UserTranslationId(user.getId(), "uk");
-        translation.setId(id);
-        translation.setUser(user);
+        translation.setId(new UserTranslation.UserTranslationId(user.getId(), "uk"));
         translation.setFirstName(dto.getFirstName());
         translation.setLastName(dto.getLastName());
-        userTranslationRepository.save(translation);
-        return savedUser.getId();
-    }
+        translation.setUser(user);
 
+        user.setTranslations(List.of(translation));
+        userRepository.save(user);
+        return user.getId();
+    }
     @Transactional
     public void registerUser(UserRegistrationDTO dto, String lang) {
         if (userRepository.findByEmail(dto.getEmail()).isPresent()) {
@@ -139,6 +183,7 @@ public class UserService {
         user.setTranslations(List.of(translation));
         userRepository.save(user);
     }
+    @Transactional
     public UserProfileDTO getProfileData(UUID userId, String lang) {
        Optional<User> userOptional = userRepository.findById(userId);
        if (userOptional.isEmpty()){
