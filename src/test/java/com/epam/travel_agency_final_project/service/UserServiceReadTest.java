@@ -1,17 +1,15 @@
-package com.epam.travel_agency_final_project.servise;
+package com.epam.travel_agency_final_project.service;
 
-import com.epam.travel_agency_final_project.dto.TourFullDTO;
 import com.epam.travel_agency_final_project.dto.UserProfileDTO;
 import com.epam.travel_agency_final_project.dto.UserRegistrationDTO;
 import com.epam.travel_agency_final_project.dto.UserSecurityDTO;
 import com.epam.travel_agency_final_project.entity.*;
 import com.epam.travel_agency_final_project.exeption.UserAlreadyExistsException;
-import com.epam.travel_agency_final_project.mapper.TourMapper1;
+import com.epam.travel_agency_final_project.mapper.TourMapper;
 import com.epam.travel_agency_final_project.mapper.UserSecurityMapper;
 import com.epam.travel_agency_final_project.repository.UserRepository;
 import com.epam.travel_agency_final_project.repository.UserTourRepository;
 import com.epam.travel_agency_final_project.repository.UserTranslationRepository;
-import com.epam.travel_agency_final_project.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -22,7 +20,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
-import java.math.BigDecimal;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -31,7 +28,7 @@ import static org.mockito.Mockito.*;
 @ExtendWith(MockitoExtension.class)
 public class UserServiceReadTest {
     @Mock
-    private TourMapper1 tourMapper;
+    private TourMapper tourMapper;
     @Mock
     private UserTranslationRepository userTranslationRepository;
     @Mock
@@ -93,45 +90,6 @@ public class UserServiceReadTest {
         verify(userRepository).findByEmail(email);
         verify(userSecurityMapper).toSecurityDto(null);
     }
-
-    @Test
-    void finalizePurchase_ShouldUpdateBalanceAndSaveUserTour() {
-        UserSecurityDTO userDto = new UserSecurityDTO();
-        userDto.setBalance(BigDecimal.valueOf(1000));
-
-        TourFullDTO tourDto = new TourFullDTO();
-        tourDto.setPrice(BigDecimal.valueOf(200));
-
-        User userEntity = new User();
-        Tour tourEntity = new Tour();
-
-        when(userSecurityMapper.toEntity(userDto)).thenReturn(userEntity);
-        when(tourMapper.toEntity(tourDto)).thenReturn(tourEntity);
-
-        userService.finalizePurchase(userDto, tourDto);
-        assertEquals(BigDecimal.valueOf(800), userDto.getBalance());
-
-        verify(userRepository).save(userEntity);
-        verify(userTourRepository).save(any(UserTour.class));
-    }
-
-    @Test
-    void registerNewUser_ShouldSaveUserAndTranslation_AndReturnId() {
-        UserRegistrationDTO dto = new UserRegistrationDTO();
-        dto.setEmail("test@example.com");
-        dto.setPassword("password123");
-        dto.setFirstName("Ivan");
-        dto.setLastName("Ivanov");
-
-        when(passwordEncoder.encode("password123")).thenReturn("encodedPassword");
-        when(userRepository.save(any(User.class))).thenAnswer(invocation -> invocation.getArgument(0));
-        UUID resultId = userService.registerNewUser(dto);
-        assertNotNull(resultId);
-        verify(userRepository).save(any(User.class));
-        verify(userTranslationRepository).save(any(UserTranslation.class));
-        verify(passwordEncoder).encode("password123");
-    }
-
     @Test
     void registerUser_ShouldSaveUser_WhenEmailIsUnique() {
         UserRegistrationDTO dto = new UserRegistrationDTO();

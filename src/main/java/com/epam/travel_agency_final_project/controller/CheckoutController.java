@@ -21,7 +21,6 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class CheckoutController {
     private final CookieService cookieService;
-    private final JwtProvider jwtTokenProvider;
     private final UserService userService;
     private final TourService tourService;
     private final UserAuthenticationService userAuthenticationService;

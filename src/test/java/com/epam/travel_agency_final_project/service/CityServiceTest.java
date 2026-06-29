@@ -1,9 +1,8 @@
-package com.epam.travel_agency_final_project.servise;
+package com.epam.travel_agency_final_project.service;
 import com.epam.travel_agency_final_project.dto.CityDTO;
 import com.epam.travel_agency_final_project.entity.City;
 import com.epam.travel_agency_final_project.mapper.CityMapper;
 import com.epam.travel_agency_final_project.repository.CityRepository;
-import com.epam.travel_agency_final_project.service.CityService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -19,16 +18,12 @@ import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class CityServiceTest {
-
     @Mock
     private CityMapper cityMapper;
-
     @Mock
     private CityRepository cityRepository;
-
     @InjectMocks
     private CityService cityService;
-
     @Test
     @DisplayName("Should return list of CityDTO when cities exist")
     void findAll_ShouldReturnListOfCityDTO_WhenCitiesExist() {

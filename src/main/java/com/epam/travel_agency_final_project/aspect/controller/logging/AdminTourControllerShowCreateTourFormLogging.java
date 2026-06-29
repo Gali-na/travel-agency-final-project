@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class AdminTourControllerShowCreateTourFormLogging {
     private static final Logger logger = LogManager.getLogger(AdminTourControllerShowCreateTourFormLogging.class);
-    @Before("execution(* com.epam.travel_agency_final_project.controller.*.showCreateTourForm(..))")
+    @Before("execution(* com.epam.travel_agency_final_project.controller.AdminTourController.createTour(..))")
     public void logBefore() {
         logger.info("Method showCreateTourForm was invoked.");
     }

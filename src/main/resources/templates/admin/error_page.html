@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${currentLang}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title th:text="#{error.page.title}">Error</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <style>
+        .error-card {
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #eaeaea;
+            padding: 40px;
+            text-align: center;
+        }
+        .error-icon { font-size: 4rem; color: #e60000; }
+        .btn-home {
+            background-color: #212529;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+        .btn-home:hover { background-color: #000; color: white; }
+    </style>
+</head>
+<body class="bg-light">
+
+<div class="position-absolute top-0 end-0 p-3">
+
+</div>
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+  <div class="error-card shadow-sm w-100" style="max-width: 600px;">
+    <div class="container text-center pt-3">
+      <div class="btn-group btn-group-sm" role="group">
+        <a th:href="@{/error(lang='uk')}" class="btn btn-outline-dark">UK</a>
+        <a th:href="@{/error(lang='en')}" class="btn btn-outline-dark">EN</a>
+      </div>
+    </div>
+    <i class="bi bi-exclamation-triangle error-icon mb-3"></i>
+
+    <h2 class="fw-bold mb-3" th:text="${title}">Title</h2>
+    <p class="text-muted mb-4" th:text="${message}">Message</p>
+
+    <div class="d-flex justify-content-center gap-3">
+      <a href="/" class="btn-home">
+        <i class="bi bi-house-door me-1"></i>
+        <span th:text="#{cart.btn.back}">Повернутися на головну</span>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

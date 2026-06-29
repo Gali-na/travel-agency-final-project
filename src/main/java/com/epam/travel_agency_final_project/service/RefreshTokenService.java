@@ -3,6 +3,7 @@ package com.epam.travel_agency_final_project.service;
 import com.epam.travel_agency_final_project.dto.RefreshTokenDTO;
 import com.epam.travel_agency_final_project.dto.UserSecurityDTO;
 import com.epam.travel_agency_final_project.entity.RefreshToken;
+import com.epam.travel_agency_final_project.entity.User;
 import com.epam.travel_agency_final_project.mapper.UserSecurityMapper;
 import com.epam.travel_agency_final_project.repository.RefreshTokenRepository;
 import com.epam.travel_agency_final_project.repository.UserRepository;
@@ -70,22 +71,23 @@ public class RefreshTokenService {
     }
 
     @Transactional
-    public void createRefreshToken(UserSecurityDTO userDto, String token) {
+    public boolean createRefreshToken(UserSecurityDTO userDto, String token) {
         Optional<RefreshToken> existingToken = refreshTokenRepository.findByUserId(userDto.getId());
-
+        Optional<User> userOptional;
         if (existingToken.isPresent()) {
             RefreshToken tokenEntity = existingToken.get();
             tokenEntity.setToken(token);
             tokenEntity.setExpiryDate(LocalDateTime.now().plusDays(30));
             refreshTokenRepository.save(tokenEntity);
-        } else {
+            return true;
+        } else if((userOptional = userRepository.findById(userDto.getId())).isPresent()){
             RefreshToken newToken = new RefreshToken();
-
-            newToken.setUser(userRepository.findById(userDto.getId()).get());
-          //  newToken.setUser(userSecurityMapper.toEntity(userDto));
+            newToken.setUser(userOptional.get());
             newToken.setToken(token);
             newToken.setExpiryDate(LocalDateTime.now().plusDays(30));
             refreshTokenRepository.save(newToken);
+            return true;
         }
+        return false;
     }
 }

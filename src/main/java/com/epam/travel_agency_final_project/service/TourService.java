@@ -55,11 +55,9 @@ public class TourService{
         Pageable pageable = PageRequest.of(page, size);
         return tourRepository.findToursWithJdbc(lang, filter, pageable);
     }
-
     public List<TourFullDTO> getToursForCart(Set<UUID> ids, String lang) {
         return tourRepository.findToursByIdsAndInLanguage(ids, lang);
     }
-
     public Page<TourFullDTO> getAllToursByLanguage(String lang, int page, int size) {
         TourFilter emptyFilter = new TourFilter();
         return getTours(lang, emptyFilter, page, size);
@@ -72,7 +70,6 @@ public class TourService{
         }
        throw  new TourNotFoundException("Tour with ID " + id + " not found");
     }
-
     public int checkPaymentAvailability(UserSecurityDTO userSecurityDTO, TourFullDTO tourDTO){
         BigDecimal balance = (userSecurityDTO.getBalance() != null) ? userSecurityDTO.getBalance() : BigDecimal.ZERO;
         BigDecimal price = (tourDTO.getPrice() != null) ? tourDTO.getPrice() : BigDecimal.ZERO;

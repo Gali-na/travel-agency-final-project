@@ -11,6 +11,7 @@ public class InfoController {
     }
     @GetMapping("/tour-not-found")
     public String showTourNotFoundPage() {
+
         return "tour-not-found";
     }
     @GetMapping("/checkoutInfo")
@@ -30,6 +31,7 @@ public class InfoController {
     }
     @GetMapping("/checkout-success")
     public String checkoutSuccess() {
+
         return "checkout-success";
     }
 }

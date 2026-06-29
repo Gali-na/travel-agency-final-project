@@ -61,9 +61,7 @@ class AdminUserControllerTest {
     @Test
     void listUsers_WithoutEmail_ReturnsAllUsers() {
         when(userService.findAll(pageable)).thenReturn(page);
-
         String viewName = controller.listUsers(model, pageable, null);
-
         assertEquals("admin/users", viewName);
         verify(model).addAttribute("users", page);
     }
@@ -71,9 +69,7 @@ class AdminUserControllerTest {
     @Test
     void lockUser_RedirectsToUsersList() {
         UUID userId = UUID.randomUUID();
-
         String viewName = controller.lockUser(userId);
-
         assertEquals("redirect:/admin/users", viewName);
         verify(userService, times(1)).lockUser(userId);
     }

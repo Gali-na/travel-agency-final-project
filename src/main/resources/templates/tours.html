@@ -119,8 +119,8 @@
                     <label class="small text-muted text-uppercase fw-semibold m-0">Готель:</label>
                     <select class="form-select form-select-sm" name="hotelType" style="min-width: 160px;">
                         <option value="" th:text="#{filter.hotel.any}">Будь-який</option>
-                        <option value="Five-star hotel" th:selected="${filter.hotelType == 'Five-star hotel'}" th:text="#{filter.hotel.five_star}">Five-star hotel</option>
-                        <option value="Four-star hotel" th:selected="${filter.hotelType == 'Four-star hotel'}" th:text="#{filter.hotel.four_star}">Four-star hotel</option>
+                        <option value="FIVE_STARS" th:selected="${filter.hotelType == 'FIVE_STARS'}" th:text="#{filter.hotel.five_star}">Five-star hotel</option>
+                        <option value="FOUR_STARS" th:selected="${filter.hotelType == 'FOUR_STARS'}" th:text="#{filter.hotel.four_star}">Four-star hotel</option>
                     </select>
                 </div>
             </div>
@@ -162,7 +162,7 @@
                     <span>|</span>
                     <span><i class="bi bi-train-front me-1"></i><span th:text="#{ 'transfer.type.' + ${tour.transferType} }">TRAIN</span></span>
                     <span>|</span>
-                    <span><i class="bi bi-building me-1"></i><span th:text="#{ 'hotel.type.' + ${#strings.replace(tour.hotelType, ' ', '_')} }">Four-star hotel</span></span>
+                    <span><i class="bi bi-building me-1"></i><span th:text="#{ 'hotel.type.' +  ${tour.hotelType} }">Four-star hotel</span></span>
                 </div>
 
                 <p class="text-muted mb-3" style="font-size: 0.95rem; line-height: 1.5;" th:text="${tour.description}">

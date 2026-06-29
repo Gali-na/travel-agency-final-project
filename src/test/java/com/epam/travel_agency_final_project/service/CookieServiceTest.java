@@ -1,9 +1,7 @@
-package com.epam.travel_agency_final_project.servise;
+package com.epam.travel_agency_final_project.service;
 
 import com.epam.travel_agency_final_project.exeption.TourNotFoundException;
 import com.epam.travel_agency_final_project.model.Cart;
-import com.epam.travel_agency_final_project.service.CookieService;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
@@ -16,6 +14,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.util.List;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -29,104 +28,31 @@ class CookieServiceTest {
     private HttpServletRequest request;
     @InjectMocks
     private CookieService cookieService;
-    @BeforeEach
-    void setUp() {
-        cookieService = new CookieService();
-        response = mock(HttpServletResponse.class);
-    }
     @Test
-    void parseCookieDecoder_ShouldReturnDecodedValue_WhenCartCookieExists() {
-        String originalValue = "{\"id\":1, \"name\":\"item\"}";
-        String encodedValue = URLEncoder.encode(originalValue, StandardCharsets.UTF_8);
-        Cookie[] cookies = { new Cookie("other", "data"), new Cookie("cart", encodedValue) };
+    void updateAuthCookies_ShouldCoverAllLines() {
+        String accessToken = "at";
+        String refreshUUID = "rt";
 
-        String result = cookieService.parseCookieDecoder(cookies);
+        cookieService.updateAuthCookies(response, accessToken, refreshUUID);
 
-        assertEquals(originalValue, result);
+        ArgumentCaptor<Cookie> captor = ArgumentCaptor.forClass(Cookie.class);
+        verify(response, times(2)).addCookie(captor.capture());
+
+        List<Cookie> cookies = captor.getAllValues();
+        Cookie access = cookies.get(0);
+        assertEquals("access_token", access.getName());
+        assertEquals(accessToken, access.getValue());
+        assertTrue(access.isHttpOnly());
+        assertEquals("/", access.getPath());
+        assertEquals(900, access.getMaxAge());
+
+        Cookie refresh = cookies.get(1);
+        assertEquals("refresh_token", refresh.getName());
+        assertEquals(refreshUUID, refresh.getValue());
+        assertTrue(refresh.isHttpOnly());
+        assertEquals("/", refresh.getPath());
+        assertEquals(2592000, refresh.getMaxAge());
     }
-
-    @Test
-    void parseCookieDecoder_ShouldReturnEmptyString_WhenCookiesArrayIsNull() {
-        String result = cookieService.parseCookieDecoder(null);
-
-        assertEquals("", result);
-    }
-
-    @Test
-    void parseCookieDecoder_ShouldReturnEmptyString_WhenCartCookieNotFound() {
-        Cookie[] cookies = { new Cookie("theme", "dark"), new Cookie("session", "123") };
-
-        String result = cookieService.parseCookieDecoder(cookies);
-
-        assertEquals("", result);
-    }
-
-    @Test
-    void parseCookieDecoder_ShouldHandleEmptyCookieValue() {
-        Cookie[] cookies = { new Cookie("cart", "") };
-
-        String result = cookieService.parseCookieDecoder(cookies);
-
-        assertEquals("", result);
-    }
-    @Test
-    void updateAuthCookies_ShouldAddCorrectCookie() {
-        String token = "test-token-123";
-        ArgumentCaptor<Cookie> cookieCaptor = ArgumentCaptor.forClass(Cookie.class);
-
-        cookieService.updateAuthCookies(response, token);
-
-        verify(response).addCookie(cookieCaptor.capture());
-        Cookie capturedCookie = cookieCaptor.getValue();
-
-        assertEquals("access_token", capturedCookie.getName());
-        assertEquals(token, capturedCookie.getValue());
-        assertTrue(capturedCookie.isHttpOnly());
-        assertEquals("/", capturedCookie.getPath());
-        assertEquals(2592000, capturedCookie.getMaxAge());
-    }
-
-    @Test
-    void updateAuthCookies_ShouldHandleNullToken() {
-        ArgumentCaptor<Cookie> cookieCaptor = ArgumentCaptor.forClass(Cookie.class);
-
-        cookieService.updateAuthCookies(response, null);
-
-        verify(response).addCookie(cookieCaptor.capture());
-        assertNull(cookieCaptor.getValue().getValue());
-    }
-    @Test
-    void extractCookieJWT_ShouldReturnToken_WhenCookieExists() {
-        String cookieName = "jwt";
-        String cookieValue = "test-token";
-        Cookie[] cookies = {new Cookie(cookieName, cookieValue)};
-
-        when(request.getCookies()).thenReturn(cookies);
-
-        String result = cookieService.extractCookieJWT(request, cookieName);
-
-        assertEquals(cookieValue, result);
-    }
-
-    @Test
-    void extractCookieJWT_ShouldReturnNull_WhenCookiesAreNull() {
-        when(request.getCookies()).thenReturn(null);
-
-        String result = cookieService.extractCookieJWT(request, "jwt");
-
-        assertNull(result);
-    }
-
-    @Test
-    void extractCookieJWT_ShouldReturnNull_WhenCookieNotFound() {
-        Cookie[] cookies = {new Cookie("other", "value")};
-        when(request.getCookies()).thenReturn(cookies);
-
-        String result = cookieService.extractCookieJWT(request, "jwt");
-
-        assertNull(result);
-    }
-
     @Test
     void updateCartCookieAfterPurchase_ShouldUpdateCookie_WhenTourExistsInCart() {
         UUID tourId = UUID.randomUUID();
@@ -161,7 +87,41 @@ class CookieServiceTest {
                 cookieService.updateCartCookieAfterPurchase(UUID.randomUUID(), request, response)
         );
     }
+        @Test
+    void parseCookieDecoder_ShouldReturnDecodedValue_WhenCartCookieExists() {
+        String originalValue = "{\"id\":1, \"name\":\"item\"}";
+        String encodedValue = URLEncoder.encode(originalValue, StandardCharsets.UTF_8);
+        Cookie[] cookies = { new Cookie("other", "data"), new Cookie("cart", encodedValue) };
+
+        String result = cookieService.parseCookieDecoder(cookies);
+
+        assertEquals(originalValue, result);
+    }
+
     @Test
+    void parseCookieDecoder_ShouldReturnEmptyString_WhenCookiesArrayIsNull() {
+        String result = cookieService.parseCookieDecoder(null);
+
+        assertEquals("", result);
+    }
+
+    @Test
+    void parseCookieDecoder_ShouldReturnEmptyString_WhenCartCookieNotFound() {
+        Cookie[] cookies = { new Cookie("theme", "dark"), new Cookie("session", "123") };
+
+        String result = cookieService.parseCookieDecoder(cookies);
+
+        assertEquals("", result);
+    }
+
+    @Test
+    void parseCookieDecoder_ShouldHandleEmptyCookieValue() {
+        Cookie[] cookies = { new Cookie("cart", "") };
+
+        String result = cookieService.parseCookieDecoder(cookies);
+
+        assertEquals("", result);
+    }@Test
     void extractCookie_ShouldReturnNull_WhenRequestHasNoCookies() {
         when(request.getCookies()).thenReturn(null);
 

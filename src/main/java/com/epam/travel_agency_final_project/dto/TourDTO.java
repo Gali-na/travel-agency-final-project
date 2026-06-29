@@ -1,10 +1,5 @@
 package com.epam.travel_agency_final_project.dto;
-
-
-import jakarta.validation.constraints.DecimalMin;
-import jakarta.validation.constraints.NotNull;
 import lombok.*;
-
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.UUID;

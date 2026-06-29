@@ -23,7 +23,6 @@ public class UserRegistrationDTO implements Validatable {
         if (!password.matches(basicRegex)) {
             throw new ValidationException("error.password.invalid");
         }
-
         if (!password.matches(".*[a-z].*")) {
             throw new ValidationException("error.password.no.lowercase");
         }

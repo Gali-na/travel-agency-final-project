@@ -1,5 +1,4 @@
 package com.epam.travel_agency_final_project.dto;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,14 +1,24 @@
-package com.epam.travel_agency_final_project.servise;
+package com.epam.travel_agency_final_project.service;
 
+import com.epam.travel_agency_final_project.dto.TourFullDTO;
 import com.epam.travel_agency_final_project.dto.UserProfileDTO;
+import com.epam.travel_agency_final_project.dto.UserRegistrationDTO;
 import com.epam.travel_agency_final_project.dto.UserSecurityDTO;
+import com.epam.travel_agency_final_project.entity.RoleEntity;
+import com.epam.travel_agency_final_project.entity.Tour;
 import com.epam.travel_agency_final_project.entity.User;
-import com.epam.travel_agency_final_project.mapper.UserProfileMapper1;
+import com.epam.travel_agency_final_project.entity.UserTour;
+import com.epam.travel_agency_final_project.mapper.TourMapper;
+import com.epam.travel_agency_final_project.mapper.UserProfileMapper;
 import com.epam.travel_agency_final_project.mapper.UserSecurityMapper;
+import com.epam.travel_agency_final_project.model.Role;
+import com.epam.travel_agency_final_project.repository.RoleRepository;
 import com.epam.travel_agency_final_project.repository.UserRepository;
-import com.epam.travel_agency_final_project.service.UserService;
+import com.epam.travel_agency_final_project.repository.UserTourRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Captor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -18,30 +28,121 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import java.math.BigDecimal;
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
+
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class UserServiceTest {
     @Mock
+    private TourMapper tourMapper;
+    @Mock
+    private UserTourRepository userTourRepository;
+    @InjectMocks
+    private UserService userService;
+    @Mock
     private UserSecurityMapper userSecurityMapper;
     @Mock
     private UserRepository userRepository;
     @Mock
+    private RoleRepository roleRepository;
+    @Mock
     private PasswordEncoder passwordEncoder;
     @Mock
-    private UserProfileMapper1 userProfileMapper;
-    @InjectMocks
-    private UserService userService;
+    private UserProfileMapper userProfileMapper;
+    @Captor
+    private ArgumentCaptor<User> userCaptor;
+    @Test
+    void registerNewUser_ShouldSaveUserAndReturnId() {
+        UserRegistrationDTO dto = new UserRegistrationDTO();
+        dto.setEmail("test@example.com");
+        dto.setPassword("Password123");
+        dto.setFirstName("Ivan");
+        dto.setLastName("Ivanov");
+
+        when(passwordEncoder.encode(dto.getPassword())).thenReturn("encodedPassword");
+
+        UUID userId = userService.registerNewUser(dto);
+
+        verify(userRepository).save(userCaptor.capture());
+        User savedUser = userCaptor.getValue();
+
+        assertNotNull(userId);
+        assertEquals(dto.getEmail(), savedUser.getEmail());
+        assertEquals("encodedPassword", savedUser.getPasswordHash());
+        assertFalse(savedUser.isLocked());
+        assertEquals(BigDecimal.ZERO, savedUser.getBalance());
+        assertEquals(1, savedUser.getTranslations().size());
+        assertEquals("Ivan", savedUser.getTranslations().get(0).getFirstName());
+    }
+
+    @Test
+    void getUserRolesByUserSecurityDTO_ShouldReturnRoles() {
+        List<String> roleNames = Arrays.asList("ROLE_USER", "ROLE_ADMIN");
+
+        UserSecurityDTO dto = UserSecurityDTO.builder()
+                .roles(roleNames)
+                .build();
+
+        List<Role> expectedEnums = Arrays.asList(Role.ROLE_USER, Role.ROLE_ADMIN);
+        List<RoleEntity> expectedEntities = Arrays.asList(new RoleEntity(), new RoleEntity());
+
+        when(roleRepository.findByNameIn(expectedEnums)).thenReturn(expectedEntities);
+
+        List<RoleEntity> result = userService.getUserRolesByUserSecurityDTO(dto);
+
+        assertEquals(2, result.size());
+        verify(roleRepository).findByNameIn(expectedEnums);
+    }
+
+    @Test
+    void getUserRolesByUserSecurityDTO_ShouldThrowException_WhenRoleIsInvalid() {
+        UserSecurityDTO dto = UserSecurityDTO.builder()
+                .roles(Collections.singletonList("INVALID_ROLE"))
+                .build();
+
+        assertThrows(IllegalArgumentException.class, () ->
+                userService.getUserRolesByUserSecurityDTO(dto));
+    }
     @Test
     void lockUser_ShouldCallRepository() {
         UUID id = UUID.randomUUID();
         userService.lockUser(id);
         verify(userRepository, times(1)).lockUserById(id);
     }
+    @Test
+    void finalizePurchase_ShouldUpdateBalanceAndSaveUserTour() {
+        UUID userId = UUID.randomUUID();
+        String email = "test@example.com";
+        BigDecimal initialBalance = new BigDecimal("100.00");
+        BigDecimal price = new BigDecimal("40.00");
+
+        UserSecurityDTO userSecurityDTO = UserSecurityDTO.builder()
+                .login(email)
+                .balance(initialBalance)
+                .build();
+
+        TourFullDTO tourDTO = new TourFullDTO();
+        tourDTO.setPrice(price);
+
+        User user = new User();
+        user.setEmail(email);
+        user.setBalance(initialBalance);
+
+        Tour tourEntity = new Tour();
+
+        when(userRepository.findByEmail(email)).thenReturn(Optional.of(user));
+        when(tourMapper.toEntity(tourDTO)).thenReturn(tourEntity);
+
+        userService.finalizePurchase(userSecurityDTO, tourDTO);
+
+        assertEquals(new BigDecimal("60.00"), user.getBalance());
+        verify(userRepository).save(user);
+        verify(userTourRepository).save(any(UserTour.class));
+    }
+
+
     @Test
     void findAll_ShouldReturnPageOfUserProfiles() {
         Pageable pageable = PageRequest.of(0, 10);

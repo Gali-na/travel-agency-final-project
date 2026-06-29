@@ -35,42 +35,4 @@ public class UserSecurityMapper {
                         : new ArrayList<>())
                 .build();
     }
-
-//    public User toEntity(UserSecurityDTO dto) {
-//        User user = new User();
-//        user.setId(dto.getId());
-//        user.setEmail(dto.getLogin());
-//        user.setLocked(dto.isLocked());
-//        user.setBalance(dto.getBalance());
-//        //user.setRoles(userAuthenticationService.getUserRolesByUserSecurityDTO( dto));
-//        return user;
-//    }
-//getUserRolesByUserSecurityDTO(UserSecurityDTO dto)
-/*public class UserSecurityDTO {
-    private UUID id;
-    private String login;
-    private List<String> roles = new ArrayList<>();//
-    private boolean isLocked;
-    private BigDecimal balance;
-}*/
-
-//    public User toEntity(UserSecurityDTO dto) {
-//        if (dto == null) return null;
-//        User user = userRepository.findById(dto.getId())
-//                .orElse(new User());
-//        user.setId(dto.getId());
-//        user.setEmail(dto.getLogin());
-//        user.setLocked(dto.isLocked());
-//        user.setBalance(dto.getBalance());
-//        if (dto.getRoles() != null) {
-//            List<RoleEntity> roleEntities = dto.getRoles().stream()
-//                    .map(roleName -> roleRepository.findByName(Role.valueOf(roleName))
-//                            .orElseThrow(() -> new RuntimeException("Role not found: " + roleName)))
-//                    .collect(Collectors.toList());
-//            user.setRoles(roleEntities);
-//        }
-//
-//        return user;
-//    }
-
 }

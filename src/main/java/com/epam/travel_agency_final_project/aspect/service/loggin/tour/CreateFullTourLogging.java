@@ -1,6 +1,7 @@
 package com.epam.travel_agency_final_project.aspect.service.loggin.tour;
 
 import com.epam.travel_agency_final_project.exeption.CityNotFoundException;
+import com.epam.travel_agency_final_project.service.TourService;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +14,7 @@ import org.aspectj.lang.annotation.*;
 @Component
 public class CreateFullTourLogging {
     private static final Logger logger = LogManager.getLogger(CreateFullTourLogging.class);
-    @Pointcut("execution(com.epam.travel_agency_final_project.service.TourService.createFullTour(..))")
+    @Pointcut("execution(* com.epam.travel_agency_final_project.service.TourService.createFullTour(..))")
     public void tourCreationMethods() {
     }
     @Before("tourCreationMethods()")

@@ -23,101 +23,73 @@ import java.util.UUID;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
+import com.epam.travel_agency_final_project.controller.RegistrationController;
+import com.epam.travel_agency_final_project.dto.UserRegistrationDTO;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.ui.Model;
+
 @ExtendWith(MockitoExtension.class)
 class RegistrationControllerTest {
-
-    private RegistrationController controller;
-
+    @Mock
+    private Model model;
+    @InjectMocks
+    private RegistrationController registrationController;
     @Mock
     private UserService userService;
     @Mock
     private MessageSource messageSource;
     @Mock
-    private JwtProvider jwtProvider;
-    @Mock
-    private RefreshTokenService refreshTokenService;
-    @Mock
-    private UserSecurityMapper userSecurityMapper;
-    @Mock
-    private CookieService cookieService;
-    @Mock
     private UserAuthenticationService userAuthenticationService;
     @Mock
     private BindingResult bindingResult;
     @Mock
-    private Model model;
-    @Mock
     private HttpServletResponse response;
-
-    @BeforeEach
-    void setUp() {
-        controller = new RegistrationController(userService, messageSource, jwtProvider,
-                refreshTokenService, userSecurityMapper, cookieService, userAuthenticationService);
-    }
-
     @Test
-    void showRegistrationForm_ReturnsRegisterView() {
-        String view = controller.showRegistrationForm(model);
+    void showRegistrationForm_ShouldAddUserDtoToModelAndReturnRegisterView() {
+        String view = registrationController.showRegistrationForm(model);
         assertEquals("register", view);
         verify(model).addAttribute(eq("userDto"), any(UserRegistrationDTO.class));
     }
-
     @Test
-    void registerUser_InvalidInput_ReturnsRegisterView() {
+    void registerUser_ValidationException_ReturnsRegister() throws ValidationException {
         UserRegistrationDTO dto = mock(UserRegistrationDTO.class);
         doThrow(new ValidationException("error.invalid")).when(dto).validate();
-        when(messageSource.getMessage(anyString(), any(), any(Locale.class))).thenReturn("Invalid data");
-
-        String view = controller.registerUser(dto, bindingResult, response, Locale.UK);
-
+        when(messageSource.getMessage("error.invalid", null, Locale.UK)).thenReturn("Invalid data");
+        String view = registrationController.registerUser(dto, bindingResult, response, Locale.UK);
         assertEquals("register", view);
-        verify(bindingResult).reject(isNull(), eq("Invalid data"));
+        verify(bindingResult).reject(null, "Invalid data");
     }
     @Test
-    void registerUser_LockedUser_RedirectsToLogin() {
-        UserRegistrationDTO dto = spy(new UserRegistrationDTO());
-        dto.setEmail("locked@test.com");
-        dto.setPassword("Valid123!");
-        doNothing().when(dto).validate();
-        UUID userId = UUID.randomUUID();
-        UserSecurityDTO user = new UserSecurityDTO();
-        user.setLocked(true);
-
-        when(userService.findByEmail(anyString())).thenReturn(null);
-        when(userService.registerNewUser(dto)).thenReturn(userId);
-        when(userService.findById(userId)).thenReturn(user);
-        String view = controller.registerUser(dto, bindingResult, response, Locale.UK);
-        assertEquals("redirect:/login?blocked", view);
+    void registerUser_EmailExists_ReturnsRegister() {
+        UserRegistrationDTO dto = new UserRegistrationDTO();
+        dto.setPassword("Abc12345");
+        dto.setEmail("test@mail");
+        dto.setFirstName("John");
+        dto.setLastName("Doe");
+        UserSecurityDTO existingUser = new UserSecurityDTO();
+        when(userService.findByEmail("test@mail")).thenReturn(existingUser);
+        String view = registrationController.registerUser(dto, bindingResult, response, Locale.UK);
+        assertEquals("register", view);
+        verify(bindingResult).rejectValue("email", "error.user.exists", "User with this email address already exists");
     }
     @Test
     void registerUser_Success_RedirectsToHome() {
-        UserRegistrationDTO dto = spy(new UserRegistrationDTO());
-        dto.setEmail("new@test.com");
-        dto.setPassword("Valid123!");
-        doNothing().when(dto).validate();
-
-        UUID userId = UUID.randomUUID();
-        UserSecurityDTO user = new UserSecurityDTO();
-        user.setLocked(false);
-
-        when(userService.findByEmail(anyString())).thenReturn(null);
-        when(userService.registerNewUser(any())).thenReturn(userId);
-        when(userService.findById(userId)).thenReturn(user);
-        String view = controller.registerUser(dto, bindingResult, response, Locale.UK);
+        UserRegistrationDTO dto = new UserRegistrationDTO();
+        dto.setEmail("test@mail");
+        dto.setPassword("Abc12345");
+        dto.setFirstName("John");
+        dto.setLastName("Doe");
+        UUID newUserId = UUID.randomUUID();
+        when(userService.findByEmail(dto.getEmail())).thenReturn(null);
+        when(userService.registerNewUser(dto)).thenReturn(newUserId);
+        String view = registrationController.registerUser(dto, bindingResult, response, Locale.UK);
         assertEquals("redirect:/", view);
-        verify(userAuthenticationService).registerAndAuthenticate(eq(userId), eq(response));
-    }
-
-    @Test
-    void registerUser_UserExists_ReturnsRegisterView() {
-        UserRegistrationDTO dto = spy(new UserRegistrationDTO());
-        dto.setEmail("exists@test.com");
-        dto.setPassword("Valid123!");
-        doNothing().when(dto).validate();
-
-        when(userService.findByEmail("exists@test.com")).thenReturn(new UserSecurityDTO());
-        String view = controller.registerUser(dto, bindingResult, response, Locale.UK);
-        assertEquals("register", view);
-        verify(bindingResult).rejectValue(eq("email"), eq("error.user.exists"), anyString());
+        verify(userService).registerNewUser(dto);
+        verify(userAuthenticationService).registerAndAuthenticate(newUserId, response);
+        verifyNoInteractions(bindingResult);
     }
 }

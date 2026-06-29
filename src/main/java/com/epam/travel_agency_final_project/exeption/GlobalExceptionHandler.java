@@ -13,7 +13,6 @@ import java.util.Locale;
 @RequiredArgsConstructor
 @ControllerAdvice
 public class GlobalExceptionHandler {
-
     private final MessageSource messageSource;
     @ExceptionHandler(UserAlreadyExistsException.class)
     public String handleUserAlreadyExists(UserAlreadyExistsException ex, Model model, Locale locale) {

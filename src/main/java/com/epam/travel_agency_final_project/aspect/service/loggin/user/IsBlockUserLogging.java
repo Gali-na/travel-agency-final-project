@@ -1,4 +1,5 @@
 package com.epam.travel_agency_final_project.aspect.service.loggin.user;
+import com.epam.travel_agency_final_project.service.UserService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.aspectj.lang.JoinPoint;
@@ -10,7 +11,6 @@ import java.util.UUID;
 @Component
 public class IsBlockUserLogging {
     private static final Logger logger = LogManager.getLogger(IsBlockUserLogging.class);
-
     @Pointcut("execution(* com.epam.travel_agency_final_project.service.*.isBlockUser(java.util.UUID))")
     public void blockStatusMethods() {
     }

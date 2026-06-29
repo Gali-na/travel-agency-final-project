@@ -45,6 +45,7 @@ public class JwtCookieFilter extends OncePerRequestFilter {
                 || path.startsWith("/css/")
                 || path.startsWith("/blocked/")
                 || path.startsWith("/js/")
+                || path.startsWith("/error")
                 || path.startsWith("/uploads/");
     }
     @Override

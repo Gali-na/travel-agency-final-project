@@ -11,8 +11,8 @@ import org.springframework.validation.BindingResult;
 @Aspect
 @Component
 public class AdminTourControllerCreateTourLogging {
-    private static final Logger logger = LogManager.getLogger( AdminTourControllerCreateTourLogging.class);
-    @Before("execution(* com.epam.travel_agency_final_project.controller.TourController.createTour(..))")
+    private static final Logger logger = LogManager.getLogger(AdminTourControllerCreateTourLogging.class);
+    @Before("execution(* com.epam.travel_agency_final_project.controller.AdminTourController.createTour(..))")
     public void logBefore(JoinPoint joinPoint) {
         Object[] args = joinPoint.getArgs();
         if (args.length >= 2 && args[0] instanceof TourCreationDTO) {

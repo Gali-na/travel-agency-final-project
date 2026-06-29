@@ -1,4 +1,5 @@
 package com.epam.travel_agency_final_project.aspect.service.loggin.tour;
+import com.epam.travel_agency_final_project.service.TourService;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +14,7 @@ import java.util.Set;
 @Component
 public class GetToursForCartLogging {
     private static final Logger logger = LogManager.getLogger(GetToursForCartLogging.class);
-    @Pointcut("execution(com.epam.travel_agency_final_project.service.TourService.getToursForCart(..))")
+    @Pointcut("execution(* com.epam.travel_agency_final_project.service.TourService.getToursForCart(..))")
     public void getToursForCartMethods() {}
     @Before("getToursForCartMethods()")
     public void logBefore(JoinPoint joinPoint) {

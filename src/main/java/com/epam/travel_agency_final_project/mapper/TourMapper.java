@@ -46,7 +46,6 @@ public class TourMapper  {
         if (tourDTO == null) {
             return null;
         }
-
         Tour tour = modelMapper.map(tourDTO, Tour.class);
 
         if (tourDTO.getCityId() != null) {

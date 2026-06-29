@@ -1,5 +1,6 @@
 package com.epam.travel_agency_final_project.aspect.service.loggin.user;
 import com.epam.travel_agency_final_project.dto.UserRegistrationDTO;
+import com.epam.travel_agency_final_project.service.UserService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.aspectj.lang.JoinPoint;

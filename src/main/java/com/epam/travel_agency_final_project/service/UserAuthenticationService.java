@@ -64,5 +64,4 @@ public class UserAuthenticationService {
         UserSecurityDTO userSecurityDTO = userService.findById(userId);
         updateRefreshAccessToken( resp, userSecurityDTO);
     }
-
 }

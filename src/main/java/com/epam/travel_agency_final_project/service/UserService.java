@@ -86,25 +86,10 @@ public class UserService {
     public UserSecurityDTO findByEmail(String email) {
         return userSecurityMapper.toSecurityDto(userRepository.findByEmail(email).orElse(null));
     }
-
-//    @Transactional
-//    public void finalizePurchase(UserSecurityDTO userSecurityDTO, TourFullDTO tourDTO) {
-//        userSecurityDTO.setBalance(userSecurityDTO.getBalance().subtract(tourDTO.getPrice()));
-//        userRepository.save(userSecurityMapper.toEntity(userSecurityDTO));
-//        UserTour userTour = new UserTour();
-//        userTour.setUser(userSecurityMapper.toEntity(userSecurityDTO));
-//        userTour.setTour(tourMapper.toEntity(tourDTO));
-//        userTour.setStatus(String.valueOf(StatusTour.PAID));
-//        userTourRepository.save(userTour);
-//    }
-
     @Transactional
     public void finalizePurchase(UserSecurityDTO userSecurityDTO, TourFullDTO tourDTO) {
-      //  userSecurityDTO.setBalance(userSecurityDTO.getBalance().subtract(tourDTO.getPrice()));
-
         User user = userRepository.findByEmail(userSecurityDTO.getLogin()).get();
         user.setBalance(userSecurityDTO.getBalance().subtract(tourDTO.getPrice()));
-
         userRepository.save(user);
         UserTour userTour = new UserTour();
         userTour.setUser(user);
@@ -118,27 +103,6 @@ public class UserService {
                 .collect(Collectors.toList());
         return roleRepository.findByNameIn(roleEnums);
     }
-//    @Transactional
-//    public UUID registerNewUser(UserRegistrationDTO dto) {
-//        User user = new User();
-//        user.setId(UUID.randomUUID());
-//        user.setEmail(dto.getEmail());
-//        user.setPasswordHash(passwordEncoder.encode(dto.getPassword()));
-//        user.setLocked(false);
-//        user.setBalance(BigDecimal.ZERO);
-//        User savedUser = userRepository.save(user);
-//
-//        UserTranslation translation = new UserTranslation();
-//        UserTranslation.UserTranslationId id = new UserTranslation.UserTranslationId(user.getId(), "uk");
-//        translation.setId(id);
-//        translation.setUser(user);
-//        translation.setFirstName(dto.getFirstName());
-//        translation.setLastName(dto.getLastName());
-//        userTranslationRepository.save(translation);
-//        return savedUser.getId();
-//    }
-
-
     @Transactional
     public UUID registerNewUser(UserRegistrationDTO dto) {
         User user = new User();

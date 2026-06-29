@@ -13,10 +13,7 @@ import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
 import java.nio.charset.StandardCharsets;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 @Component
 public class JwtProvider {
@@ -80,7 +77,7 @@ public class JwtProvider {
             return false;
         }
     }
-    public java.util.List<String> getRolesFromToken(String token) {
+    public List<String> getRolesFromToken(String token) {
         Claims claims = Jwts.parser()
                 .verifyWith(key)
                 .build()

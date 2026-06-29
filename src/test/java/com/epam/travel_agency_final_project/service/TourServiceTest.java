@@ -1,21 +1,17 @@
-package com.epam.travel_agency_final_project.servise;
+package com.epam.travel_agency_final_project.service;
 
-import com.epam.travel_agency_final_project.dto.TourCreationDTO;
-import com.epam.travel_agency_final_project.dto.TourDTO;
-import com.epam.travel_agency_final_project.dto.TourFullDTO;
-import com.epam.travel_agency_final_project.dto.TourTranslationDTO;
+import com.epam.travel_agency_final_project.dto.*;
 import com.epam.travel_agency_final_project.entity.City;
 import com.epam.travel_agency_final_project.entity.Tour;
 import com.epam.travel_agency_final_project.entity.TourTranslation;
 import com.epam.travel_agency_final_project.exeption.CityNotFoundException;
 import com.epam.travel_agency_final_project.exeption.TourNotFoundException;
 import com.epam.travel_agency_final_project.mapper.TourCreateMapper;
-import com.epam.travel_agency_final_project.mapper.TourMapper1;
+import com.epam.travel_agency_final_project.mapper.TourMapper;
 import com.epam.travel_agency_final_project.model.TourFilter;
 import com.epam.travel_agency_final_project.repository.CityRepository;
 import com.epam.travel_agency_final_project.repository.TourRepository;
 import com.epam.travel_agency_final_project.repository.TourTranslationRepository;
-import com.epam.travel_agency_final_project.service.TourService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -26,10 +22,10 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 
+import java.math.BigDecimal;
 import java.util.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
@@ -38,7 +34,7 @@ class TourServiceTest {
     @Mock
     private TourRepository tourRepository;
     @Mock
-    private TourMapper1 tourMapper;
+    private TourMapper tourMapper;
     @Mock
     private TourTranslationRepository translationRepository;
     @Mock
@@ -142,5 +138,69 @@ class TourServiceTest {
         assertThrows(TourNotFoundException.class, () -> tourService.findById(id, lang));
         verify(tourRepository).findById(id);
         verify(tourMapper, never()).toDto(any(), anyString());
+    }
+    @Test
+    void checkPaymentAvailability_ShouldReturnPositive_WhenBalanceIsGreater() {
+        UserSecurityDTO user = UserSecurityDTO.builder()
+                .balance(new BigDecimal("100.00"))
+                .build();
+        TourFullDTO tour = new TourFullDTO();
+        tour.setPrice(new BigDecimal("50.00"));
+
+        int result = tourService.checkPaymentAvailability(user, tour);
+
+        assertTrue(result > 0);
+    }
+
+    @Test
+    void checkPaymentAvailability_ShouldReturnZero_WhenBalanceEqualsPrice() {
+        UserSecurityDTO user = UserSecurityDTO.builder()
+                .balance(new BigDecimal("50.00"))
+                .build();
+        TourFullDTO tour = new TourFullDTO();
+        tour.setPrice(new BigDecimal("50.00"));
+
+        int result = tourService.checkPaymentAvailability(user, tour);
+
+        assertEquals(0, result);
+    }
+
+    @Test
+    void checkPaymentAvailability_ShouldReturnNegative_WhenBalanceIsLower() {
+        UserSecurityDTO user = UserSecurityDTO.builder()
+                .balance(new BigDecimal("20.00"))
+                .build();
+        TourFullDTO tour = new TourFullDTO();
+        tour.setPrice(new BigDecimal("50.00"));
+
+        int result = tourService.checkPaymentAvailability(user, tour);
+
+        assertTrue(result < 0);
+    }
+
+    @Test
+    void checkPaymentAvailability_ShouldHandleNullBalanceAsZero() {
+        UserSecurityDTO user = UserSecurityDTO.builder()
+                .balance(null)
+                .build();
+        TourFullDTO tour = new TourFullDTO();
+        tour.setPrice(new BigDecimal("50.00"));
+
+        int result = tourService.checkPaymentAvailability(user, tour);
+
+        assertTrue(result < 0);
+    }
+
+    @Test
+    void checkPaymentAvailability_ShouldHandleNullPriceAsZero() {
+        UserSecurityDTO user = UserSecurityDTO.builder()
+                .balance(new BigDecimal("50.00"))
+                .build();
+        TourFullDTO tour = new TourFullDTO();
+        tour.setPrice(null);
+
+        int result = tourService.checkPaymentAvailability(user, tour);
+
+        assertTrue(result > 0);
     }
 }

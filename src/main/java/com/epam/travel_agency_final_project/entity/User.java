@@ -24,7 +24,6 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private List<UserTranslation> translations;
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    //@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<UserTour> userTours;
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(

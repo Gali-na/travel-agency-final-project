@@ -45,9 +45,7 @@ class TourWebControllerTest {
     void getToursPage_ReturnsToursView() {
         when(tourService.getTours(anyString(), any(), anyInt(), anyInt())).thenReturn(page);
         when(page.getContent()).thenReturn(List.of(new TourFullDTO()));
-
         String view = controller.getToursPage("uk", 0, null, null, null, model);
-
         assertEquals("tours", view);
         verify(model).addAttribute(eq("tours"), anyList());
         verify(model).addAttribute(eq("currentPage"), eq(0));
@@ -57,9 +55,7 @@ class TourWebControllerTest {
         UUID tourId = UUID.randomUUID();
         Cart cart = new Cart();
         when(cookieService.getCartFromCookie(request)).thenReturn(cart);
-
         String view = controller.addToCart(tourId, "uk", request, response);
-
         assertEquals("redirect:/tours?lang=uk", view);
         verify(response, times(1)).addCookie(any());
     }

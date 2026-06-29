@@ -38,10 +38,7 @@ class HomeControllerTest {
     @Test
     void index_NoToken_SetsFlagsToFalse() {
         when(cookieService.extractCookie(request, "access_token")).thenReturn(null);
-
-        String viewName = controller.index(request, model);
-
-        assertEquals("index", viewName);
+        String viewName = controller.index(request, model);assertEquals("index", viewName);
         verify(model).addAttribute("isAdmin", false);
         verify(model).addAttribute("isManager", false);
     }
@@ -52,9 +49,7 @@ class HomeControllerTest {
         when(cookieService.extractCookie(request, "access_token")).thenReturn(token);
         when(jwtProvider.validateAccessToken(token)).thenReturn(true);
         when(jwtProvider.getRolesFromToken(token)).thenReturn(List.of("ROLE_ADMIN"));
-
         controller.index(request, model);
-
         verify(model).addAttribute("isAdmin", true);
         verify(model).addAttribute("isManager", true);
     }
@@ -65,9 +60,7 @@ class HomeControllerTest {
         when(cookieService.extractCookie(request, "access_token")).thenReturn(token);
         when(jwtProvider.validateAccessToken(token)).thenReturn(true);
         when(jwtProvider.getRolesFromToken(token)).thenReturn(List.of("ROLE_USER"));
-
         controller.index(request, model);
-
         verify(model).addAttribute("isAdmin", false);
         verify(model).addAttribute("isManager", false);
     }

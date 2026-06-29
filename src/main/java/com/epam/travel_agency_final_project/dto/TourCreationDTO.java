@@ -18,7 +18,6 @@ import java.util.UUID;
 @Builder
 @ToString
 public class TourCreationDTO implements Validatable{
-
     @NotNull(message = "{error.price.required}")
     @DecimalMin(value = "1.00", message = "{error.price.min}")
     private BigDecimal price;
@@ -29,16 +28,12 @@ public class TourCreationDTO implements Validatable{
     @NotNull(message = "{error.eviction.required}")
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private LocalDateTime evictionDate;
-
     @NotNull(message = "{error.hot.required}")
     private Boolean isHot;
-
     @NotBlank(message = "{error.image.required}")
     private String imagePath;
-
     @NotBlank(message = "{error.type.required}")
     private String tourType;
-
     @NotBlank(message = "{error.transfer.required}")
     private String transferType;
     @NotBlank(message = "{error.hotel.required}")

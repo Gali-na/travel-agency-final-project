@@ -1,6 +1,7 @@
 package com.epam.travel_agency_final_project.aspect.service.loggin.cooki;
 
 import com.epam.travel_agency_final_project.exeption.TourNotFoundException;
+import com.epam.travel_agency_final_project.service.CookieService;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import org.aspectj.lang.JoinPoint;
@@ -11,7 +12,7 @@ import java.util.UUID;
 @Component
 public class UpdateCartCookieAfterPurchaseLogging {
     private static final Logger logger = LogManager.getLogger(UpdateCartCookieAfterPurchaseLogging.class);
-    @Pointcut("execution(com.epam.travel_agency_final_project.service.СookieServiсe.updateCartCookieAfterPurchase(..))")
+    @Pointcut("execution(* com.epam.travel_agency_final_project.service.СookieServiсe.updateCartCookieAfterPurchase(..))")
     public void UpdateCartCookieAfterPurchase() {
     }
     @Before("cartCookieMethods()")

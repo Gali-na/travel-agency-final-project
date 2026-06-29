@@ -1,6 +1,7 @@
 package com.epam.travel_agency_final_project.aspect.service.loggin.tour;
 
 import com.epam.travel_agency_final_project.exeption.TourNotFoundException;
+import com.epam.travel_agency_final_project.service.TourService;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
 
@@ -14,7 +15,7 @@ import java.util.UUID;
 @Component
 public class FindByIdLogging {
     private static final Logger logger = LogManager.getLogger(FindByIdLogging.class);
-    @Pointcut("execution(com.epam.travel_agency_final_project.service.TourService.findById(java.util.UUID, String))")
+    @Pointcut("execution(* com.epam.travel_agency_final_project.service.TourService.findById(java.util.UUID, String))")
     public void findByIdMethods() {
 
     }

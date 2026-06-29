@@ -1,5 +1,6 @@
 package com.epam.travel_agency_final_project.aspect.service.loggin.tour;
 
+import com.epam.travel_agency_final_project.service.TourService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.aspectj.lang.JoinPoint;
@@ -9,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class GetToursLogging {
     private static final Logger logger = LogManager.getLogger(GetToursLogging.class);
-    @Pointcut("execution(com.epam.travel_agency_final_project.service.TourService.getTours(..))")
+    @Pointcut("execution(* com.epam.travel_agency_final_project.service.TourService.getTours(..))")
     public void getToursMethods() {
 
     }

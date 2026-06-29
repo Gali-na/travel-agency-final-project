@@ -1,5 +1,6 @@
 package com.epam.travel_agency_final_project.aspect.service.loggin.tour;
 
+import com.epam.travel_agency_final_project.service.TourService;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +14,7 @@ import org.aspectj.lang.annotation.*;
 public class GetAllToursByLanguageLogging {
     private static final Logger logger = LogManager.getLogger(GetAllToursByLanguageLogging.class);
 
-    @Pointcut("execution(com.epam.travel_agency_final_project.service.TourService.getAllToursByLanguage(..))")
+    @Pointcut("execution(* com.epam.travel_agency_final_project.service.TourService.getAllToursByLanguage(..))")
     public void getAllToursMethods() {
     }
 

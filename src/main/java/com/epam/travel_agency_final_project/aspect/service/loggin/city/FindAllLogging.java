@@ -1,5 +1,6 @@
 package com.epam.travel_agency_final_project.aspect.service.loggin.city;
 
+import com.epam.travel_agency_final_project.service.CityService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.aspectj.lang.JoinPoint;
@@ -13,9 +14,9 @@ import java.util.List;
 
 @Aspect
 @Component
-public class findAllLogging {
-    private static final Logger logger = LogManager.getLogger(findAllLogging.class);
-    @Pointcut("execution(com.epam.travel_agency_final_project.service.CityService.findAll(..))")
+public class FindAllLogging {
+    private static final Logger logger = LogManager.getLogger(FindAllLogging.class);
+    @Pointcut("execution(* com.epam.travel_agency_final_project.service.CityService.findAll(..))")
     public void findAllMethod() {
     }
     @AfterReturning(pointcut = "findAllMethod()", returning = "result")

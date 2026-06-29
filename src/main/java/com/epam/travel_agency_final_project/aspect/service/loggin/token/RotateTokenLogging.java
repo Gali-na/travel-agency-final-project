@@ -1,5 +1,6 @@
 package com.epam.travel_agency_final_project.aspect.service.loggin.token;
 
+import com.epam.travel_agency_final_project.service.RefreshTokenService;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
 
@@ -11,7 +12,7 @@ import org.aspectj.lang.annotation.*;
 @Component
 public class RotateTokenLogging {
     private static final Logger logger = LogManager.getLogger(RotateTokenLogging.class);
-    @Pointcut("execution(com.epam.travel_agency_final_project.service.RefreshTokenService.rotateRefreshToken(..))")
+    @Pointcut("execution(* com.epam.travel_agency_final_project.service.RefreshTokenService.rotateRefreshToken(..))")
     public void rotateTokenMethods() {
 
     }
