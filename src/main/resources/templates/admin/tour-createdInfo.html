@@ -14,6 +14,10 @@
 </head>
 <body>
 <div class="card">
+    <div class="language-switcher">
+        <a th:href="@{/admin/tour-createdInfo(lang='uk')}">УКР</a>
+        <a th:href="@{/admin/tour-createdInfo(lang='en')}">ENG</a>
+    </div>
     <div class="icon">✨</div>
     <h1 th:text="#{admin.tour.created.header}">Тур успішно створено!</h1>
     <p th:text="#{admin.tour.created.message}">Ваш новий тур був доданий до системи та доступний для перегляду.</p>

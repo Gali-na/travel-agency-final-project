@@ -1,76 +1,130 @@
-INSERT INTO countries (id, image_path) VALUES ('a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d', 'countries/Argentina.png');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d', 'uk', 'Аргентина');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d', 'en', 'Argentina');
+INSERT INTO "PUBLIC"."COUNTRIES" ("ID", "IMAGE_PATH") VALUES
+('00000000-0000-0000-0000-000000000001', 'flags/ukraine.jpg'),
+('00000000-0000-0000-0000-000000000002', 'flags/poland.jpg'),
+('00000000-0000-0000-0000-000000000003', 'flags/germany.jpg'),
+('00000000-0000-0000-0000-000000000004', 'flags/italy.jpg'),
+('00000000-0000-0000-0000-000000000005', 'flags/france.jpg'),
+('00000000-0000-0000-0000-000000000006', 'flags/spain.jpg'),
+('00000000-0000-0000-0000-000000000007', 'flags/turkey.jpg');
 
-INSERT INTO countries (id, image_path) VALUES ('b2c3d4e5-f6a7-8b9c-0d1e-2f3a4b5c6d7e', 'countries/Australia.png');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('b2c3d4e5-f6a7-8b9c-0d1e-2f3a4b5c6d7e', 'uk', 'Австралія');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('b2c3d4e5-f6a7-8b9c-0d1e-2f3a4b5c6d7e', 'en', 'Australia');
+MERGE INTO "PUBLIC"."CITIES" ("ID", "COUNTRY_ID") KEY("ID") VALUES
+('10000000-0000-0000-0000-000000000001', '00000000-0000-0000-0000-000000000001'),
+('10000000-0000-0000-0000-000000000002', '00000000-0000-0000-0000-000000000002'),
+('10000000-0000-0000-0000-000000000003', '00000000-0000-0000-0000-000000000003'),
+('10000000-0000-0000-0000-000000000004', '00000000-0000-0000-0000-000000000004'),
+('10000000-0000-0000-0000-000000000005', '00000000-0000-0000-0000-000000000005'),
+('10000000-0000-0000-0000-000000000006', '00000000-0000-0000-0000-000000000006'),
+('10000000-0000-0000-0000-000000000007', '00000000-0000-0000-0000-000000000007');
 
-INSERT INTO countries (id, image_path) VALUES ('c3d4e5f6-a7b8-9c0d-1e2f-3a4b5c6d7e8f', 'countries/Brazil.png');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('c3d4e5f6-a7b8-9c0d-1e2f-3a4b5c6d7e8f', 'uk', 'Бразилія');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('c3d4e5f6-a7b8-9c0d-1e2f-3a4b5c6d7e8f', 'en', 'Brazil');
+MERGE INTO "PUBLIC"."ROLES" ("ID", "NAME") KEY("ID") VALUES
+('4f31ad68-fb2d-4d5a-8430-53f44dd83bf9', 'ROLE_USER'),
+('0874ff5e-f748-4977-92e7-324bd15d5357', 'ROLE_MANAGER'),
+('49f9466a-89be-4415-ae7e-6b3aeb771da3', 'ROLE_ADMIN');
 
-INSERT INTO countries (id, image_path) VALUES ('d4e5f6a7-b8c9-0d1e-2f3a-4b5c6d7e8f9a', 'countries/Canada.png');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('d4e5f6a7-b8c9-0d1e-2f3a-4b5c6d7e8f9a', 'uk', 'Канада');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('d4e5f6a7-b8c9-0d1e-2f3a-4b5c6d7e8f9a', 'en', 'Canada');
+MERGE INTO "PUBLIC"."USERS" ("ID", "EMAIL", "PASSWORD_HASH", "BALANCE", "IS_LOCKED") KEY("ID") VALUES
+('1da4fed8-2859-499e-883b-ce5a06f757d3', 'svitlana.marchenko@example.com', 'd02778cb97b102f6bb1b56950ec464879a83a00508dae921d6e1596f2a893259', 1830.00, FALSE),
+('202ba1b4-2bc5-419c-a762-167c8afa6c48', 'artem.melnychuk@example.com', '8e6cf23778a4b665c7d8123ef8bc6292773603d0d6aabbdd62a11ef721d1542d', 1055.20, FALSE),
+('c9eb4482-160e-40fc-9954-d6f4f6a41caa', 'admin1@gmail.com', '$2a$10$1lYnx58CSAy7UlwMmIOnx.46zDoNnDlmFt92waNsdQeK6yx5IRzP.', 0.00, FALSE),
+('3ae70cf0-dbe9-4390-b012-1329c8ed15b3', 'admin@gmail', '$2a$10$YGMy/r5mir8F7KHjQGETVea2rzRV9T9WdLJK7Tn/B78l9SEM8hWHe', 115.00, FALSE),
+('41acc2b9-3e30-41d2-9e8f-6a43fec73334', 'manager@gmail.com', '$2a$10$YGMy/r5mir8F7KHjQGETVea2rzRV9T9WdLJK7Tn/B78l9SEM8hWHe', 5045.00, FALSE),
+('33f2661a-bbdf-4da2-a2c4-e3df376d2d0b', 'user1@gmail.com', '$2a$10$mtlidpZ4I0Eq40qMUjJwRub/2.AEhSfgS.EfCpu6scRRU6mCWYAWi', 3680.00, TRUE),
+('efacf208-7ff9-485c-b22d-f57998c667bc', 'user12@gmail.com', '$2a$10$Pn9lcD/aFnYmxCGM62NoJuuezy6lU80EVPe8mKq2pOENcZZkgUxWq', 53823.00, FALSE);
 
-INSERT INTO countries (id, image_path) VALUES ('e5f6a7b8-c9d0-1e2f-3a4b-5c6d7e8f9a0b', 'countries/France.png');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('e5f6a7b8-c9d0-1e2f-3a4b-5c6d7e8f9a0b', 'uk', 'Франція');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('e5f6a7b8-c9d0-1e2f-3a4b-5c6d7e8f9a0b', 'en', 'France');
+INSERT INTO "PUBLIC"."USER_TRANSLATIONS" ("USER_ID", "LANG", "FIRST_NAME", "LAST_NAME") VALUES
+('3ae70cf0-dbe9-4390-b012-1329c8ed15b3', 'uk', 'Адміністратор', 'Головний'),
+('3ae70cf0-dbe9-4390-b012-1329c8ed15b3', 'en', 'Admin', 'Main'),
+('41acc2b9-3e30-41d2-9e8f-6a43fec73334', 'uk', 'Менеджер', 'Сервісу'),
+('41acc2b9-3e30-41d2-9e8f-6a43fec73334', 'en', 'Manager', 'Service'),
+('33f2661a-bbdf-4da2-a2c4-e3df376d2d0b', 'uk', 'Олександр', 'Петров'),
+('33f2661a-bbdf-4da2-a2c4-e3df376d2d0b', 'en', 'Oleksandr', 'Petrov'),
+('efacf208-7ff9-485c-b22d-f57998c667bc', 'uk', 'Анна', 'Коваль'),
+('efacf208-7ff9-485c-b22d-f57998c667bc', 'en', 'Anna', 'Koval');
 
-INSERT INTO countries (id, image_path) VALUES ('f6a7b8c9-d0e1-2f3a-4b5c-6d7e8f9a0b1c', 'countries/India.png');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('f6a7b8c9-d0e1-2f3a-4b5c-6d7e8f9a0b1c', 'uk', 'Індія');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('f6a7b8c9-d0e1-2f3a-4b5c-6d7e8f9a0b1c', 'en', 'India');
+MERGE INTO "PUBLIC"."USER_ROLES" ("USER_ID", "ROLE_ID") KEY("USER_ID", "ROLE_ID") VALUES
+('1da4fed8-2859-499e-883b-ce5a06f757d3', '4f31ad68-fb2d-4d5a-8430-53f44dd83bf9'),
+('202ba1b4-2bc5-419c-a762-167c8afa6c48', '4f31ad68-fb2d-4d5a-8430-53f44dd83bf9'),
+('3ae70cf0-dbe9-4390-b012-1329c8ed15b3', '49f9466a-89be-4415-ae7e-6b3aeb771da3'),
+('41acc2b9-3e30-41d2-9e8f-6a43fec73334', '0874ff5e-f748-4977-92e7-324bd15d5357'),
+('33f2661a-bbdf-4da2-a2c4-e3df376d2d0b', '4f31ad68-fb2d-4d5a-8430-53f44dd83bf9'),
+('efacf208-7ff9-485c-b22d-f57998c667bc', '4f31ad68-fb2d-4d5a-8430-53f44dd83bf9'),
+('c9eb4482-160e-40fc-9954-d6f4f6a41caa', '4f31ad68-fb2d-4d5a-8430-53f44dd83bf9');
 
-INSERT INTO countries (id, image_path) VALUES ('a7b8c9d0-e1f2-3a4b-5c6d-7e8f9a0b1c2d', 'countries/Italy.png');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('a7b8c9d0-e1f2-3a4b-5c6d-7e8f9a0b1c2d', 'uk', 'Італія');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('a7b8c9d0-e1f2-3a4b-5c6d-7e8f9a0b1c2d', 'en', 'Italy');
+INSERT INTO "PUBLIC"."COUNTRY_TRANSLATIONS" ("COUNTRY_ID", "LANG", "NAME") VALUES
+('00000000-0000-0000-0000-000000000001', 'uk', 'Україна'),
+('00000000-0000-0000-0000-000000000001', 'en', 'Ukraine'),
+('00000000-0000-0000-0000-000000000002', 'uk', 'Польща'),
+('00000000-0000-0000-0000-000000000002', 'en', 'Poland'),
+('00000000-0000-0000-0000-000000000003', 'uk', 'Німеччина'),
+('00000000-0000-0000-0000-000000000003', 'en', 'Germany'),
+('00000000-0000-0000-0000-000000000004', 'uk', 'Італія'),
+('00000000-0000-0000-0000-000000000004', 'en', 'Italy'),
+('00000000-0000-0000-0000-000000000005', 'uk', 'Франція'),
+('00000000-0000-0000-0000-000000000005', 'en', 'France'),
+('00000000-0000-0000-0000-000000000006', 'uk', 'Іспанія'),
+('00000000-0000-0000-0000-000000000006', 'en', 'Spain'),
+('00000000-0000-0000-0000-000000000007', 'uk', 'Туреччина'),
+('00000000-0000-0000-0000-000000000007', 'en', 'Turkey');
 
-INSERT INTO countries (id, image_path) VALUES ('b8c9d0e1-f2a3-4b5c-6d7e-8f9a0b1c2d3e', 'countries/Japan.png');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('b8c9d0e1-f2a3-4b5c-6d7e-8f9a0b1c2d3e', 'uk', 'Японія');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('b8c9d0e1-f2a3-4b5c-6d7e-8f9a0b1c2d3e', 'en', 'Japan');
 
-INSERT INTO countries (id, image_path) VALUES ('c9d0e1f2-a3b4-5c6d-7e8f-9a0b1c2d3e4f', 'countries/Kenya.png');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('c9d0e1f2-a3b4-5c6d-7e8f-9a0b1c2d3e4f', 'uk', 'Кенія');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('c9d0e1f2-a3b4-5c6d-7e8f-9a0b1c2d3e4f', 'en', 'Kenya');
+INSERT INTO "PUBLIC"."CITY_TRANSLATIONS" ("CITY_ID", "LANG", "NAME") VALUES
+('10000000-0000-0000-0000-000000000001', 'uk', 'Київ'),
+('10000000-0000-0000-0000-000000000001', 'en', 'Kyiv'),
+('10000000-0000-0000-0000-000000000002', 'uk', 'Варшава'),
+('10000000-0000-0000-0000-000000000002', 'en', 'Warsaw'),
+('10000000-0000-0000-0000-000000000003', 'uk', 'Берлін'),
+('10000000-0000-0000-0000-000000000003', 'en', 'Berlin'),
+('10000000-0000-0000-0000-000000000004', 'uk', 'Рим'),
+('10000000-0000-0000-0000-000000000004', 'en', 'Rome'),
+('10000000-0000-0000-0000-000000000005', 'uk', 'Париж'),
+('10000000-0000-0000-0000-000000000005', 'en', 'Paris'),
+('10000000-0000-0000-0000-000000000006', 'uk', 'Мадрид'),
+('10000000-0000-0000-0000-000000000006', 'en', 'Madrid'),
+('10000000-0000-0000-0000-000000000007', 'uk', 'Стамбул'),
+('10000000-0000-0000-0000-000000000007', 'en', 'Istanbul');
 
-INSERT INTO countries (id, image_path) VALUES ('d0e1f2a3-b4c5-6d7e-8f9a-0b1c2d3e4f5a', 'countries/Mexico.png');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('d0e1f2a3-b4c5-6d7e-8f9a-0b1c2d3e4f5a', 'uk', 'Мексика');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('d0e1f2a3-b4c5-6d7e-8f9a-0b1c2d3e4f5a', 'en', 'Mexico');
+MERGE INTO "PUBLIC"."TOURS" ("ID", "PRICE", "CITY_ID", "ARRIVAL_DATE", "EVICTION_DATE")
+KEY("ID")
+VALUES
+('20000000-0000-0000-0000-000000000001', 100.0, '10000000-0000-0000-0000-000000000001', '2026-07-01', '2026-07-06'),
+('20000000-0000-0000-0000-000000000002', 200.0, '10000000-0000-0000-0000-000000000002', '2026-07-05', '2026-07-10'),
+('20000000-0000-0000-0000-000000000003', 300.0, '10000000-0000-0000-0000-000000000003', '2026-07-10', '2026-07-15'),
+('20000000-0000-0000-0000-000000000004', 400.0, '10000000-0000-0000-0000-000000000004', '2026-07-15', '2026-07-20'),
+('20000000-0000-0000-0000-000000000005', 500.0, '10000000-0000-0000-0000-000000000005', '2026-07-20', '2026-07-25'),
+('20000000-0000-0000-0000-000000000006', 600.0, '10000000-0000-0000-0000-000000000006', '2026-07-25', '2026-07-30'),
+('20000000-0000-0000-0000-000000000007', 700.0, '10000000-0000-0000-0000-000000000007', '2026-07-30', '2026-08-04');
 
-INSERT INTO countries (id, image_path) VALUES ('e1f2a3b4-c5d6-7e8f-9a0b-1c2d3e4f5a6b', 'countries/Nepal.png');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('e1f2a3b4-c5d6-7e8f-9a0b-1c2d3e4f5a6b', 'uk', 'Непал');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('e1f2a3b4-c5d6-7e8f-9a0b-1c2d3e4f5a6b', 'en', 'Nepal');
+INSERT INTO "PUBLIC"."TOURS_TRANSLATIONS"
+("TOURS_ID", "LANG", "TITLE", "DESCRIPTION", "TOUR_TYPE", "TRANSFER_TYPE", "HOTEL_TYPE") VALUES
+-- Тур 1
+('20000000-0000-0000-0000-000000000001', 'en', 'Tour 1', 'Relaxing health retreat', 'HEALTH', 'TRAIN', 'FOUR_STARS'),
+('20000000-0000-0000-0000-000000000001', 'uk', 'Тур 1', 'Відпочинок для здоров’я', 'HEALTH', 'TRAIN', 'FOUR_STARS'),
+-- Тур 2
+('20000000-0000-0000-0000-000000000002', 'en', 'Tour 2', 'Active sports week', 'SPORTS', 'PLANE', 'FIVE_STARS'),
+('20000000-0000-0000-0000-000000000002', 'uk', 'Тур 2', 'Активний спортивний тиждень', 'SPORTS', 'PLANE', 'FIVE_STARS'),
+-- Тур 3
+('20000000-0000-0000-0000-000000000003', 'en', 'Tour 3', 'Leisure city break', 'LEISURE', 'BUS', 'FOUR_STARS'),
+('20000000-0000-0000-0000-000000000003', 'uk', 'Тур 3', 'Міський відпочинок', 'LEISURE', 'BUS', 'FOUR_STARS'),
+-- Тур 4
+('20000000-0000-0000-0000-000000000004', 'en', 'Tour 4', 'Wild safari adventure', 'SAFARI', 'PLANE', 'FIVE_STARS'),
+('20000000-0000-0000-0000-000000000004', 'uk', 'Тур 4', 'Дике сафарі', 'SAFARI', 'PLANE', 'FIVE_STARS'),
+-- Тур 5
+('20000000-0000-0000-0000-000000000005', 'en', 'Tour 5', 'Exquisite wine tasting', 'WINE', 'TRAIN', 'FOUR_STARS'),
+('20000000-0000-0000-0000-000000000005', 'uk', 'Тур 5', 'Вишукана дегустація вин', 'WINE', 'TRAIN', 'FOUR_STARS'),
+-- Тур 6
+('20000000-0000-0000-0000-000000000006', 'en', 'Tour 6', 'Eco nature getaway', 'ECO', 'BUS', 'FIVE_STARS'),
+('20000000-0000-0000-0000-000000000006', 'uk', 'Тур 6', 'Еко-відпочинок на природі', 'ECO', 'BUS', 'FIVE_STARS'),
+-- Тур 7
+('20000000-0000-0000-0000-000000000007', 'en', 'Tour 7', 'Cultural city exploration', 'CULTURAL', 'SHIP', 'FOUR_STARS'),
+('20000000-0000-0000-0000-000000000007', 'uk', 'Тур 7', 'Культурна експедиція', 'CULTURAL', 'SHIP', 'FOUR_STARS');
 
-INSERT INTO countries (id, image_path) VALUES ('f2a3b4c5-d6e7-8f9a-0b1c-2d3e4f5a6b7c', 'countries/New_Zealand.png');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('f2a3b4c5-d6e7-8f9a-0b1c-2d3e4f5a6b7c', 'uk', 'Нова Зеландія');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('f2a3b4c5-d6e7-8f9a-0b1c-2d3e4f5a6b7c', 'en', 'New Zealand');
+INSERT INTO "PUBLIC"."USER_TOURS" ("ID", "USER_ID", "TOUR_ID", "STATUS", "CREATED_AT") VALUES
+('f0000000-0000-0000-0000-000000000001', '33f2661a-bbdf-4da2-a2c4-e3df376d2d0b', '20000000-0000-0000-0000-000000000001', 'PAID', CURRENT_TIMESTAMP),
+('f0000000-0000-0000-0000-000000000002', '33f2661a-bbdf-4da2-a2c4-e3df376d2d0b', '20000000-0000-0000-0000-000000000002', 'PENDING', CURRENT_TIMESTAMP),
+('f0000000-0000-0000-0000-000000000003', 'efacf208-7ff9-485c-b22d-f57998c667bc', '20000000-0000-0000-0000-000000000003', 'PAID', CURRENT_TIMESTAMP),
+('f0000000-0000-0000-0000-000000000004', 'efacf208-7ff9-485c-b22d-f57998c667bc', '20000000-0000-0000-0000-000000000004', 'CANCELLED', CURRENT_TIMESTAMP),
+('f0000000-0000-0000-0000-000000000005', '33f2661a-bbdf-4da2-a2c4-e3df376d2d0b', '20000000-0000-0000-0000-000000000005', 'PAID', CURRENT_TIMESTAMP),
+('f0000000-0000-0000-0000-000000000006', 'efacf208-7ff9-485c-b22d-f57998c667bc', '20000000-0000-0000-0000-000000000006', 'PAID', CURRENT_TIMESTAMP),
+('f0000000-0000-0000-0000-000000000007', '33f2661a-bbdf-4da2-a2c4-e3df376d2d0b', '20000000-0000-0000-0000-000000000007', 'PAID', CURRENT_TIMESTAMP);
 
-INSERT INTO countries (id, image_path) VALUES ('a3b4c5d6-e7f8-9a0b-1c2d-3e4f5a6b7c8d', 'countries/Peru.png');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('a3b4c5d6-e7f8-9a0b-1c2d-3e4f5a6b7c8d', 'uk', 'Перу');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('a3b4c5d6-e7f8-9a0b-1c2d-3e4f5a6b7c8d', 'en', 'Peru');
 
-INSERT INTO countries (id, image_path) VALUES ('b4c5d6e7-f8a9-0b1c-2d3e-4f5a6b7c8d9e', 'countries/South_Africa.png');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('b4c5d6e7-f8a9-0b1c-2d3e-4f5a6b7c8d9e', 'uk', 'Південна Африка');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('b4c5d6e7-f8a9-0b1c-2d3e-4f5a6b7c8d9e', 'en', 'South Africa');
-
-INSERT INTO countries (id, image_path) VALUES ('c5d6e7f8-a9b0-1c2d-3e4f-5a6b7c8d9e0f', 'countries/Spain.png');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('c5d6e7f8-a9b0-1c2d-3e4f-5a6b7c8d9e0f', 'uk', 'Іспанія');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('c5d6e7f8-a9b0-1c2d-3e4f-5a6b7c8d9e0f', 'en', 'Spain');
-
-INSERT INTO countries (id, image_path) VALUES ('d6e7f8a9-b0c1-2d3e-4f5a-6b7c8d9e0f1a', 'countries/Tanzania.png');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('d6e7f8a9-b0c1-2d3e-4f5a-6b7c8d9e0f1a', 'uk', 'Танзанія');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('d6e7f8a9-b0c1-2d3e-4f5a-6b7c8d9e0f1a', 'en', 'Tanzania');
-
-INSERT INTO countries (id, image_path) VALUES ('e7f8a9b0-c1d2-3e4f-5a6b-7c8d9e0f1a2b', 'countries/Thailand.png');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('e7f8a9b0-c1d2-3e4f-5a6b-7c8d9e0f1a2b', 'uk', 'Таїланд');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('e7f8a9b0-c1d2-3e4f-5a6b-7c8d9e0f1a2b', 'en', 'Thailand');
-
-INSERT INTO countries (id, image_path) VALUES ('f8a9b0c1-d2e3-4f5a-6b7c-8d9e0f1a2b3c', 'countries/Turkey.png');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('f8a9b0c1-d2e3-4f5a-6b7c-8d9e0f1a2b3c', 'uk', 'Туреччина');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('f8a9b0c1-d2e3-4f5a-6b7c-8d9e0f1a2b3c', 'en', 'Turkey');
-
-INSERT INTO countries (id, image_path) VALUES ('a9b0c1d2-e3f4-5a6b-7c8d-9e0f1a2b3c4d', 'countries/United_States.png');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('a9b0c1d2-e3f4-5a6b-7c8d-9e0f1a2b3c4d', 'uk', 'Сполучені Штати Америки');
-INSERT INTO country_translations (country_id, lang, name) VALUES ('a9b0c1d2-e3f4-5a6b-7c8d-9e0f1a2b3c4d', 'en', 'United States');
 

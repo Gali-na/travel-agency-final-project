@@ -6,6 +6,7 @@ import com.epam.travel_agency_final_project.service.TourService;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.ui.Model;
 import com.epam.travel_agency_final_project.dto.TourFullDTO;
@@ -20,6 +21,7 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 import java.util.UUID;
+@Slf4j
 @RequiredArgsConstructor
 @Controller
 public class TourWebController {
@@ -33,6 +35,8 @@ public class TourWebController {
             @RequestParam(required = false) String tourType,
             @RequestParam(required = false) String hotelType,
             Model model) {
+        log.info("Accessing tours page. Lang: {}, Page: {}, Filter: [isHot: {}, type: {}, hotel: {}]",
+                lang, page, isHot, tourType, hotelType);
         int pageSize = 2;
         TourFilter tourFilter = new TourFilter(isHot, tourType, hotelType);
         Page<TourFullDTO> toursPage = tourService.getTours(lang, tourFilter, page, pageSize);
@@ -48,6 +52,7 @@ public class TourWebController {
                             @RequestParam(value = "lang", defaultValue = "uk") String lang,
                             HttpServletRequest request,
                             HttpServletResponse response) {
+        log.info("Processing booking request for tour ID: {}", tourId);
         Cart cart = cookieService.getCartFromCookie(request);
         cart.addTour(tourId);
         String updatedCartJson = URLEncoder.encode(cart.toJson(), StandardCharsets.UTF_8);
@@ -55,6 +60,7 @@ public class TourWebController {
         cartCookie.setMaxAge(30 * 60);
         cartCookie.setPath("/");
         response.addCookie(cartCookie);
+        log.info("Tour ID: {} successfully added to cart.", tourId);
         return "redirect:/tours?lang=" + lang;
     }
 }

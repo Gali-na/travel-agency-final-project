@@ -31,3 +31,12 @@ build/
 
 ### VS Code ###
 .vscode/
+# Логи
+logs/
+
+
+htmlReport/
+
+
+.idea/
+*.log

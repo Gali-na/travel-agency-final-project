@@ -30,7 +30,7 @@ public class SecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/", "/index", "/tours/**", "/cart/**", "/book/**", "/error/**",
-                                        "/blocked/**", "/register", "/login",
+                                        "/blocked/**", "/register", "/login","/api/**",
                                         "/css/**", "/js/**", "/images/**", "/uploads/**", "/error").permitAll()
                         .requestMatchers("/admin/create-tour", "/admin/tours/create", "/admin/tour-createdInfo")
                         .hasAnyRole("MANAGER", "ADMIN")

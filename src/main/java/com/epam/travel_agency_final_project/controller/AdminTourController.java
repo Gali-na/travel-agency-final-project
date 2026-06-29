@@ -9,6 +9,7 @@ import com.epam.travel_agency_final_project.service.TourService;
 import jakarta.validation.Valid;
 import jakarta.validation.ValidationException;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,7 +20,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.Locale;
-
+@Slf4j
 @RequiredArgsConstructor
 @Controller
 public class AdminTourController {
@@ -37,20 +38,24 @@ public class AdminTourController {
     public String createTour(@Valid @ModelAttribute("tourCreationDTO") TourCreationDTO dto,
                              BindingResult bindingResult,
                              Model model, Locale locale) {
+        log.info("Attempting to create a new tour: {}", dto.getTitleEn());
         if (bindingResult.hasErrors()) {
+            log.warn("Validation errors occurred during tour creation: {}", bindingResult.getErrorCount());
             addAttributesToModel(model);
             return "admin/create-tour";
         }
         try {
             dto.validate();
         } catch (ValidationException e) {
+            log.error("Custom validation failed for tour: {}", e.getMessage());
             String errorMessage = messageSource.getMessage(e.getMessage(), null, locale);
             bindingResult.reject(null, errorMessage);
             addAttributesToModel(model);
             return "admin/create-tour";
         }
         tourService.createFullTour(dto);
-        return "redirect:/admin/tour-createdInfo";
+        log.info("Tour successfully created: {}", dto.getTitleEn());
+        return "admin/tour-createdInfo";
     }
     private void addAttributesToModel(Model model) {
         model.addAttribute("cities", cityService.findAll());
